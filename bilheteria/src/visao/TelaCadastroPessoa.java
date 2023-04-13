@@ -135,7 +135,7 @@ public class TelaCadastroPessoa extends JFrame {
 
 	    // Adiciona as linhas na tabela com os dados das pessoas
 	    for (Pessoa pessoa : pessoas) {
-	        Object[] linha = {pessoa.getNome(), pessoa.getEmail(), pessoa.getCpf()};
+	        Object[] linha = {pessoa.getCpf(), pessoa.getEmail(), pessoa.getNome(), };
 	        modeloTabela.addRow(linha);
 	    }
 	}
