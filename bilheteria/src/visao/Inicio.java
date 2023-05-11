@@ -53,7 +53,7 @@ public class Inicio extends JFrame {
 		
 		JLabel lblHistorico = new JLabel("BILHETERIA");
 		lblHistorico.setFont(new Font("Verdana", Font.BOLD, 57));
-		lblHistorico.setBounds(706, 47, 664, 72);
+		lblHistorico.setBounds(515, 47, 664, 72);
 		contentPane.add(lblHistorico);
 		
 		textFaixa = new JTextField();
@@ -76,16 +76,16 @@ public class Inicio extends JFrame {
 			}
 		});
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnLogin.setBounds(825, 327, 140, 47);
+		btnLogin.setBounds(629, 303, 140, 47);
 		
 		contentPane.add(btnLogin);
 		
 		JButton btnCad = new JButton("Cadastro");
 		btnCad.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnCad.setBounds(825, 408, 140, 47);
+		btnCad.setBounds(629, 386, 140, 47);
 		btnCad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Login().setVisible(true);
+				new TelaCadastroPessoa().setVisible(true);
 				this.dispose();
 			}
 

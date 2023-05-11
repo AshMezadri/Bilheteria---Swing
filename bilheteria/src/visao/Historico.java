@@ -13,6 +13,8 @@ import javax.swing.JSeparator;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Historico extends JFrame {
 
@@ -55,12 +57,22 @@ public class Historico extends JFrame {
 		
 		JLabel lblHistorico = new JLabel("Histórico de Compra");
 		lblHistorico.setFont(new Font("Verdana", Font.BOLD, 57));
-		lblHistorico.setBounds(634, 47, 664, 72);
+		lblHistorico.setBounds(358, 48, 664, 72);
 		contentPane.add(lblHistorico);
 		
 		btnNewButton = new JButton("Voltar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+					new Principal().setVisible(true);
+					this.dispose();
+				}
+
+				private void dispose() {
+					// TODO Auto-generated method stub	
+			}
+		});
 		btnNewButton.setFont(new Font("Verdana", Font.BOLD, 14));
-		btnNewButton.setBounds(1669, 898, 171, 54);
+		btnNewButton.setBounds(1193, 612, 151, 58);
 		contentPane.add(btnNewButton);
 		
 		textFaixa = new JTextField();
@@ -74,7 +86,7 @@ public class Historico extends JFrame {
 		textSemHistorico.setBackground(new Color(69, 159, 185));
 		textSemHistorico.setEditable(false);
 		textSemHistorico.setEnabled(false);
-		textSemHistorico.setBounds(509, 314, 1023, 309);
+		textSemHistorico.setBounds(187, 259, 1023, 309);
 		contentPane.add(textSemHistorico);
 		textSemHistorico.setColumns(10);
 	}

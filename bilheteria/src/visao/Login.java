@@ -11,6 +11,8 @@ import java.awt.BorderLayout;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Login extends JFrame {
 
@@ -69,6 +71,16 @@ public class Login extends JFrame {
 		getContentPane().add(textSenha);
 		
 		JButton btnIr = new JButton("Ir para a página inicial");
+		btnIr.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+					new Principal().setVisible(true);
+					this.dispose();
+				}
+
+				private void dispose() {
+					// TODO Auto-generated method stub
+				}
+		});
 		btnIr.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnIr.setBounds(730, 590, 402, 63);
 		getContentPane().add(btnIr);
