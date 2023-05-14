@@ -17,6 +17,7 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 
 public class Sessao extends JFrame {
 
@@ -80,5 +81,9 @@ public class Sessao extends JFrame {
 		lblNewLabel_1.setFont(new Font("Verdana", Font.BOLD, 15));
 		lblNewLabel_1.setBounds(67, 525, 61, 14);
 		contentPane.add(lblNewLabel_1);
+		
+		JButton btnNewButton = new JButton("Ver Horários");
+		btnNewButton.setBounds(1216, 641, 108, 23);
+		contentPane.add(btnNewButton);
 	}
 }
