@@ -45,13 +45,13 @@ public class Login extends JFrame {
 		setTitle("Login");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1947, 1017);
-		
+
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(69, 159, 185));
 		contentPane.setToolTipText("Hitórico");
 		contentPane.setForeground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		
+
 		getContentPane().setBackground(new Color(7, 1, 88));
 		getContentPane().setForeground(new Color(255, 255, 255));
 		getContentPane().setLayout(null);
@@ -102,7 +102,7 @@ public class Login extends JFrame {
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnLogin.setBounds(824, 587, 402, 63);
 		getContentPane().add(btnLogin);
-		
+
 	}
 
 }

@@ -76,6 +76,7 @@ public class Inicio extends JFrame {
 
 			}
 		});
+
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnLogin.setBounds(885, 365, 140, 47);
 

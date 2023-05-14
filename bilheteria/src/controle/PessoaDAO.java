@@ -2,15 +2,15 @@ package controle;
 
 import java.util.ArrayList;
 
-import  modelo.*;
+import modelo.*;
 
 public class PessoaDAO {
-	
-private static ArrayList<Pessoa> Pessoas;
-	
+
+	private static ArrayList<Pessoa> Pessoas;
+
 	private static PessoaDAO PessoaDAO;
-	
-	//Instacia
+
+	// Instacia
 	public static PessoaDAO getInstancia() {
 		if (PessoaDAO == null) {
 			PessoaDAO = new PessoaDAO();
@@ -18,19 +18,18 @@ private static ArrayList<Pessoa> Pessoas;
 		}
 		return PessoaDAO;
 	}
-	
-	//Insert
+
+	// Insert
 	public Boolean insert(Pessoa p) {
-		if(p != null) {
+		if (p != null) {
 			Pessoa.add(p);
 			return true;
 		}
 		return false;
 	}
-	
-	
-	//Select
-	public ArrayList<Pessoa> getList(){
+
+	// Select
+	public ArrayList<Pessoa> getList() {
 		return Pessoas;
 	}
 

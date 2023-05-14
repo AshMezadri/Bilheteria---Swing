@@ -43,7 +43,7 @@ public class Historico extends JFrame {
 	 * Create the frame.
 	 */
 	public Historico() {
-		
+
 		setTitle("Histórico de Compra");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1947, 1017);
@@ -59,12 +59,12 @@ public class Historico extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBounds(10, 36, 1904, 119);
 		contentPane.add(panel);
-				panel.setLayout(null);
-		
-				JLabel lblHistorico = new JLabel("HISTÓRICO");
-				lblHistorico.setBounds(755, 24, 395, 70);
-				panel.add(lblHistorico);
-				lblHistorico.setFont(new Font("Verdana", Font.BOLD, 57));
+		panel.setLayout(null);
+
+		JLabel lblHistorico = new JLabel("HISTÓRICO");
+		lblHistorico.setBounds(755, 24, 395, 70);
+		panel.add(lblHistorico);
+		lblHistorico.setFont(new Font("Verdana", Font.BOLD, 57));
 
 		btnNewButton = new JButton("Voltar");
 		btnNewButton.addActionListener(new ActionListener() {
