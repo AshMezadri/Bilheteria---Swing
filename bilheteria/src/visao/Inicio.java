@@ -43,6 +43,7 @@ public class Inicio extends JFrame {
 	 * Create the frame.
 	 */
 	public Inicio() {
+
 		setTitle("Main");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1947, 1017);
@@ -80,15 +81,15 @@ public class Inicio extends JFrame {
 			}
 		});
 
-		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnLogin.setBounds(885, 365, 140, 47);
+		btnLogin.setFont(new Font("Verdana", Font.BOLD, 24));
+		btnLogin.setBounds(855, 365, 205, 70);
 
 		contentPane.add(btnLogin);
 
 		btnCadastro = new JButton("Cadastro");
 		btnCadastro.setBackground(Color.WHITE);
-		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnCadastro.setBounds(885, 495, 140, 47);
+		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 24));
+		btnCadastro.setBounds(855, 510, 205, 70);
 		btnCadastro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 

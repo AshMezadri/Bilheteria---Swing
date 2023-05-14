@@ -30,6 +30,7 @@ public class Sessao extends JFrame {
 			public void run() {
 				try {
 					Sessao frame = new Sessao();
+					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
