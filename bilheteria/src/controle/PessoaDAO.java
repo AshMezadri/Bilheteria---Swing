@@ -6,7 +6,7 @@ import modelo.*;
 
 public class PessoaDAO {
 
-	private static ArrayList<Pessoa> Pessoas;
+	private static ArrayList<Pessoa> ListaPessoas;
 
 	private static PessoaDAO PessoaDAO;
 
@@ -14,7 +14,7 @@ public class PessoaDAO {
 	public static PessoaDAO getInstancia() {
 		if (PessoaDAO == null) {
 			PessoaDAO = new PessoaDAO();
-			Pessoas = new ArrayList<>();
+			ListaPessoas = new ArrayList<>();
 		}
 		return PessoaDAO;
 	}
@@ -30,7 +30,7 @@ public class PessoaDAO {
 
 	// Select
 	public ArrayList<Pessoa> getList() {
-		return Pessoas;
+		return ListaPessoas;
 	}
 
 }
