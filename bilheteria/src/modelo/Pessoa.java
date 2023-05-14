@@ -45,5 +45,10 @@ public class Pessoa {
 		// TODO Auto-generated method stub
 
 	}
+	
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Nome: " + this.getNome() + " //CPF : " + this.getCpf() + " //Email : " + this.getEmail() + " //Senha : " + this.getSenha() ;
+	}
 
 }
