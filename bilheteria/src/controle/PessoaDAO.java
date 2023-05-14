@@ -2,36 +2,35 @@ package controle;
 
 import java.util.ArrayList;
 
-import  modelo.*;
+import modelo.*;
 
 public class PessoaDAO {
-	
-private static ArrayList<Pessoa> TPessoa;
-	
-	private static PessoaDAO FPessoaDAO;
-	
-	//Instacia
+
+	private static ArrayList<Pessoa> Pessoas;
+
+	private static PessoaDAO PessoaDAO;
+
+	// Instacia
 	public static PessoaDAO getInstancia() {
-		if (FPessoaDAO == null) {
-			FPessoaDAO = new PessoaDAO();
-			TPessoa    = new ArrayList<>();
+		if (PessoaDAO == null) {
+			PessoaDAO = new PessoaDAO();
+			Pessoas = new ArrayList<>();
 		}
-		return FPessoaDAO;
+		return PessoaDAO;
 	}
-	
-	//Insert
-	public Boolean insert(Pessoa prModel) {
-		if(prModel != null) {
-			TPessoa.add(prModel);
+
+	// Insert
+	public Boolean insert(Pessoa p) {
+		if (p != null) {
+			Pessoa.add(p);
 			return true;
 		}
 		return false;
 	}
-	
-	
-	//Select
-	public ArrayList<Pessoa> getList(){
-		return TPessoa;
+
+	// Select
+	public ArrayList<Pessoa> getList() {
+		return Pessoas;
 	}
 
 }
