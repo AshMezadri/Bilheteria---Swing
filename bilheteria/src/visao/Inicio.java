@@ -17,8 +17,7 @@ import java.awt.event.ActionEvent;
 public class Inicio extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textFaixa;
-	private JTextField textFaixinha;
+	private JPanel panelMain;
 
 	/**
 	 * Launch the application.
@@ -28,6 +27,7 @@ public class Inicio extends JFrame {
 			public void run() {
 				try {
 					Inicio frame = new Inicio();
+					frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,30 +40,31 @@ public class Inicio extends JFrame {
 	 * Create the frame.
 	 */
 	public Inicio() {
+		setTitle("Main");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1947, 1017);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(69, 159, 185));
-		contentPane.setToolTipText("Hitórico");
+		contentPane.setBackground(new Color(7, 1, 88));
+		contentPane.setToolTipText("Main");
 		contentPane.setForeground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		JLabel lblHistorico = new JLabel("BILHETERIA");
-		lblHistorico.setFont(new Font("Verdana", Font.BOLD, 57));
-		lblHistorico.setBounds(515, 47, 664, 72);
-		contentPane.add(lblHistorico);
-		
-		textFaixa = new JTextField();
-		textFaixa.setEnabled(false);
-		textFaixa.setEditable(false);
-		textFaixa.setBounds(-23, 19, 1959, 136);
-		contentPane.add(textFaixa);
-		textFaixa.setColumns(10);
-		
+
+		panelMain = new JPanel();
+		panelMain.setBackground(Color.WHITE);
+		panelMain.setBounds(10, 36, 1904, 119);
+		contentPane.add(panelMain);
+		panelMain.setLayout(null);
+
+		JLabel lblBilheteria = new JLabel("BILHETERIA");
+		lblBilheteria.setBounds(755, 24, 395, 70);
+		panelMain.add(lblBilheteria);
+		lblBilheteria.setFont(new Font("Verdana", Font.BOLD, 57));
+
 		JButton btnLogin = new JButton("Login");
+		btnLogin.setBackground(Color.WHITE);
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Login().setVisible(true);
@@ -72,31 +73,30 @@ public class Inicio extends JFrame {
 
 			private void dispose() {
 				// TODO Auto-generated method stub
-				
+
 			}
 		});
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnLogin.setBounds(629, 303, 140, 47);
-		
+		btnLogin.setBounds(885, 365, 140, 47);
+
 		contentPane.add(btnLogin);
-		
+
 		JButton btnCad = new JButton("Cadastro");
+		btnCad.setBackground(Color.WHITE);
 		btnCad.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnCad.setBounds(629, 386, 140, 47);
+		btnCad.setBounds(885, 495, 140, 47);
 		btnCad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new TelaCadastroPessoa().setVisible(true);
+				new Cadastro().setVisible(true);
 				this.dispose();
 			}
 
 			private void dispose() {
 				// TODO Auto-generated method stub
 			}
-			});	
+		});
 
 		contentPane.add(btnCad);
-		
 
 	}
-	}
-
+}

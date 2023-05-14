@@ -6,23 +6,23 @@ import  modelo.*;
 
 public class PessoaDAO {
 	
-private static ArrayList<Pessoa> TPessoa;
+private static ArrayList<Pessoa> Pessoas;
 	
-	private static PessoaDAO FPessoaDAO;
+	private static PessoaDAO PessoaDAO;
 	
 	//Instacia
 	public static PessoaDAO getInstancia() {
-		if (FPessoaDAO == null) {
-			FPessoaDAO = new PessoaDAO();
-			TPessoa    = new ArrayList<>();
+		if (PessoaDAO == null) {
+			PessoaDAO = new PessoaDAO();
+			Pessoas = new ArrayList<>();
 		}
-		return FPessoaDAO;
+		return PessoaDAO;
 	}
 	
 	//Insert
-	public Boolean insert(Pessoa prModel) {
-		if(prModel != null) {
-			TPessoa.add(prModel);
+	public Boolean insert(Pessoa p) {
+		if(p != null) {
+			Pessoa.add(p);
 			return true;
 		}
 		return false;
@@ -31,7 +31,7 @@ private static ArrayList<Pessoa> TPessoa;
 	
 	//Select
 	public ArrayList<Pessoa> getList(){
-		return TPessoa;
+		return Pessoas;
 	}
 
 }
