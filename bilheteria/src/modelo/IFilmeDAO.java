@@ -7,9 +7,9 @@ public interface IFilmeDAO {
 
 	public boolean cadastrarFilme(Filme filme);
 
-	public boolean alterarFilme(Filme filme, String nomeFilme, String idFilme, LocalDateTime horarioFilmeDublado, LocalDateTime horarioFilmeLegendado);
+	public boolean alterarFilme(Filme filme, String nomeFilme, Long idFilme, LocalDateTime horarioFilmeDublado, LocalDateTime horarioFilmeLegendado);
 
-	public boolean deletarFilme(Filme filme, String idFilme);
+	public boolean deletarFilme(Filme filme, Long idFilme);
 
 	public ArrayList<Filme> listaFilmes();
 	

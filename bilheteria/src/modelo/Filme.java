@@ -4,21 +4,21 @@ import java.time.LocalDateTime;
 
 public class Filme {
 
-	public String idFilme;
+	public Long idFilme;
 	public String nomeFilme;
 	public LocalDateTime horarioFilmeDublado, horarioFilmeLegendado;
 	
-	public Filme(String nomeFilme, String idFilme, LocalDateTime horarioFilmeDublado, LocalDateTime horarioFilmeLegendado ) {
+	public Filme(String nomeFilme, Long idFilme, LocalDateTime horarioFilmeDublado, LocalDateTime horarioFilmeLegendado ) {
 		this.nomeFilme = nomeFilme;
 		this.horarioFilmeDublado = horarioFilmeDublado;
 		this.horarioFilmeLegendado = horarioFilmeLegendado;
 		this.idFilme = idFilme;
 	}
 	
-	public String getIdFilme() {
+	public Long getIdFilme() {
 		return idFilme;
 	}
-	public void setIdFilme(String idFilme) {
+	public void setIdFilme(Long idFilme) {
 		this.idFilme = idFilme;
 	}
 	public String getNomeFilme() {

@@ -7,7 +7,7 @@ import modelo.Pessoa;
 
 public class PessoaDAO implements IPessoaDAO {
 
-	private static ArrayList<Pessoa> ListaPessoas;
+	private static ArrayList<Pessoa> listaPessoas;
 	private static PessoaDAO instancia;
 
 	private PessoaDAO() {
@@ -16,7 +16,7 @@ public class PessoaDAO implements IPessoaDAO {
 	public static PessoaDAO getInstancia() {
 		if (instancia == null) {
 			instancia = new PessoaDAO();
-			ListaPessoas = new ArrayList<>();
+			listaPessoas = new ArrayList<>();
 		}
 		return instancia;
 	}
@@ -24,7 +24,7 @@ public class PessoaDAO implements IPessoaDAO {
 	@Override
 	public boolean cadastrarPessoa(Pessoa pessoa) {
 		if (pessoa != null) {
-			ListaPessoas.add(pessoa);
+			listaPessoas.add(pessoa);
 			return true;
 		}
 
@@ -34,7 +34,7 @@ public class PessoaDAO implements IPessoaDAO {
 	@Override
 	public boolean alterarPessoa(Pessoa p, Long cpf, String nome, String email, String senha) {
 
-		for (Pessoa pessoa : ListaPessoas) {
+		for (Pessoa pessoa : listaPessoas) {
 			if (pessoa.getCpf() == (cpf)) {
 				pessoa.setCpf(cpf);
 				pessoa.setNome(nome);
@@ -50,9 +50,9 @@ public class PessoaDAO implements IPessoaDAO {
 	@Override
 	public boolean deletarPessoa(Pessoa p, Long cpf) {
 
-		for (Pessoa pessoa : ListaPessoas) {
+		for (Pessoa pessoa : listaPessoas) {
 			if (pessoa.getCpf() == (cpf)) {
-				ListaPessoas.remove(pessoa);
+				listaPessoas.remove(pessoa);
 				return true;
 			}
 		}
@@ -60,7 +60,7 @@ public class PessoaDAO implements IPessoaDAO {
 	}
 
 	@Override
-	public ArrayList<Pessoa> ListaPessoas() {
+	public ArrayList<Pessoa> listaPessoas() {
 
 		return null;
 	}

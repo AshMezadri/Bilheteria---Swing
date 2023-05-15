@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_Vs55MPNiEe2sbJ5EABYfkA">
+  <modelElement href="bilheteria.uml#_WygPUPNiEe2sbJ5EABYfkA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XIr6sPNiEe2sbJ5EABYfkA" sourceAnchor="293.0,0.0" targetAnchor="45.0,289.0" target="_XL8qEPNiEe2sbJ5EABYfkA" source="_XItv4PNiEe2sbJ5EABYfkA">
+    <modelElement href="bilheteria.uml#_W9glcfNiEe2sbJ5EABYfkA"/>
+    <stereotypes xmi:id="_XIr6sfNiEe2sbJ5EABYfkA" name="Reference">
+      <modelElement href="bilheteria.uml#_W9hzkPNiEe2sbJ5EABYfkA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XIshwPNiEe2sbJ5EABYfkA" text="">
+      <visualProperties xmi:id="_Xj3a0PNiEe2sbJ5EABYfkA" position="2.0,-36.749999999999986"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XIshwfNiEe2sbJ5EABYfkA" aggregationKind="NONE" name="">
+      <modelElement href="bilheteria.uml#_W9glcvNiEe2sbJ5EABYfkA"/>
+      <visualProperties xmi:id="_XjyiUPNiEe2sbJ5EABYfkA" position="2.0,-74.33333333333331"/>
+      <visibility xmi:id="_XIshwvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XIshw_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XIshxPNiEe2sbJ5EABYfkA" aggregationKind="NONE" name="filme" navigable="true">
+      <modelElement href="bilheteria.uml#_W74NwfNiEe2sbJ5EABYfkA"/>
+      <visualProperties xmi:id="_Xj4B4PNiEe2sbJ5EABYfkA" position="-44.0,29.333333333333357"/>
+      <visibility xmi:id="_XIshxfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XIshxvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XL6N0PNiEe2sbJ5EABYfkA" source="_XL8qEPNiEe2sbJ5EABYfkA">
+    <modelElement href="bilheteria.uml#_W9YCkPNiEe2sbJ5EABYfkA"/>
+    <stereotypes xmi:id="_XL6N0fNiEe2sbJ5EABYfkA" name="Reference">
+      <modelElement href="bilheteria.uml#_W9ZQsPNiEe2sbJ5EABYfkA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XL6N0vNiEe2sbJ5EABYfkA" text=""/>
+    <sourceRole xmi:id="_XL6N0_NiEe2sbJ5EABYfkA" aggregationKind="NONE" name="">
+      <modelElement href="bilheteria.uml#_W9YCkfNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL6N1PNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL6N1fNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XL6N1vNiEe2sbJ5EABYfkA" aggregationKind="NONE" name="horarioFilmeDublado" navigable="true">
+      <modelElement href="bilheteria.uml#_W7krwPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL6N1_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL6N2PNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XL8DAPNiEe2sbJ5EABYfkA" source="_XL8qEPNiEe2sbJ5EABYfkA">
+    <modelElement href="bilheteria.uml#_W9iaoPNiEe2sbJ5EABYfkA"/>
+    <stereotypes xmi:id="_XL8DAfNiEe2sbJ5EABYfkA" name="Reference">
+      <modelElement href="bilheteria.uml#_W9k24PNiEe2sbJ5EABYfkA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XL8DAvNiEe2sbJ5EABYfkA" text=""/>
+    <sourceRole xmi:id="_XL8DA_NiEe2sbJ5EABYfkA" aggregationKind="NONE" name="">
+      <modelElement href="bilheteria.uml#_W9iaofNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL8DBPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8DBfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XL8DBvNiEe2sbJ5EABYfkA" aggregationKind="NONE" name="horarioFilmeLegendado" navigable="true">
+      <modelElement href="bilheteria.uml#_W9CrYPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL8DB_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8DCPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XM8voPNiEe2sbJ5EABYfkA" sourceAnchor="740.0,182.0" targetAnchor="293.0,270.0" target="_XItv4PNiEe2sbJ5EABYfkA" source="_XNeUEPNiEe2sbJ5EABYfkA">
+    <modelElement href="bilheteria.uml#_W9Z3wPNiEe2sbJ5EABYfkA"/>
+    <bendpoints xmi:id="_ybOe0PNiEe2sbJ5EABYfkA" sourceX="428" targetY="237"/>
+    <stereotypes xmi:id="_XNSG0fNiEe2sbJ5EABYfkA" name="Reference">
+      <modelElement href="bilheteria.uml#_W9diIPNiEe2sbJ5EABYfkA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XNRfwPNiEe2sbJ5EABYfkA" text="">
+      <visualProperties xmi:id="_Xj7FMPNiEe2sbJ5EABYfkA" position="-339.0,-2.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XNRfwfNiEe2sbJ5EABYfkA" aggregationKind="NONE" name="">
+      <modelElement href="bilheteria.uml#_W9Z3wfNiEe2sbJ5EABYfkA"/>
+      <visualProperties xmi:id="_Xj53EPNiEe2sbJ5EABYfkA" position="38.0,-12.0"/>
+      <visibility xmi:id="_XNY0gPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNYNcPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XNSG0PNiEe2sbJ5EABYfkA" aggregationKind="NONE" name="sessao" navigable="true">
+      <modelElement href="bilheteria.uml#_W7qLUPNiEe2sbJ5EABYfkA"/>
+      <visualProperties xmi:id="_Xj7sQPNiEe2sbJ5EABYfkA" position="-276.0,225.0"/>
+      <visibility xmi:id="_XNY0gvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNY0gfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_XNSG0vNiEe2sbJ5EABYfkA" sourceAnchor="0.0,182.0" targetAnchor="97.0,289.0" target="_XN_4gPNiEe2sbJ5EABYfkA" source="_XNeUEPNiEe2sbJ5EABYfkA">
+    <modelElement href="bilheteria.uml#_W9diIfNiEe2sbJ5EABYfkA"/>
+    <bendpoints xmi:id="_ybPs8PNiEe2sbJ5EABYfkA" sourceX="-274" targetY="237"/>
+    <stereotypes xmi:id="_XNZbkvNiEe2sbJ5EABYfkA" name="Reference">
+      <modelElement href="bilheteria.uml#_W9glcPNiEe2sbJ5EABYfkA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_XNY0hPNiEe2sbJ5EABYfkA" text="">
+      <visualProperties xmi:id="_Xj9hcPNiEe2sbJ5EABYfkA" position="158.0,-9.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_XNZbkPNiEe2sbJ5EABYfkA" aggregationKind="NONE" name="">
+      <modelElement href="bilheteria.uml#_W9diIvNiEe2sbJ5EABYfkA"/>
+      <visualProperties xmi:id="_Xj8TUPNiEe2sbJ5EABYfkA" position="-48.0,-28.0"/>
+      <visibility xmi:id="_XNb30fNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNb30PNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_XNZbkfNiEe2sbJ5EABYfkA" aggregationKind="NONE" name="pessoa" navigable="true">
+      <modelElement href="bilheteria.uml#_W7rZcPNiEe2sbJ5EABYfkA"/>
+      <visualProperties xmi:id="_Xj-IgPNiEe2sbJ5EABYfkA" position="93.0,208.9999999999999"/>
+      <visibility xmi:id="_XNce4fNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNce4PNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XItv4PNiEe2sbJ5EABYfkA" name="Sessao" associationsIn="_XM8voPNiEe2sbJ5EABYfkA" associationsOut="_XIr6sPNiEe2sbJ5EABYfkA">
+    <modelElement href="bilheteria.uml#_W4qhsPNiEe2sbJ5EABYfkA"/>
+    <visualProperties xmi:id="_XItv4fNiEe2sbJ5EABYfkA" position="30.0,30.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XItv4vNiEe2sbJ5EABYfkA" label="+"/>
+    <attributes xmi:id="_XItv4_NiEe2sbJ5EABYfkA" name="idSessao">
+      <modelElement href="bilheteria.uml#_W73msPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XItv5PNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W74NwPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XItv5fNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XItv5vNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XItv5_NiEe2sbJ5EABYfkA" name="Long">
+        <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XItv6PNiEe2sbJ5EABYfkA" name="filme">
+      <modelElement href="bilheteria.uml#_W74NwfNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XItv6fNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W75b4PNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XItv6vNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XItv6_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XItv7PNiEe2sbJ5EABYfkA" name="Filme">
+        <modelElement href="bilheteria.uml#_W2ySYPNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XItv7fNiEe2sbJ5EABYfkA" name="numeroSala">
+      <modelElement href="bilheteria.uml#_W75b4fNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XItv7vNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W76qAPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XItv7_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XItv8PNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XItv8fNiEe2sbJ5EABYfkA" name="Integer">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XItv8vNiEe2sbJ5EABYfkA" name="quantIngressosDisp">
+      <modelElement href="bilheteria.uml#_W76qAfNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XItv8_NiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W774IPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XItv9PNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XItv9fNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XItv9vNiEe2sbJ5EABYfkA" name="Integer">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XItv9_NiEe2sbJ5EABYfkA" name="getIdSessao">
+      <modelElement href="bilheteria.uml#_W4uMEPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XItv-PNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XItv-fNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XItv-vNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W7cI4PNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XItv-_NiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XItv_PNiEe2sbJ5EABYfkA" name="getFilme">
+      <modelElement href="bilheteria.uml#_W4vaMPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XIuW8PNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XIuW8fNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XIuW8vNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W6TgcPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XIuW8_NiEe2sbJ5EABYfkA" name="Filme">
+          <modelElement href="bilheteria.uml#_W2ySYPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XIuW9PNiEe2sbJ5EABYfkA" name="getNumeroSala">
+      <modelElement href="bilheteria.uml#_W4woUPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XIuW9fNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XIuW9vNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XIuW9_NiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W4xPYPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XIuW-PNiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XIuW-fNiEe2sbJ5EABYfkA" name="setNumeroSala">
+      <modelElement href="bilheteria.uml#_W4zEkPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XIuW-vNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XIuW-_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XIuW_PNiEe2sbJ5EABYfkA" name="numeroSala">
+        <modelElement href="bilheteria.uml#_W4zEkfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XIuW_fNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XIuW_vNiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XIuW__NiEe2sbJ5EABYfkA" name="getQuantIngressosDisp">
+      <modelElement href="bilheteria.uml#_W40SsPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XIuXAPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XIuXAfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XIuXAvNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W405wPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XIuXA_NiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XIuXBPNiEe2sbJ5EABYfkA" name="setQuantIngressosDisp">
+      <modelElement href="bilheteria.uml#_W41g0PNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XIuXBfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XIuXBvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XIuXB_NiEe2sbJ5EABYfkA" name="quantIngressosDisp">
+        <modelElement href="bilheteria.uml#_W42H4PNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XIuXCPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XIuXCfNiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XIuXCvNiEe2sbJ5EABYfkA" name="setFilme">
+      <modelElement href="bilheteria.uml#_W6UHgPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XIuXC_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XIuXDPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XIuXDfNiEe2sbJ5EABYfkA" name="filme">
+        <modelElement href="bilheteria.uml#_W6UukPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XIuXDvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XIuXD_NiEe2sbJ5EABYfkA" name="Filme">
+          <modelElement href="bilheteria.uml#_W2ySYPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XIuXEPNiEe2sbJ5EABYfkA" name="Sessao">
+      <modelElement href="bilheteria.uml#_W7ZsoPNiEe2sbJ5EABYfkA"/>
+      <keywords xmi:id="_XIuXEfNiEe2sbJ5EABYfkA" keyword="create"/>
+      <visibility xmi:id="_XIuXEvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XIuXE_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XIuXFPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W7bh0PNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XIuXFfNiEe2sbJ5EABYfkA" name="Sessao">
+          <modelElement href="bilheteria.uml#_W4qhsPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XIuXFvNiEe2sbJ5EABYfkA" name="idSessao">
+        <modelElement href="bilheteria.uml#_W7aTsPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XIuXF_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XIuXGPNiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XIuXGfNiEe2sbJ5EABYfkA" name="filme">
+        <modelElement href="bilheteria.uml#_W7aTsfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XIuXGvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XIuXG_NiEe2sbJ5EABYfkA" name="Filme">
+          <modelElement href="bilheteria.uml#_W2ySYPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XIuXHPNiEe2sbJ5EABYfkA" name="numeroSala">
+        <modelElement href="bilheteria.uml#_W7aTsvNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XIuXHfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XIuXHvNiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XIuXH_NiEe2sbJ5EABYfkA" name="quantIngressosDisp">
+        <modelElement href="bilheteria.uml#_W7a6wPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XIuXIPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XIuXIfNiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XIuXIvNiEe2sbJ5EABYfkA" name="setIdSessao">
+      <modelElement href="bilheteria.uml#_W7cv8PNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XIuXI_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XIuXJPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XIuXJfNiEe2sbJ5EABYfkA" name="idSessao">
+        <modelElement href="bilheteria.uml#_W7dXAPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XIuXJvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XIuXJ_NiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_XLU_APNiEe2sbJ5EABYfkA" name="IIngressoDAO">
+    <modelElement href="bilheteria.uml#_W2L1cPNiEe2sbJ5EABYfkA"/>
+    <visualProperties xmi:id="_XLU_AfNiEe2sbJ5EABYfkA" position="-953.0,-253.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XLU_AvNiEe2sbJ5EABYfkA" label="+"/>
+    <operations xmi:id="_XLU_A_NiEe2sbJ5EABYfkA" name="listaIngressos">
+      <modelElement href="bilheteria.uml#_W2SjIPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XLU_BPNiEe2sbJ5EABYfkA" name="Generics">
+        <modelElement href="bilheteria.uml#_W2UYUPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XLU_BfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLU_BvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLU_B_NiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W626EPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLU_CPNiEe2sbJ5EABYfkA" name="ArrayList">
+          <modelElement href="bilheteria.uml#_W5qAMPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XLU_CfNiEe2sbJ5EABYfkA" name="cadastrarIngresso">
+      <modelElement href="bilheteria.uml#_W57F8PNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XLU_CvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLU_C_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLU_DPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W57tAPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLU_DfNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLU_DvNiEe2sbJ5EABYfkA" name="ingresso">
+        <modelElement href="bilheteria.uml#_W57F8fNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLU_D_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLU_EPNiEe2sbJ5EABYfkA" name="Ingresso">
+          <modelElement href="bilheteria.uml#_W3xw4PNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLU_EfNiEe2sbJ5EABYfkA" name="alterarIngresso">
+      <modelElement href="bilheteria.uml#_W6zPsfNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XLU_EvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLU_E_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLU_FPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W61E4PNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLU_FfNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLU_FvNiEe2sbJ5EABYfkA" name="ingresso">
+        <modelElement href="bilheteria.uml#_W6z2wPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLU_F_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLU_GPNiEe2sbJ5EABYfkA" name="Ingresso">
+          <modelElement href="bilheteria.uml#_W3xw4PNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLU_GfNiEe2sbJ5EABYfkA" name="idIngresso">
+        <modelElement href="bilheteria.uml#_W6z2wfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLU_GvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLU_G_NiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLU_HPNiEe2sbJ5EABYfkA" name="sessao">
+        <modelElement href="bilheteria.uml#_W6z2wvNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLU_HfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLU_HvNiEe2sbJ5EABYfkA" name="Sessao">
+          <modelElement href="bilheteria.uml#_W4qhsPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLU_H_NiEe2sbJ5EABYfkA" name="pessoa">
+        <modelElement href="bilheteria.uml#_W6z2w_NiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLU_IPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLU_IfNiEe2sbJ5EABYfkA" name="Pessoa">
+          <modelElement href="bilheteria.uml#_W4bRIPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLU_IvNiEe2sbJ5EABYfkA" name="valor">
+        <modelElement href="bilheteria.uml#_W60d0PNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLU_I_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLU_JPNiEe2sbJ5EABYfkA" name="Double">
+          <modelElement href="bilheteria.uml#_W6u-QPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLU_JfNiEe2sbJ5EABYfkA" name="fileira">
+        <modelElement href="bilheteria.uml#_W60d0fNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLU_JvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLU_J_NiEe2sbJ5EABYfkA" name="Character">
+          <modelElement href="bilheteria.uml#_W6xagfNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLU_KPNiEe2sbJ5EABYfkA" name="numCadeira">
+        <modelElement href="bilheteria.uml#_W60d0vNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLU_KfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLU_KvNiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLU_K_NiEe2sbJ5EABYfkA" name="deletarIngresso">
+      <modelElement href="bilheteria.uml#_W61r8PNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XLU_LPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLU_LfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLU_LvNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W62TAfNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLU_L_NiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLU_MPNiEe2sbJ5EABYfkA" name="ingresso">
+        <modelElement href="bilheteria.uml#_W61r8fNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLU_MfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLU_MvNiEe2sbJ5EABYfkA" name="Ingresso">
+          <modelElement href="bilheteria.uml#_W3xw4PNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLU_M_NiEe2sbJ5EABYfkA" name="idIngresso">
+        <modelElement href="bilheteria.uml#_W62TAPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLU_NPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLU_NfNiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_XLnS4PNiEe2sbJ5EABYfkA" name="IPessoaDAO">
+    <modelElement href="bilheteria.uml#_W2c7MPNiEe2sbJ5EABYfkA"/>
+    <visualProperties xmi:id="_XLnS4fNiEe2sbJ5EABYfkA" position="-764.0,-61.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XLnS4vNiEe2sbJ5EABYfkA" label="+"/>
+    <operations xmi:id="_XLnS4_NiEe2sbJ5EABYfkA" name="ListaPessoas">
+      <modelElement href="bilheteria.uml#_W2f-gPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XLnS5PNiEe2sbJ5EABYfkA" name="Generics">
+        <modelElement href="bilheteria.uml#_W2jo4PNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XLnS5fNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLnS5vNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLnS5_NiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W68ZoPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLnS6PNiEe2sbJ5EABYfkA" name="ArrayList">
+          <modelElement href="bilheteria.uml#_W5qAMPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XLnS6fNiEe2sbJ5EABYfkA" name="cadastrarPessoa">
+      <modelElement href="bilheteria.uml#_W5_XYPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XLnS6vNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLnS6_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLnS7PNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W5_-cPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLnS7fNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLnS7vNiEe2sbJ5EABYfkA" name="pessoa">
+        <modelElement href="bilheteria.uml#_W5_XYfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLnS7_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLnS8PNiEe2sbJ5EABYfkA" name="Pessoa">
+          <modelElement href="bilheteria.uml#_W4bRIPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLnS8fNiEe2sbJ5EABYfkA" name="alterarPessoa">
+      <modelElement href="bilheteria.uml#_W63hIPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XLnS8vNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLnS8_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLnS9PNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W64vQPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLnS9fNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLnS9vNiEe2sbJ5EABYfkA" name="pessoa">
+        <modelElement href="bilheteria.uml#_W63hIfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLnS9_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLnS-PNiEe2sbJ5EABYfkA" name="Pessoa">
+          <modelElement href="bilheteria.uml#_W4bRIPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLnS-fNiEe2sbJ5EABYfkA" name="cpf">
+        <modelElement href="bilheteria.uml#_W63hIvNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLnS-vNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLnS-_NiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLnS_PNiEe2sbJ5EABYfkA" name="nome">
+        <modelElement href="bilheteria.uml#_W64IMPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLnS_fNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLnS_vNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLnS__NiEe2sbJ5EABYfkA" name="email">
+        <modelElement href="bilheteria.uml#_W64IMfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLnTAPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLnTAfNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLnTAvNiEe2sbJ5EABYfkA" name="senha">
+        <modelElement href="bilheteria.uml#_W64IMvNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLnTA_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLnTBPNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLnTBfNiEe2sbJ5EABYfkA" name="deletarPessoa">
+      <modelElement href="bilheteria.uml#_W659YPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XLnTBvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLnTB_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLnTCPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W67LgPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLnTCfNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLnTCvNiEe2sbJ5EABYfkA" name="pessoa">
+        <modelElement href="bilheteria.uml#_W659YfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLnTC_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLnTDPNiEe2sbJ5EABYfkA" name="Pessoa">
+          <modelElement href="bilheteria.uml#_W4bRIPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLnTDfNiEe2sbJ5EABYfkA" name="cpf">
+        <modelElement href="bilheteria.uml#_W66kcPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLnTDvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLnTD_NiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_XMv7UPNiEe2sbJ5EABYfkA" name="IFilmeDAO">
+    <modelElement href="bilheteria.uml#_W1yM0PNiEe2sbJ5EABYfkA"/>
+    <visualProperties xmi:id="_XMv7UfNiEe2sbJ5EABYfkA" position="-953.0,137.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XMv7UvNiEe2sbJ5EABYfkA" label="+"/>
+    <operations xmi:id="_XMv7U_NiEe2sbJ5EABYfkA" name="listaFilmes">
+      <modelElement href="bilheteria.uml#_W16vsPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XMv7VPNiEe2sbJ5EABYfkA" name="Generics">
+        <modelElement href="bilheteria.uml#_W19L8PNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XMv7VfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XMv7VvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMv7V_NiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W6twIPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XMv7WPNiEe2sbJ5EABYfkA" name="ArrayList">
+          <modelElement href="bilheteria.uml#_W5qAMPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XMv7WfNiEe2sbJ5EABYfkA" name="cadastrarFilme">
+      <modelElement href="bilheteria.uml#_W52NcPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XMv7WvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XMv7W_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMv7XPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W520gfNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XMv7XfNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XMv7XvNiEe2sbJ5EABYfkA" name="filme">
+        <modelElement href="bilheteria.uml#_W520gPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XMv7X_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XMv7YPNiEe2sbJ5EABYfkA" name="Filme">
+          <modelElement href="bilheteria.uml#_W2ySYPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XMv7YfNiEe2sbJ5EABYfkA" name="alterarFilme">
+      <modelElement href="bilheteria.uml#_W6pesPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XMv7YvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XMv7Y_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMv7ZPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W6rT4PNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XMv7ZfNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XMv7ZvNiEe2sbJ5EABYfkA" name="filme">
+        <modelElement href="bilheteria.uml#_W6qFwPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XMv7Z_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XMv7aPNiEe2sbJ5EABYfkA" name="Filme">
+          <modelElement href="bilheteria.uml#_W2ySYPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMv7afNiEe2sbJ5EABYfkA" name="nomeFilme">
+        <modelElement href="bilheteria.uml#_W6qFwfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XMv7avNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XMv7a_NiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMv7bPNiEe2sbJ5EABYfkA" name="idFilme">
+        <modelElement href="bilheteria.uml#_W6qs0PNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XMv7bfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XMv7bvNiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMv7b_NiEe2sbJ5EABYfkA" name="horarioFilmeDublado">
+        <modelElement href="bilheteria.uml#_W6qs0fNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XMv7cPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XMv7cfNiEe2sbJ5EABYfkA" name="LocalDateTime">
+          <modelElement href="bilheteria.uml#_W5yjEPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMv7cvNiEe2sbJ5EABYfkA" name="horarioFilmeLegendado">
+        <modelElement href="bilheteria.uml#_W6qs0vNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XMv7c_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XMv7dPNiEe2sbJ5EABYfkA" name="LocalDateTime">
+          <modelElement href="bilheteria.uml#_W5yjEPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XMv7dfNiEe2sbJ5EABYfkA" name="deletarFilme">
+      <modelElement href="bilheteria.uml#_W6r68PNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XMv7dvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XMv7d_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XMv7ePNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W6tJEPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XMv7efNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XMv7evNiEe2sbJ5EABYfkA" name="filme">
+        <modelElement href="bilheteria.uml#_W6siAPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XMv7e_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XMv7fPNiEe2sbJ5EABYfkA" name="Filme">
+          <modelElement href="bilheteria.uml#_W2ySYPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XMv7ffNiEe2sbJ5EABYfkA" name="idFilme">
+        <modelElement href="bilheteria.uml#_W6siAfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XMv7fvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XMv7f_NiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XNeUEPNiEe2sbJ5EABYfkA" name="Ingresso" associationsOut="_XM8voPNiEe2sbJ5EABYfkA _XNSG0vNiEe2sbJ5EABYfkA">
+    <modelElement href="bilheteria.uml#_W3xw4PNiEe2sbJ5EABYfkA"/>
+    <visualProperties xmi:id="_XNeUEfNiEe2sbJ5EABYfkA" position="-845.0,355.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XNeUEvNiEe2sbJ5EABYfkA" label="+"/>
+    <attributes xmi:id="_XNeUE_NiEe2sbJ5EABYfkA" name="idIngresso">
+      <modelElement href="bilheteria.uml#_W7oWIPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XNeUFPNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W7pkQPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XNeUFfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNeUFvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XNeUF_NiEe2sbJ5EABYfkA" name="Long">
+        <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XNeUGPNiEe2sbJ5EABYfkA" name="sessao">
+      <modelElement href="bilheteria.uml#_W7qLUPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XNeUGfNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W7qyYPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XNeUGvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNeUG_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XNeUHPNiEe2sbJ5EABYfkA" name="Sessao">
+        <modelElement href="bilheteria.uml#_W4qhsPNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XNeUHfNiEe2sbJ5EABYfkA" name="pessoa">
+      <modelElement href="bilheteria.uml#_W7rZcPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XNeUHvNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W7snkPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XNeUH_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNeUIPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XNeUIfNiEe2sbJ5EABYfkA" name="Pessoa">
+        <modelElement href="bilheteria.uml#_W4bRIPNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XNeUIvNiEe2sbJ5EABYfkA" name="valor">
+      <modelElement href="bilheteria.uml#_W7tOoPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XNeUI_NiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W7t1sPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XNeUJPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNeUJfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XNeUJvNiEe2sbJ5EABYfkA" name="Double">
+        <modelElement href="bilheteria.uml#_W6u-QPNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XNeUJ_NiEe2sbJ5EABYfkA" name="fileira">
+      <modelElement href="bilheteria.uml#_W7ucwPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XNeUKPNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W7vD0PNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XNeUKfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNeUKvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XNeUK_NiEe2sbJ5EABYfkA" name="Character">
+        <modelElement href="bilheteria.uml#_W6xagfNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XNeULPNiEe2sbJ5EABYfkA" name="numCadeira">
+      <modelElement href="bilheteria.uml#_W7vq4PNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XNeULfNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W7w5APNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XNeULvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNeUL_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XNeUMPNiEe2sbJ5EABYfkA" name="Integer">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XNeUMfNiEe2sbJ5EABYfkA" name="getIdIngresso">
+      <modelElement href="bilheteria.uml#_W4BBcPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNeUMvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNeUM_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XNeUNPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W7PUkPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XNeUNfNiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XNeUNvNiEe2sbJ5EABYfkA" name="getSessao">
+      <modelElement href="bilheteria.uml#_W4BogPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNeUN_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNeUOPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XNeUOfNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W6KWgPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XNeUOvNiEe2sbJ5EABYfkA" name="Sessao">
+          <modelElement href="bilheteria.uml#_W4qhsPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XNeUO_NiEe2sbJ5EABYfkA" name="getPessoa">
+      <modelElement href="bilheteria.uml#_W4GhAPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNeUPPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNeUPfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XNeUPvNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W6MLsPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XNeUP_NiEe2sbJ5EABYfkA" name="Pessoa">
+          <modelElement href="bilheteria.uml#_W4bRIPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XNeUQPNiEe2sbJ5EABYfkA" name="getValor">
+      <modelElement href="bilheteria.uml#_W4HvIPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNeUQfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNeUQvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XNeUQ_NiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W7Rw0PNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XNeURPNiEe2sbJ5EABYfkA" name="Double">
+          <modelElement href="bilheteria.uml#_W6u-QPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XNe7IPNiEe2sbJ5EABYfkA" name="getFileira">
+      <modelElement href="bilheteria.uml#_W4IWMPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNe7IfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNe7IvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XNe7I_NiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W7U0IPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XNe7JPNiEe2sbJ5EABYfkA" name="Character">
+          <modelElement href="bilheteria.uml#_W6xagfNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XNe7JfNiEe2sbJ5EABYfkA" name="getNumCadeira">
+      <modelElement href="bilheteria.uml#_W4JkUPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNe7JvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNe7J_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XNe7KPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W4JkUfNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XNe7KfNiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XNe7KvNiEe2sbJ5EABYfkA" name="setNumCadeira">
+      <modelElement href="bilheteria.uml#_W4NOsPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNe7K_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNe7LPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XNe7LfNiEe2sbJ5EABYfkA" name="numCadeira">
+        <modelElement href="bilheteria.uml#_W4N1wPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7LvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7L_NiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XNe7MPNiEe2sbJ5EABYfkA" name="setSessao">
+      <modelElement href="bilheteria.uml#_W6K9kPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNe7MfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNe7MvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XNe7M_NiEe2sbJ5EABYfkA" name="sessao">
+        <modelElement href="bilheteria.uml#_W6LkoPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7NPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7NfNiEe2sbJ5EABYfkA" name="Sessao">
+          <modelElement href="bilheteria.uml#_W4qhsPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XNe7NvNiEe2sbJ5EABYfkA" name="setPessoa">
+      <modelElement href="bilheteria.uml#_W6MywPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNe7N_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNe7OPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XNe7OfNiEe2sbJ5EABYfkA" name="pessoa">
+        <modelElement href="bilheteria.uml#_W6MywfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7OvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7O_NiEe2sbJ5EABYfkA" name="Pessoa">
+          <modelElement href="bilheteria.uml#_W4bRIPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XNe7PPNiEe2sbJ5EABYfkA" name="Ingresso">
+      <modelElement href="bilheteria.uml#_W7LqMPNiEe2sbJ5EABYfkA"/>
+      <keywords xmi:id="_XNe7PfNiEe2sbJ5EABYfkA" keyword="create"/>
+      <visibility xmi:id="_XNe7PvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNe7P_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XNe7QPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W7OGcvNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XNe7QfNiEe2sbJ5EABYfkA" name="Ingresso">
+          <modelElement href="bilheteria.uml#_W3xw4PNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XNe7QvNiEe2sbJ5EABYfkA" name="idIngresso">
+        <modelElement href="bilheteria.uml#_W7LqMfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7Q_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7RPNiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XNe7RfNiEe2sbJ5EABYfkA" name="sessao">
+        <modelElement href="bilheteria.uml#_W7MRQPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7RvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7R_NiEe2sbJ5EABYfkA" name="Sessao">
+          <modelElement href="bilheteria.uml#_W4qhsPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XNe7SPNiEe2sbJ5EABYfkA" name="pessoa">
+        <modelElement href="bilheteria.uml#_W7MRQfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7SfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7SvNiEe2sbJ5EABYfkA" name="Pessoa">
+          <modelElement href="bilheteria.uml#_W4bRIPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XNe7S_NiEe2sbJ5EABYfkA" name="valor">
+        <modelElement href="bilheteria.uml#_W7M4UPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7TPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7TfNiEe2sbJ5EABYfkA" name="Double">
+          <modelElement href="bilheteria.uml#_W6u-QPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XNe7TvNiEe2sbJ5EABYfkA" name="fileira">
+        <modelElement href="bilheteria.uml#_W7M4UfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7T_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7UPNiEe2sbJ5EABYfkA" name="Character">
+          <modelElement href="bilheteria.uml#_W6xagfNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XNe7UfNiEe2sbJ5EABYfkA" name="numCadeira">
+        <modelElement href="bilheteria.uml#_W7NfYPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7UvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7U_NiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XNe7VPNiEe2sbJ5EABYfkA" name="setIdIngresso">
+      <modelElement href="bilheteria.uml#_W7QisPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNe7VfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNe7VvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XNe7V_NiEe2sbJ5EABYfkA" name="idIngresso">
+        <modelElement href="bilheteria.uml#_W7QisfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7WPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7WfNiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XNe7WvNiEe2sbJ5EABYfkA" name="setValor">
+      <modelElement href="bilheteria.uml#_W7TmAPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNe7W_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNe7XPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XNe7XfNiEe2sbJ5EABYfkA" name="valor">
+        <modelElement href="bilheteria.uml#_W7TmAfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7XvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7X_NiEe2sbJ5EABYfkA" name="Double">
+          <modelElement href="bilheteria.uml#_W6u-QPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XNe7YPNiEe2sbJ5EABYfkA" name="setFileira">
+      <modelElement href="bilheteria.uml#_W7VbMPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XNe7YfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XNe7YvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XNe7Y_NiEe2sbJ5EABYfkA" name="fileira">
+        <modelElement href="bilheteria.uml#_W7VbMfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XNe7ZPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XNe7ZfNiEe2sbJ5EABYfkA" name="Character">
+          <modelElement href="bilheteria.uml#_W6xagfNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XN_4gPNiEe2sbJ5EABYfkA" name="Pessoa" associationsIn="_XNSG0vNiEe2sbJ5EABYfkA">
+    <modelElement href="bilheteria.uml#_W4bRIPNiEe2sbJ5EABYfkA"/>
+    <visualProperties xmi:id="_XN_4gfNiEe2sbJ5EABYfkA" position="-1216.0,11.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XN_4gvNiEe2sbJ5EABYfkA" label="+"/>
+    <attributes xmi:id="_XN_4g_NiEe2sbJ5EABYfkA" name="cpf">
+      <modelElement href="bilheteria.uml#_W7yuMPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XN_4hPNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W7zVQPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XN_4hfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4hvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XN_4h_NiEe2sbJ5EABYfkA" name="Long">
+        <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XN_4iPNiEe2sbJ5EABYfkA" name="email">
+      <modelElement href="bilheteria.uml#_W7z8UPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XN_4ifNiEe2sbJ5EABYfkA" name="MultiDeclaration">
+        <modelElement href="bilheteria.uml#_W71KcPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XN_4ivNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W71xgPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XN_4i_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4jPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XN_4jfNiEe2sbJ5EABYfkA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XN_4jvNiEe2sbJ5EABYfkA" name="nome">
+      <modelElement href="bilheteria.uml#_W9FHoPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XN_4j_NiEe2sbJ5EABYfkA" name="MultiDeclaration">
+        <modelElement href="bilheteria.uml#_W9FusPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XN_4kPNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W9FusfNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XN_4kfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4kvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XN_4k_NiEe2sbJ5EABYfkA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XN_4lPNiEe2sbJ5EABYfkA" name="senha">
+      <modelElement href="bilheteria.uml#_W9GVwPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XN_4lfNiEe2sbJ5EABYfkA" name="MultiDeclaration">
+        <modelElement href="bilheteria.uml#_W9GVwfNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XN_4lvNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W9G80PNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XN_4l_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4mPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XN_4mfNiEe2sbJ5EABYfkA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XN_4mvNiEe2sbJ5EABYfkA" name="getNome">
+      <modelElement href="bilheteria.uml#_W4dtYPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XN_4m_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4nPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XN_4nfNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W4dtYfNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XN_4nvNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XN_4n_NiEe2sbJ5EABYfkA" name="setNome">
+      <modelElement href="bilheteria.uml#_W4e7gPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XN_4oPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4ofNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XN_4ovNiEe2sbJ5EABYfkA" name="nome">
+        <modelElement href="bilheteria.uml#_W4e7gfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XN_4o_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XN_4pPNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XN_4pfNiEe2sbJ5EABYfkA" name="getEmail">
+      <modelElement href="bilheteria.uml#_W4fikPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XN_4pvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4p_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XN_4qPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W4gJoPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XN_4qfNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XN_4qvNiEe2sbJ5EABYfkA" name="setEmail">
+      <modelElement href="bilheteria.uml#_W4gwsPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XN_4q_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4rPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XN_4rfNiEe2sbJ5EABYfkA" name="email">
+        <modelElement href="bilheteria.uml#_W4hXwPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XN_4rvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XN_4r_NiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XN_4sPNiEe2sbJ5EABYfkA" name="getSenha">
+      <modelElement href="bilheteria.uml#_W4h-0PNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XN_4sfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4svNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XN_4s_NiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W4il4PNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XN_4tPNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XN_4tfNiEe2sbJ5EABYfkA" name="setSenha">
+      <modelElement href="bilheteria.uml#_W4jM8PNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XN_4tvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4t_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XN_4uPNiEe2sbJ5EABYfkA" name="senha">
+        <modelElement href="bilheteria.uml#_W4jM8fNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XN_4ufNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XN_4uvNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XN_4u_NiEe2sbJ5EABYfkA" name="getCpf">
+      <modelElement href="bilheteria.uml#_W4j0APNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XN_4vPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4vfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XN_4vvNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W4kbEPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XN_4v_NiEe2sbJ5EABYfkA" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XN_4wPNiEe2sbJ5EABYfkA" name="setCpf">
+      <modelElement href="bilheteria.uml#_W4lCIPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XN_4wfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4wvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XN_4w_NiEe2sbJ5EABYfkA" name="cpf">
+        <modelElement href="bilheteria.uml#_W4lpMPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XN_4xPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XN_4xfNiEe2sbJ5EABYfkA" name="long">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XN_4xvNiEe2sbJ5EABYfkA" name="toString">
+      <modelElement href="bilheteria.uml#_W4mQQPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XN_4x_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XN_4yPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XN_4yfNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W4m3UPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XN_4yvNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_XLBdAPNiEe2sbJ5EABYfkA" name="ISessaoDAO">
+    <modelElement href="bilheteria.uml#_W1D0EPNiEe2sbJ5EABYfkA"/>
+    <visualProperties xmi:id="_XLBdAfNiEe2sbJ5EABYfkA" position="-791.0,-474.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XLBdAvNiEe2sbJ5EABYfkA" label="+"/>
+    <operations xmi:id="_XLBdA_NiEe2sbJ5EABYfkA" name="listaSessoes">
+      <modelElement href="bilheteria.uml#_W1TEoPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XLBdBPNiEe2sbJ5EABYfkA" name="Generics">
+        <modelElement href="bilheteria.uml#_W1X9IPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XLBdBfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLBdBvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLBdB_NiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W6oQkPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLBdCPNiEe2sbJ5EABYfkA" name="ArrayList">
+          <modelElement href="bilheteria.uml#_W5qAMPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XLBdCfNiEe2sbJ5EABYfkA" name="cadastrarSessao">
+      <modelElement href="bilheteria.uml#_W5vfwPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XLBdCvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLBdC_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLBdDPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W5wG0PNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLBdDfNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLBdDvNiEe2sbJ5EABYfkA" name="sessao">
+        <modelElement href="bilheteria.uml#_W5vfwfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLBdD_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLBdEPNiEe2sbJ5EABYfkA" name="Sessao">
+          <modelElement href="bilheteria.uml#_W4qhsPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLBdEfNiEe2sbJ5EABYfkA" name="alterarSessao">
+      <modelElement href="bilheteria.uml#_W6jYEfNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XLBdEvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLBdE_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLBdFPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W6lNQPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLBdFfNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLBdFvNiEe2sbJ5EABYfkA" name="sessao">
+        <modelElement href="bilheteria.uml#_W6j_IPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLBdF_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLBdGPNiEe2sbJ5EABYfkA" name="Sessao">
+          <modelElement href="bilheteria.uml#_W4qhsPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLBdGfNiEe2sbJ5EABYfkA" name="idSessao">
+        <modelElement href="bilheteria.uml#_W6j_IfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLBdGvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLBdG_NiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLBdHPNiEe2sbJ5EABYfkA" name="filme">
+        <modelElement href="bilheteria.uml#_W6j_IvNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLBdHfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLBdHvNiEe2sbJ5EABYfkA" name="Filme">
+          <modelElement href="bilheteria.uml#_W2ySYPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLBdH_NiEe2sbJ5EABYfkA" name="numeroSala">
+        <modelElement href="bilheteria.uml#_W6kmMPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLBdIPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLBdIfNiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLBdIvNiEe2sbJ5EABYfkA" name="quantIngressosDisp">
+        <modelElement href="bilheteria.uml#_W6kmMfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLBdI_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLBdJPNiEe2sbJ5EABYfkA" name="Integer">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XLBdJfNiEe2sbJ5EABYfkA" name="deletarSessao">
+      <modelElement href="bilheteria.uml#_W6mbYPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XLBdJvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XLBdJ_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XLBdKPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W6npgfNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XLBdKfNiEe2sbJ5EABYfkA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XLBdKvNiEe2sbJ5EABYfkA" name="sessao">
+        <modelElement href="bilheteria.uml#_W6nCcPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLBdK_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLBdLPNiEe2sbJ5EABYfkA" name="Sessao">
+          <modelElement href="bilheteria.uml#_W4qhsPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XLBdLfNiEe2sbJ5EABYfkA" name="idSessao">
+        <modelElement href="bilheteria.uml#_W6npgPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XLBdLvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XLBdL_NiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_XL8qEPNiEe2sbJ5EABYfkA" name="Filme" associationsIn="_XIr6sPNiEe2sbJ5EABYfkA" associationsOut="_XL6N0PNiEe2sbJ5EABYfkA _XL8DAPNiEe2sbJ5EABYfkA">
+    <modelElement href="bilheteria.uml#_W2ySYPNiEe2sbJ5EABYfkA"/>
+    <visualProperties xmi:id="_XL8qEfNiEe2sbJ5EABYfkA" position="278.0,-391.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_XL8qEvNiEe2sbJ5EABYfkA" label="+"/>
+    <attributes xmi:id="_XL8qE_NiEe2sbJ5EABYfkA" name="idFilme">
+      <modelElement href="bilheteria.uml#_W7hocPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XL8qFPNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W7i2kPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XL8qFfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qFvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XL8qF_NiEe2sbJ5EABYfkA" name="Long">
+        <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XL8qGPNiEe2sbJ5EABYfkA" name="nomeFilme">
+      <modelElement href="bilheteria.uml#_W7jdoPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XL8qGfNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W7kEsPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XL8qGvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qG_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XL8qHPNiEe2sbJ5EABYfkA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XL8qHfNiEe2sbJ5EABYfkA" name="horarioFilmeDublado">
+      <modelElement href="bilheteria.uml#_W7krwPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XL8qHvNiEe2sbJ5EABYfkA" name="MultiDeclaration">
+        <modelElement href="bilheteria.uml#_W7lS0PNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XL8qH_NiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W7mg8PNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XL8qIPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qIfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XL8qIvNiEe2sbJ5EABYfkA" name="LocalDateTime">
+        <modelElement href="bilheteria.uml#_W5yjEPNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_XL8qI_NiEe2sbJ5EABYfkA" name="horarioFilmeLegendado">
+      <modelElement href="bilheteria.uml#_W9CrYPNiEe2sbJ5EABYfkA"/>
+      <stereotypes xmi:id="_XL8qJPNiEe2sbJ5EABYfkA" name="MultiDeclaration">
+        <modelElement href="bilheteria.uml#_W9DScPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_XL8qJfNiEe2sbJ5EABYfkA" name="LegacyStyledElement">
+        <modelElement href="bilheteria.uml#_W9D5gPNiEe2sbJ5EABYfkA"/>
+      </stereotypes>
+      <visibility xmi:id="_XL8qJvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qJ_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <type xmi:id="_XL8qKPNiEe2sbJ5EABYfkA" name="LocalDateTime">
+        <modelElement href="bilheteria.uml#_W5yjEPNiEe2sbJ5EABYfkA"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_XL8qKfNiEe2sbJ5EABYfkA" name="getIdFilme">
+      <modelElement href="bilheteria.uml#_W3IQoPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL8qKvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qK_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XL8qLPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W7BSIPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XL8qLfNiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XL8qLvNiEe2sbJ5EABYfkA" name="getNomeFilme">
+      <modelElement href="bilheteria.uml#_W3KF0PNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL8qL_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qMPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XL8qMfNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W3Ks4PNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XL8qMvNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XL8qM_NiEe2sbJ5EABYfkA" name="setNomeFilme">
+      <modelElement href="bilheteria.uml#_W3L7APNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL8qNPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qNfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XL8qNvNiEe2sbJ5EABYfkA" name="nomeFilme">
+        <modelElement href="bilheteria.uml#_W3NJIPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XL8qN_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XL8qOPNiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XL8qOfNiEe2sbJ5EABYfkA" name="getHorarioFilmeDublado">
+      <modelElement href="bilheteria.uml#_W3NwMPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL8qOvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qO_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XL8qPPNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W7EVcPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XL8qPfNiEe2sbJ5EABYfkA" name="LocalDateTime">
+          <modelElement href="bilheteria.uml#_W5yjEPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XL8qPvNiEe2sbJ5EABYfkA" name="getHorarioFilmeLegendado">
+      <modelElement href="bilheteria.uml#_W3O-UPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL8qP_NiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qQPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XL8qQfNiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W7GKoPNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XL8qQvNiEe2sbJ5EABYfkA" name="LocalDateTime">
+          <modelElement href="bilheteria.uml#_W5yjEPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_XL8qQ_NiEe2sbJ5EABYfkA" name="Filme">
+      <modelElement href="bilheteria.uml#_W6-O0PNiEe2sbJ5EABYfkA"/>
+      <keywords xmi:id="_XL8qRPNiEe2sbJ5EABYfkA" keyword="create"/>
+      <visibility xmi:id="_XL8qRfNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qRvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_XL8qR_NiEe2sbJ5EABYfkA">
+        <modelElement href="bilheteria.uml#_W7AEAfNiEe2sbJ5EABYfkA"/>
+        <type xmi:id="_XL8qSPNiEe2sbJ5EABYfkA" name="Filme">
+          <modelElement href="bilheteria.uml#_W2ySYPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_XL8qSfNiEe2sbJ5EABYfkA" name="nomeFilme">
+        <modelElement href="bilheteria.uml#_W6-14PNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XL8qSvNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XL8qS_NiEe2sbJ5EABYfkA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XL8qTPNiEe2sbJ5EABYfkA" name="idFilme">
+        <modelElement href="bilheteria.uml#_W6-14fNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XL8qTfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XL8qTvNiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XL8qT_NiEe2sbJ5EABYfkA" name="horarioFilmeDublado">
+        <modelElement href="bilheteria.uml#_W6-14vNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XL8qUPNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XL8qUfNiEe2sbJ5EABYfkA" name="LocalDateTime">
+          <modelElement href="bilheteria.uml#_W5yjEPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_XL8qUvNiEe2sbJ5EABYfkA" name="horarioFilmeLegendado">
+        <modelElement href="bilheteria.uml#_W6_c8PNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XL8qU_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XL8qVPNiEe2sbJ5EABYfkA" name="LocalDateTime">
+          <modelElement href="bilheteria.uml#_W5yjEPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XL8qVfNiEe2sbJ5EABYfkA" name="setIdFilme">
+      <modelElement href="bilheteria.uml#_W7CgQPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL8qVvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qV_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XL8qWPNiEe2sbJ5EABYfkA" name="idFilme">
+        <modelElement href="bilheteria.uml#_W7CgQfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XL8qWfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XL8qWvNiEe2sbJ5EABYfkA" name="Long">
+          <modelElement href="bilheteria.uml#_W6g70fNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XL8qW_NiEe2sbJ5EABYfkA" name="setHorarioFilmeDublado">
+      <modelElement href="bilheteria.uml#_W7E8gPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL8qXPNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qXfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XL8qXvNiEe2sbJ5EABYfkA" name="horarioFilmeDublado">
+        <modelElement href="bilheteria.uml#_W7E8gfNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XL8qX_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XL8qYPNiEe2sbJ5EABYfkA" name="LocalDateTime">
+          <modelElement href="bilheteria.uml#_W5yjEPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_XL8qYfNiEe2sbJ5EABYfkA" name="setHorarioFilmeLegendado">
+      <modelElement href="bilheteria.uml#_W7GxsPNiEe2sbJ5EABYfkA"/>
+      <visibility xmi:id="_XL8qYvNiEe2sbJ5EABYfkA" label="+"/>
+      <cardinality xmi:id="_XL8qY_NiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_XL8qZPNiEe2sbJ5EABYfkA" name="horarioFilmeLegendado">
+        <modelElement href="bilheteria.uml#_W7HYwPNiEe2sbJ5EABYfkA"/>
+        <cardinality xmi:id="_XL8qZfNiEe2sbJ5EABYfkA" label="1" max="1" min="1"/>
+        <type xmi:id="_XL8qZvNiEe2sbJ5EABYfkA" name="LocalDateTime">
+          <modelElement href="bilheteria.uml#_W5yjEPNiEe2sbJ5EABYfkA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

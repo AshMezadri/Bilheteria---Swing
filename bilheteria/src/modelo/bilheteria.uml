@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_VjMjkPNiEe2sbJ5EABYfkA" name="bilheteria">
+    <eAnnotations xmi:id="_WOaDwPNiEe2sbJ5EABYfkA" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_WOaq0PNiEe2sbJ5EABYfkA" source="codegen">
+        <details xmi:id="_WOaq0fNiEe2sbJ5EABYfkA" key="codegenDirectory" value="/bilheteria/src"/>
+        <details xmi:id="_XH6eoPNiEe2sbJ5EABYfkA" key="AssociatedSourceCode" value="/bilheteria/src/modelo/ISessaoDAO.java;2461585386/1;/bilheteria/src/modelo/IFilmeDAO.java;3887701168/1;/bilheteria/src/modelo/IIngressoDAO.java;901200459/1;/bilheteria/src/modelo/IPessoaDAO.java;529770080/1;/bilheteria/src/modelo/Filme.java;272863033/1;/bilheteria/src/modelo/Ingresso.java;1458227856/1;/bilheteria/src/modelo/Pessoa.java;2622480389/1;/bilheteria/src/modelo/Sessao.java;1698548034/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_Wx4kQPNiEe2sbJ5EABYfkA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_Wx5LUPNiEe2sbJ5EABYfkA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_Wx6ZcPNiEe2sbJ5EABYfkA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_Wx6ZcfNiEe2sbJ5EABYfkA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_Wx6ZcvNiEe2sbJ5EABYfkA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_Wx7AgPNiEe2sbJ5EABYfkA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_Wx7AgfNiEe2sbJ5EABYfkA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_Wx7nkPNiEe2sbJ5EABYfkA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_Wx8OoPNiEe2sbJ5EABYfkA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_WyBHIPNiEe2sbJ5EABYfkA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_WyBuMPNiEe2sbJ5EABYfkA" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_W5qAMPNiEe2sbJ5EABYfkA" name="ArrayList"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_WylH0PNiEe2sbJ5EABYfkA" name="time">
+        <packagedElement xmi:type="uml:Class" xmi:id="_W5yjEPNiEe2sbJ5EABYfkA" name="LocalDateTime"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_W6g70PNiEe2sbJ5EABYfkA" name="lang">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_W6g70fNiEe2sbJ5EABYfkA" name="Long"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_W6u-QPNiEe2sbJ5EABYfkA" name="Double"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_W6xagfNiEe2sbJ5EABYfkA" name="Character"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_WygPUPNiEe2sbJ5EABYfkA" name="modelo">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_W1D0EPNiEe2sbJ5EABYfkA" name="ISessaoDAO">
+        <ownedOperation xmi:id="_W1TEoPNiEe2sbJ5EABYfkA" name="listaSessoes">
+          <ownedParameter xmi:id="_W6oQkPNiEe2sbJ5EABYfkA" type="_W5qAMPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W5vfwPNiEe2sbJ5EABYfkA" name="cadastrarSessao">
+          <ownedParameter xmi:id="_W5vfwfNiEe2sbJ5EABYfkA" name="sessao" type="_W4qhsPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W5wG0PNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W6jYEfNiEe2sbJ5EABYfkA" name="alterarSessao">
+          <ownedParameter xmi:id="_W6j_IPNiEe2sbJ5EABYfkA" name="sessao" type="_W4qhsPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6j_IfNiEe2sbJ5EABYfkA" name="idSessao" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6j_IvNiEe2sbJ5EABYfkA" name="filme" type="_W2ySYPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6kmMPNiEe2sbJ5EABYfkA" name="numeroSala">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W6kmMfNiEe2sbJ5EABYfkA" name="quantIngressosDisp">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W6lNQPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W6mbYPNiEe2sbJ5EABYfkA" name="deletarSessao">
+          <ownedParameter xmi:id="_W6nCcPNiEe2sbJ5EABYfkA" name="sessao" type="_W4qhsPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6npgPNiEe2sbJ5EABYfkA" name="idSessao" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6npgfNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_W1yM0PNiEe2sbJ5EABYfkA" name="IFilmeDAO">
+        <ownedOperation xmi:id="_W16vsPNiEe2sbJ5EABYfkA" name="listaFilmes">
+          <ownedParameter xmi:id="_W6twIPNiEe2sbJ5EABYfkA" type="_W5qAMPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W52NcPNiEe2sbJ5EABYfkA" name="cadastrarFilme">
+          <ownedParameter xmi:id="_W520gPNiEe2sbJ5EABYfkA" name="filme" type="_W2ySYPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W520gfNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W6pesPNiEe2sbJ5EABYfkA" name="alterarFilme">
+          <ownedParameter xmi:id="_W6qFwPNiEe2sbJ5EABYfkA" name="filme" type="_W2ySYPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6qFwfNiEe2sbJ5EABYfkA" name="nomeFilme">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W6qs0PNiEe2sbJ5EABYfkA" name="idFilme" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6qs0fNiEe2sbJ5EABYfkA" name="horarioFilmeDublado" type="_W5yjEPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6qs0vNiEe2sbJ5EABYfkA" name="horarioFilmeLegendado" type="_W5yjEPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6rT4PNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W6r68PNiEe2sbJ5EABYfkA" name="deletarFilme">
+          <ownedParameter xmi:id="_W6siAPNiEe2sbJ5EABYfkA" name="filme" type="_W2ySYPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6siAfNiEe2sbJ5EABYfkA" name="idFilme" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6tJEPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_W2L1cPNiEe2sbJ5EABYfkA" name="IIngressoDAO">
+        <ownedOperation xmi:id="_W2SjIPNiEe2sbJ5EABYfkA" name="listaIngressos">
+          <ownedParameter xmi:id="_W626EPNiEe2sbJ5EABYfkA" type="_W5qAMPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W57F8PNiEe2sbJ5EABYfkA" name="cadastrarIngresso">
+          <ownedParameter xmi:id="_W57F8fNiEe2sbJ5EABYfkA" name="ingresso" type="_W3xw4PNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W57tAPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W6zPsfNiEe2sbJ5EABYfkA" name="alterarIngresso">
+          <ownedParameter xmi:id="_W6z2wPNiEe2sbJ5EABYfkA" name="ingresso" type="_W3xw4PNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6z2wfNiEe2sbJ5EABYfkA" name="idIngresso" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6z2wvNiEe2sbJ5EABYfkA" name="sessao" type="_W4qhsPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6z2w_NiEe2sbJ5EABYfkA" name="pessoa" type="_W4bRIPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W60d0PNiEe2sbJ5EABYfkA" name="valor" type="_W6u-QPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W60d0fNiEe2sbJ5EABYfkA" name="fileira" type="_W6xagfNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W60d0vNiEe2sbJ5EABYfkA" name="numCadeira">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W61E4PNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W61r8PNiEe2sbJ5EABYfkA" name="deletarIngresso">
+          <ownedParameter xmi:id="_W61r8fNiEe2sbJ5EABYfkA" name="ingresso" type="_W3xw4PNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W62TAPNiEe2sbJ5EABYfkA" name="idIngresso" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W62TAfNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_W2c7MPNiEe2sbJ5EABYfkA" name="IPessoaDAO">
+        <ownedOperation xmi:id="_W2f-gPNiEe2sbJ5EABYfkA" name="listaPessoas">
+          <ownedParameter xmi:id="_W68ZoPNiEe2sbJ5EABYfkA" type="_W5qAMPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W5_XYPNiEe2sbJ5EABYfkA" name="cadastrarPessoa">
+          <ownedParameter xmi:id="_W5_XYfNiEe2sbJ5EABYfkA" name="pessoa" type="_W4bRIPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W5_-cPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W63hIPNiEe2sbJ5EABYfkA" name="alterarPessoa">
+          <ownedParameter xmi:id="_W63hIfNiEe2sbJ5EABYfkA" name="pessoa" type="_W4bRIPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W63hIvNiEe2sbJ5EABYfkA" name="cpf" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W64IMPNiEe2sbJ5EABYfkA" name="nome">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W64IMfNiEe2sbJ5EABYfkA" name="email">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W64IMvNiEe2sbJ5EABYfkA" name="senha">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W64vQPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W659YPNiEe2sbJ5EABYfkA" name="deletarPessoa">
+          <ownedParameter xmi:id="_W659YfNiEe2sbJ5EABYfkA" name="pessoa" type="_W4bRIPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W66kcPNiEe2sbJ5EABYfkA" name="cpf" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W67LgPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_W2ySYPNiEe2sbJ5EABYfkA" name="Filme">
+        <ownedAttribute xmi:id="_W7hocPNiEe2sbJ5EABYfkA" name="idFilme" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+        <ownedAttribute xmi:id="_W7jdoPNiEe2sbJ5EABYfkA" name="nomeFilme">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_W7krwPNiEe2sbJ5EABYfkA" name="horarioFilmeDublado" type="_W5yjEPNiEe2sbJ5EABYfkA" association="_W9YCkPNiEe2sbJ5EABYfkA"/>
+        <ownedAttribute xmi:id="_W9CrYPNiEe2sbJ5EABYfkA" name="horarioFilmeLegendado" type="_W5yjEPNiEe2sbJ5EABYfkA" association="_W9iaoPNiEe2sbJ5EABYfkA"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8IscPNiEe2sbJ5EABYfkA" name="Filme" specification="_W6-O0PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8IscfNiEe2sbJ5EABYfkA" name="nomeFilme">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W8IscvNiEe2sbJ5EABYfkA" name="idFilme" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W8Isc_NiEe2sbJ5EABYfkA" name="horarioFilmeDublado" type="_W5yjEPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W8IsdPNiEe2sbJ5EABYfkA" name="horarioFilmeLegendado" type="_W5yjEPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W8IsdfNiEe2sbJ5EABYfkA" type="_W2ySYPNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>this.nomeFilme = nomeFilme;&#xD;
+		this.horarioFilmeDublado = horarioFilmeDublado;&#xD;
+		this.horarioFilmeLegendado = horarioFilmeLegendado;&#xD;
+		this.idFilme = idFilme;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8U5sPNiEe2sbJ5EABYfkA" name="getIdFilme" specification="_W3IQoPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8VgwPNiEe2sbJ5EABYfkA" type="_W6g70fNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>return idFilme;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8Wu4PNiEe2sbJ5EABYfkA" name="setIdFilme" specification="_W7CgQPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8Wu4fNiEe2sbJ5EABYfkA" name="idFilme" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <language>java</language>
+          <body>this.idFilme = idFilme;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8X9APNiEe2sbJ5EABYfkA" name="getNomeFilme" specification="_W3KF0PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8YkEPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return nomeFilme;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8c1gPNiEe2sbJ5EABYfkA" name="setNomeFilme" specification="_W3L7APNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8c1gfNiEe2sbJ5EABYfkA" name="nomeFilme">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.nomeFilme = nomeFilme;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8c1gvNiEe2sbJ5EABYfkA" name="getHorarioFilmeDublado" specification="_W3NwMPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8c1g_NiEe2sbJ5EABYfkA" type="_W5yjEPNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>return horarioFilmeDublado;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8dckPNiEe2sbJ5EABYfkA" name="setHorarioFilmeDublado" specification="_W7E8gPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8dckfNiEe2sbJ5EABYfkA" name="horarioFilmeDublado" type="_W5yjEPNiEe2sbJ5EABYfkA"/>
+          <language>java</language>
+          <body>this.horarioFilmeDublado = horarioFilmeDublado;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8eqsPNiEe2sbJ5EABYfkA" name="getHorarioFilmeLegendado" specification="_W3O-UPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8eqsfNiEe2sbJ5EABYfkA" type="_W5yjEPNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>return horarioFilmeLegendado;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8fRwPNiEe2sbJ5EABYfkA" name="setHorarioFilmeLegendado" specification="_W7GxsPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8fRwfNiEe2sbJ5EABYfkA" name="horarioFilmeLegendado" type="_W5yjEPNiEe2sbJ5EABYfkA"/>
+          <language>java</language>
+          <body>this.horarioFilmeLegendado = horarioFilmeLegendado;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_W3IQoPNiEe2sbJ5EABYfkA" name="getIdFilme" method="_W8U5sPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7BSIPNiEe2sbJ5EABYfkA" type="_W6g70fNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W3KF0PNiEe2sbJ5EABYfkA" name="getNomeFilme" method="_W8X9APNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W3Ks4PNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W3L7APNiEe2sbJ5EABYfkA" name="setNomeFilme" method="_W8c1gPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W3NJIPNiEe2sbJ5EABYfkA" name="nomeFilme">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W3NwMPNiEe2sbJ5EABYfkA" name="getHorarioFilmeDublado" method="_W8c1gvNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7EVcPNiEe2sbJ5EABYfkA" type="_W5yjEPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W3O-UPNiEe2sbJ5EABYfkA" name="getHorarioFilmeLegendado" method="_W8eqsPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7GKoPNiEe2sbJ5EABYfkA" type="_W5yjEPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W6-O0PNiEe2sbJ5EABYfkA" name="Filme" method="_W8IscPNiEe2sbJ5EABYfkA">
+          <eAnnotations xmi:id="_W6_c8fNiEe2sbJ5EABYfkA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_W7AEAPNiEe2sbJ5EABYfkA" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_W6-14PNiEe2sbJ5EABYfkA" name="nomeFilme">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W6-14fNiEe2sbJ5EABYfkA" name="idFilme" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6-14vNiEe2sbJ5EABYfkA" name="horarioFilmeDublado" type="_W5yjEPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W6_c8PNiEe2sbJ5EABYfkA" name="horarioFilmeLegendado" type="_W5yjEPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W7AEAfNiEe2sbJ5EABYfkA" type="_W2ySYPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W7CgQPNiEe2sbJ5EABYfkA" name="setIdFilme" method="_W8Wu4PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7CgQfNiEe2sbJ5EABYfkA" name="idFilme" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W7E8gPNiEe2sbJ5EABYfkA" name="setHorarioFilmeDublado" method="_W8dckPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7E8gfNiEe2sbJ5EABYfkA" name="horarioFilmeDublado" type="_W5yjEPNiEe2sbJ5EABYfkA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W7GxsPNiEe2sbJ5EABYfkA" name="setHorarioFilmeLegendado" method="_W8fRwPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7HYwPNiEe2sbJ5EABYfkA" name="horarioFilmeLegendado" type="_W5yjEPNiEe2sbJ5EABYfkA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_W3xw4PNiEe2sbJ5EABYfkA" name="Ingresso">
+        <ownedAttribute xmi:id="_W7oWIPNiEe2sbJ5EABYfkA" name="idIngresso" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+        <ownedAttribute xmi:id="_W7qLUPNiEe2sbJ5EABYfkA" name="sessao" type="_W4qhsPNiEe2sbJ5EABYfkA" association="_W9Z3wPNiEe2sbJ5EABYfkA"/>
+        <ownedAttribute xmi:id="_W7rZcPNiEe2sbJ5EABYfkA" name="pessoa" type="_W4bRIPNiEe2sbJ5EABYfkA" association="_W9diIfNiEe2sbJ5EABYfkA"/>
+        <ownedAttribute xmi:id="_W7tOoPNiEe2sbJ5EABYfkA" name="valor" type="_W6u-QPNiEe2sbJ5EABYfkA"/>
+        <ownedAttribute xmi:id="_W7ucwPNiEe2sbJ5EABYfkA" name="fileira" type="_W6xagfNiEe2sbJ5EABYfkA"/>
+        <ownedAttribute xmi:id="_W7vq4PNiEe2sbJ5EABYfkA" name="numCadeira">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8huAPNiEe2sbJ5EABYfkA" name="Ingresso" specification="_W7LqMPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8huAfNiEe2sbJ5EABYfkA" name="idIngresso" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W8huAvNiEe2sbJ5EABYfkA" name="sessao" type="_W4qhsPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W8huA_NiEe2sbJ5EABYfkA" name="pessoa" type="_W4bRIPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W8huBPNiEe2sbJ5EABYfkA" name="valor" type="_W6u-QPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W8huBfNiEe2sbJ5EABYfkA" name="fileira" type="_W6xagfNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W8huBvNiEe2sbJ5EABYfkA" name="numCadeira">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W8huB_NiEe2sbJ5EABYfkA" type="_W3xw4PNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>this.idIngresso = idIngresso;&#xD;
+     this.sessao = sessao;&#xD;
+     this.pessoa = pessoa;&#xD;
+     this.valor = valor;&#xD;
+     this.fileira = fileira;&#xD;
+     this.numCadeira = numCadeira;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8jjMPNiEe2sbJ5EABYfkA" name="getIdIngresso" specification="_W4BBcPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8jjMfNiEe2sbJ5EABYfkA" type="_W6g70fNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>return idIngresso;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8jjMvNiEe2sbJ5EABYfkA" name="setIdIngresso" specification="_W7QisPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8jjM_NiEe2sbJ5EABYfkA" name="idIngresso" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <language>java</language>
+          <body>this.idIngresso = idIngresso;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8kxUPNiEe2sbJ5EABYfkA" name="getSessao" specification="_W4BogPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8kxUfNiEe2sbJ5EABYfkA" type="_W4qhsPNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>return sessao;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8mmgPNiEe2sbJ5EABYfkA" name="setSessao" specification="_W6K9kPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8mmgfNiEe2sbJ5EABYfkA" name="sessao" type="_W4qhsPNiEe2sbJ5EABYfkA"/>
+          <language>java</language>
+          <body>this.sessao = sessao;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8nNkPNiEe2sbJ5EABYfkA" name="getPessoa" specification="_W4GhAPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8nNkfNiEe2sbJ5EABYfkA" type="_W4bRIPNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>return pessoa;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8n0oPNiEe2sbJ5EABYfkA" name="setPessoa" specification="_W6MywPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8n0ofNiEe2sbJ5EABYfkA" name="pessoa" type="_W4bRIPNiEe2sbJ5EABYfkA"/>
+          <language>java</language>
+          <body>this.pessoa = pessoa;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8n0ovNiEe2sbJ5EABYfkA" name="getValor" specification="_W4HvIPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8n0o_NiEe2sbJ5EABYfkA" type="_W6u-QPNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>return valor;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8n0pPNiEe2sbJ5EABYfkA" name="setValor" specification="_W7TmAPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8n0pfNiEe2sbJ5EABYfkA" name="valor" type="_W6u-QPNiEe2sbJ5EABYfkA"/>
+          <language>java</language>
+          <body>this.valor = valor;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8qQ4PNiEe2sbJ5EABYfkA" name="getFileira" specification="_W4IWMPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8qQ4fNiEe2sbJ5EABYfkA" type="_W6xagfNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>return fileira;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W8q38PNiEe2sbJ5EABYfkA" name="setFileira" specification="_W7VbMPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W8q38fNiEe2sbJ5EABYfkA" name="fileira" type="_W6xagfNiEe2sbJ5EABYfkA"/>
+          <language>java</language>
+          <body>this.fileira = fileira;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W80B4PNiEe2sbJ5EABYfkA" name="getNumCadeira" specification="_W4JkUPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W80o8PNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return numCadeira;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W81QAPNiEe2sbJ5EABYfkA" name="setNumCadeira" specification="_W4NOsPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W81QAfNiEe2sbJ5EABYfkA" name="numCadeira">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.numCadeira = numCadeira;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_W4BBcPNiEe2sbJ5EABYfkA" name="getIdIngresso" method="_W8jjMPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7PUkPNiEe2sbJ5EABYfkA" type="_W6g70fNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4BogPNiEe2sbJ5EABYfkA" name="getSessao" method="_W8kxUPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W6KWgPNiEe2sbJ5EABYfkA" type="_W4qhsPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4GhAPNiEe2sbJ5EABYfkA" name="getPessoa" method="_W8nNkPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W6MLsPNiEe2sbJ5EABYfkA" type="_W4bRIPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4HvIPNiEe2sbJ5EABYfkA" name="getValor" method="_W8n0ovNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7Rw0PNiEe2sbJ5EABYfkA" type="_W6u-QPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4IWMPNiEe2sbJ5EABYfkA" name="getFileira" method="_W8qQ4PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7U0IPNiEe2sbJ5EABYfkA" type="_W6xagfNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4JkUPNiEe2sbJ5EABYfkA" name="getNumCadeira" method="_W80B4PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4JkUfNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4NOsPNiEe2sbJ5EABYfkA" name="setNumCadeira" method="_W81QAPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4N1wPNiEe2sbJ5EABYfkA" name="numCadeira">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W6K9kPNiEe2sbJ5EABYfkA" name="setSessao" method="_W8mmgPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W6LkoPNiEe2sbJ5EABYfkA" name="sessao" type="_W4qhsPNiEe2sbJ5EABYfkA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W6MywPNiEe2sbJ5EABYfkA" name="setPessoa" method="_W8n0oPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W6MywfNiEe2sbJ5EABYfkA" name="pessoa" type="_W4bRIPNiEe2sbJ5EABYfkA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W7LqMPNiEe2sbJ5EABYfkA" name="Ingresso" method="_W8huAPNiEe2sbJ5EABYfkA">
+          <eAnnotations xmi:id="_W7OGcPNiEe2sbJ5EABYfkA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_W7OGcfNiEe2sbJ5EABYfkA" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_W7LqMfNiEe2sbJ5EABYfkA" name="idIngresso" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W7MRQPNiEe2sbJ5EABYfkA" name="sessao" type="_W4qhsPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W7MRQfNiEe2sbJ5EABYfkA" name="pessoa" type="_W4bRIPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W7M4UPNiEe2sbJ5EABYfkA" name="valor" type="_W6u-QPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W7M4UfNiEe2sbJ5EABYfkA" name="fileira" type="_W6xagfNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W7NfYPNiEe2sbJ5EABYfkA" name="numCadeira">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W7OGcvNiEe2sbJ5EABYfkA" type="_W3xw4PNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W7QisPNiEe2sbJ5EABYfkA" name="setIdIngresso" method="_W8jjMvNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7QisfNiEe2sbJ5EABYfkA" name="idIngresso" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W7TmAPNiEe2sbJ5EABYfkA" name="setValor" method="_W8n0pPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7TmAfNiEe2sbJ5EABYfkA" name="valor" type="_W6u-QPNiEe2sbJ5EABYfkA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W7VbMPNiEe2sbJ5EABYfkA" name="setFileira" method="_W8q38PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7VbMfNiEe2sbJ5EABYfkA" name="fileira" type="_W6xagfNiEe2sbJ5EABYfkA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_W4bRIPNiEe2sbJ5EABYfkA" name="Pessoa">
+        <ownedAttribute xmi:id="_W7yuMPNiEe2sbJ5EABYfkA" name="cpf" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+        <ownedAttribute xmi:id="_W7z8UPNiEe2sbJ5EABYfkA" name="email">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_W9FHoPNiEe2sbJ5EABYfkA" name="nome">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_W9GVwPNiEe2sbJ5EABYfkA" name="senha">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W813EPNiEe2sbJ5EABYfkA" name="getNome" specification="_W4dtYPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W813EfNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return nome;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W82eIPNiEe2sbJ5EABYfkA" name="setNome" specification="_W4e7gPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W82eIfNiEe2sbJ5EABYfkA" name="nome">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.nome = nome;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W83sQPNiEe2sbJ5EABYfkA" name="getEmail" specification="_W4fikPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W83sQfNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return email;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W84TUPNiEe2sbJ5EABYfkA" name="setEmail" specification="_W4gwsPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W84TUfNiEe2sbJ5EABYfkA" name="email">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.email = email;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W84TUvNiEe2sbJ5EABYfkA" name="getSenha" specification="_W4h-0PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W84TU_NiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return senha;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W846YPNiEe2sbJ5EABYfkA" name="setSenha" specification="_W4jM8PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W846YfNiEe2sbJ5EABYfkA" name="senha">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.senha = senha;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W846YvNiEe2sbJ5EABYfkA" name="getCpf" specification="_W4j0APNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W846Y_NiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return cpf;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W85hcPNiEe2sbJ5EABYfkA" name="setCpf" specification="_W4lCIPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W85hcfNiEe2sbJ5EABYfkA" name="cpf">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.cpf = cpf;&#xD;
+ </body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W85hcvNiEe2sbJ5EABYfkA" name="toString" specification="_W4mQQPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W85hc_NiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>// TODO Auto-generated method stub&#xD;
+		return &quot;Nome: &quot; + this.getNome() + &quot; //CPF : &quot; + this.getCpf() + &quot; //Email : &quot; + this.getEmail() + &quot; //Senha : &quot; + this.getSenha() ;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_W4dtYPNiEe2sbJ5EABYfkA" name="getNome" method="_W813EPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4dtYfNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4e7gPNiEe2sbJ5EABYfkA" name="setNome" method="_W82eIPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4e7gfNiEe2sbJ5EABYfkA" name="nome">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4fikPNiEe2sbJ5EABYfkA" name="getEmail" method="_W83sQPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4gJoPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4gwsPNiEe2sbJ5EABYfkA" name="setEmail" method="_W84TUPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4hXwPNiEe2sbJ5EABYfkA" name="email">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4h-0PNiEe2sbJ5EABYfkA" name="getSenha" method="_W84TUvNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4il4PNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4jM8PNiEe2sbJ5EABYfkA" name="setSenha" method="_W846YPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4jM8fNiEe2sbJ5EABYfkA" name="senha">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4j0APNiEe2sbJ5EABYfkA" name="getCpf" method="_W846YvNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4kbEPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4lCIPNiEe2sbJ5EABYfkA" name="setCpf" method="_W85hcPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4lpMPNiEe2sbJ5EABYfkA" name="cpf">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4mQQPNiEe2sbJ5EABYfkA" name="toString" method="_W85hcvNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4m3UPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_W4qhsPNiEe2sbJ5EABYfkA" name="Sessao">
+        <ownedAttribute xmi:id="_W73msPNiEe2sbJ5EABYfkA" name="idSessao" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+        <ownedAttribute xmi:id="_W74NwfNiEe2sbJ5EABYfkA" name="filme" type="_W2ySYPNiEe2sbJ5EABYfkA" association="_W9glcfNiEe2sbJ5EABYfkA"/>
+        <ownedAttribute xmi:id="_W75b4fNiEe2sbJ5EABYfkA" name="numeroSala">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_W76qAfNiEe2sbJ5EABYfkA" name="quantIngressosDisp">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W86vkPNiEe2sbJ5EABYfkA" name="Sessao" specification="_W7ZsoPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W86vkfNiEe2sbJ5EABYfkA" name="idSessao" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W86vkvNiEe2sbJ5EABYfkA" name="filme" type="_W2ySYPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W86vk_NiEe2sbJ5EABYfkA" name="numeroSala">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W86vlPNiEe2sbJ5EABYfkA" name="quantIngressosDisp">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W86vlfNiEe2sbJ5EABYfkA" type="_W4qhsPNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>this.idSessao = idSessao;&#xD;
+		this.filme = filme;&#xD;
+		this.numeroSala = numeroSala;&#xD;
+		this.quantIngressosDisp = quantIngressosDisp;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W87WoPNiEe2sbJ5EABYfkA" name="getIdSessao" specification="_W4uMEPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W87WofNiEe2sbJ5EABYfkA" type="_W6g70fNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>return idSessao;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W87WovNiEe2sbJ5EABYfkA" name="setIdSessao" specification="_W7cv8PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W87Wo_NiEe2sbJ5EABYfkA" name="idSessao" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <language>java</language>
+          <body>this.idSessao = idSessao;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W879sPNiEe2sbJ5EABYfkA" name="getFilme" specification="_W4vaMPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W879sfNiEe2sbJ5EABYfkA" type="_W2ySYPNiEe2sbJ5EABYfkA" direction="return"/>
+          <language>java</language>
+          <body>return filme;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W88kwPNiEe2sbJ5EABYfkA" name="setFilme" specification="_W6UHgPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W88kwfNiEe2sbJ5EABYfkA" name="filme" type="_W2ySYPNiEe2sbJ5EABYfkA"/>
+          <language>java</language>
+          <body>this.filme = filme;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W89L0PNiEe2sbJ5EABYfkA" name="getNumeroSala" specification="_W4woUPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W89L0fNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return numeroSala;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W89L0vNiEe2sbJ5EABYfkA" name="setNumeroSala" specification="_W4zEkPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W89L0_NiEe2sbJ5EABYfkA" name="numeroSala">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.numeroSala = numeroSala;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W89y4PNiEe2sbJ5EABYfkA" name="getQuantIngressosDisp" specification="_W40SsPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W89y4fNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return quantIngressosDisp;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_W89y4vNiEe2sbJ5EABYfkA" name="setQuantIngressosDisp" specification="_W41g0PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W89y4_NiEe2sbJ5EABYfkA" name="quantIngressosDisp">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.quantIngressosDisp = quantIngressosDisp;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_W4uMEPNiEe2sbJ5EABYfkA" name="getIdSessao" method="_W87WoPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7cI4PNiEe2sbJ5EABYfkA" type="_W6g70fNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4vaMPNiEe2sbJ5EABYfkA" name="getFilme" method="_W879sPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W6TgcPNiEe2sbJ5EABYfkA" type="_W2ySYPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4woUPNiEe2sbJ5EABYfkA" name="getNumeroSala" method="_W89L0PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4xPYPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W4zEkPNiEe2sbJ5EABYfkA" name="setNumeroSala" method="_W89L0vNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W4zEkfNiEe2sbJ5EABYfkA" name="numeroSala">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W40SsPNiEe2sbJ5EABYfkA" name="getQuantIngressosDisp" method="_W89y4PNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W405wPNiEe2sbJ5EABYfkA" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W41g0PNiEe2sbJ5EABYfkA" name="setQuantIngressosDisp" method="_W89y4vNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W42H4PNiEe2sbJ5EABYfkA" name="quantIngressosDisp">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W6UHgPNiEe2sbJ5EABYfkA" name="setFilme" method="_W88kwPNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W6UukPNiEe2sbJ5EABYfkA" name="filme" type="_W2ySYPNiEe2sbJ5EABYfkA"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W7ZsoPNiEe2sbJ5EABYfkA" name="Sessao" method="_W86vkPNiEe2sbJ5EABYfkA">
+          <eAnnotations xmi:id="_W7a6wfNiEe2sbJ5EABYfkA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_W7a6wvNiEe2sbJ5EABYfkA" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_W7aTsPNiEe2sbJ5EABYfkA" name="idSessao" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W7aTsfNiEe2sbJ5EABYfkA" name="filme" type="_W2ySYPNiEe2sbJ5EABYfkA"/>
+          <ownedParameter xmi:id="_W7aTsvNiEe2sbJ5EABYfkA" name="numeroSala">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W7a6wPNiEe2sbJ5EABYfkA" name="quantIngressosDisp">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_W7bh0PNiEe2sbJ5EABYfkA" type="_W4qhsPNiEe2sbJ5EABYfkA" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_W7cv8PNiEe2sbJ5EABYfkA" name="setIdSessao" method="_W87WovNiEe2sbJ5EABYfkA">
+          <ownedParameter xmi:id="_W7dXAPNiEe2sbJ5EABYfkA" name="idSessao" type="_W6g70fNiEe2sbJ5EABYfkA"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_W9YCkPNiEe2sbJ5EABYfkA" name="" memberEnd="_W9YCkfNiEe2sbJ5EABYfkA _W7krwPNiEe2sbJ5EABYfkA">
+        <ownedEnd xmi:id="_W9YCkfNiEe2sbJ5EABYfkA" name="" type="_W2ySYPNiEe2sbJ5EABYfkA" association="_W9YCkPNiEe2sbJ5EABYfkA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_W9Z3wPNiEe2sbJ5EABYfkA" name="" memberEnd="_W9Z3wfNiEe2sbJ5EABYfkA _W7qLUPNiEe2sbJ5EABYfkA">
+        <ownedEnd xmi:id="_W9Z3wfNiEe2sbJ5EABYfkA" name="" type="_W3xw4PNiEe2sbJ5EABYfkA" association="_W9Z3wPNiEe2sbJ5EABYfkA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_W9diIfNiEe2sbJ5EABYfkA" name="" memberEnd="_W9diIvNiEe2sbJ5EABYfkA _W7rZcPNiEe2sbJ5EABYfkA">
+        <ownedEnd xmi:id="_W9diIvNiEe2sbJ5EABYfkA" name="" type="_W3xw4PNiEe2sbJ5EABYfkA" association="_W9diIfNiEe2sbJ5EABYfkA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_W9glcfNiEe2sbJ5EABYfkA" name="" memberEnd="_W9glcvNiEe2sbJ5EABYfkA _W74NwfNiEe2sbJ5EABYfkA">
+        <ownedEnd xmi:id="_W9glcvNiEe2sbJ5EABYfkA" name="" type="_W4qhsPNiEe2sbJ5EABYfkA" association="_W9glcfNiEe2sbJ5EABYfkA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_W9iaoPNiEe2sbJ5EABYfkA" name="" memberEnd="_W9iaofNiEe2sbJ5EABYfkA _W9CrYPNiEe2sbJ5EABYfkA">
+        <ownedEnd xmi:id="_W9iaofNiEe2sbJ5EABYfkA" name="" type="_W2ySYPNiEe2sbJ5EABYfkA" association="_W9iaoPNiEe2sbJ5EABYfkA"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_WOduIPNiEe2sbJ5EABYfkA">
+      <eAnnotations xmi:id="_WOzFUPNiEe2sbJ5EABYfkA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_WPBu0PNiEe2sbJ5EABYfkA" base_Package="_VjMjkPNiEe2sbJ5EABYfkA">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:Generics xmi:id="_W1X9IPNiEe2sbJ5EABYfkA" genericsValue="Sessao" base_Element="_W1TEoPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Generics xmi:id="_W19L8PNiEe2sbJ5EABYfkA" genericsValue="Filme" base_Element="_W16vsPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Generics xmi:id="_W2UYUPNiEe2sbJ5EABYfkA" genericsValue="Ingresso" base_Element="_W2SjIPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Generics xmi:id="_W2jo4PNiEe2sbJ5EABYfkA" genericsValue="Pessoa" base_Element="_W2f-gPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Reference xmi:id="_W5tDgPNiEe2sbJ5EABYfkA" base_Element="_W5qAMPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Reference xmi:id="_W50_UPNiEe2sbJ5EABYfkA" base_Element="_W5yjEPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Reference xmi:id="_W6jYEPNiEe2sbJ5EABYfkA" base_Element="_W6g70fNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Reference xmi:id="_W6xagPNiEe2sbJ5EABYfkA" base_Element="_W6u-QPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Reference xmi:id="_W6zPsPNiEe2sbJ5EABYfkA" base_Element="_W6xagfNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W7i2kPNiEe2sbJ5EABYfkA" base_Element="_W7hocPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W7kEsPNiEe2sbJ5EABYfkA" base_Element="_W7jdoPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_W7lS0PNiEe2sbJ5EABYfkA" base_Property="_W7krwPNiEe2sbJ5EABYfkA" siblings="_W9CrYPNiEe2sbJ5EABYfkA" root="true"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W7mg8PNiEe2sbJ5EABYfkA" base_Element="_W7krwPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W7pkQPNiEe2sbJ5EABYfkA" base_Element="_W7oWIPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W7qyYPNiEe2sbJ5EABYfkA" base_Element="_W7qLUPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W7snkPNiEe2sbJ5EABYfkA" base_Element="_W7rZcPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W7t1sPNiEe2sbJ5EABYfkA" base_Element="_W7tOoPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W7vD0PNiEe2sbJ5EABYfkA" base_Element="_W7ucwPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W7w5APNiEe2sbJ5EABYfkA" base_Element="_W7vq4PNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W7zVQPNiEe2sbJ5EABYfkA" base_Element="_W7yuMPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_W71KcPNiEe2sbJ5EABYfkA" base_Property="_W7z8UPNiEe2sbJ5EABYfkA" siblings="_W9FHoPNiEe2sbJ5EABYfkA _W9GVwPNiEe2sbJ5EABYfkA" root="true"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W71xgPNiEe2sbJ5EABYfkA" base_Element="_W7z8UPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W74NwPNiEe2sbJ5EABYfkA" base_Element="_W73msPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W75b4PNiEe2sbJ5EABYfkA" base_Element="_W74NwfNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W76qAPNiEe2sbJ5EABYfkA" base_Element="_W75b4fNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W774IPNiEe2sbJ5EABYfkA" base_Element="_W76qAfNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_W9DScPNiEe2sbJ5EABYfkA" base_Property="_W9CrYPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W9D5gPNiEe2sbJ5EABYfkA" base_Element="_W9CrYPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_W9FusPNiEe2sbJ5EABYfkA" base_Property="_W9FHoPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W9FusfNiEe2sbJ5EABYfkA" base_Element="_W9FHoPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_W9GVwfNiEe2sbJ5EABYfkA" base_Property="_W9GVwPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_W9G80PNiEe2sbJ5EABYfkA" base_Element="_W9GVwPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Reference xmi:id="_W9ZQsPNiEe2sbJ5EABYfkA" base_Element="_W9YCkPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Reference xmi:id="_W9diIPNiEe2sbJ5EABYfkA" base_Element="_W9Z3wPNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Reference xmi:id="_W9glcPNiEe2sbJ5EABYfkA" base_Element="_W9diIfNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Reference xmi:id="_W9hzkPNiEe2sbJ5EABYfkA" base_Element="_W9glcfNiEe2sbJ5EABYfkA"/>
+  <UMLLabProfile:Reference xmi:id="_W9k24PNiEe2sbJ5EABYfkA" base_Element="_W9iaoPNiEe2sbJ5EABYfkA"/>
+</xmi:XMI>

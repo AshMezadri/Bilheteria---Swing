@@ -2,22 +2,22 @@ package modelo;
 
 public class Sessao {
 	
-	public String idSessao;
+	public Long idSessao;
 	public Filme filme;
 	public Integer numeroSala;
 	public Integer quantIngressosDisp;
 	
-	public Sessao(String idSessao, Filme filme,  Integer numeroSala,Integer quantIngressosDisp) {
+	public Sessao(Long idSessao, Filme filme,  Integer numeroSala,Integer quantIngressosDisp) {
 		this.idSessao = idSessao;
 		this.filme = filme;
 		this.numeroSala = numeroSala;
 		this.quantIngressosDisp = quantIngressosDisp;
 	}
 	
-	public String getIdSessao() {
+	public Long getIdSessao() {
 		return idSessao;
 	}
-	public void setIdSessao(String idSessao) {
+	public void setIdSessao(Long idSessao) {
 		this.idSessao = idSessao;
 	}
 	public Filme getFilme() {

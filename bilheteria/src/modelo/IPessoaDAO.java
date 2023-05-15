@@ -10,6 +10,6 @@ public interface IPessoaDAO {
 
 	public boolean deletarPessoa(Pessoa pessoa, Long cpf);
 
-	public ArrayList<Pessoa> ListaPessoas();
+	public ArrayList<Pessoa> listaPessoas();
 
 }
