@@ -61,11 +61,7 @@ public class PessoaDAO implements IPessoaDAO {
 
 	@Override
 	public ArrayList<Pessoa> ListaPessoas() {
-		if (!ListaPessoas.isEmpty()) {
-			for (Pessoa pessoa : ListaPessoas) {
 
-			}
-		}
 		return null;
 	}
 }
