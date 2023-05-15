@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -53,7 +54,11 @@ public class Principal extends JFrame {
 	public Principal() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setExtendedState(MAXIMIZED_BOTH);
-		setBounds(100, 100, 14500, 13000);
+		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+		setBounds(0, 0,screen.width,screen.height - 30);
+		setExtendedState(JFrame.MAXIMIZED_BOTH);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 		contentPane = new JPanel();
 		contentPane.setBounds(100, 100, 450, 300);
 		contentPane.setBackground(new Color(7, 1, 88));
