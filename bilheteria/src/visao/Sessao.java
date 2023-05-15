@@ -21,6 +21,10 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 import java.awt.Label;
 import javax.swing.JTextPane;
+import javax.swing.JTabbedPane;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Sessao extends JFrame {
 
@@ -65,68 +69,103 @@ public class Sessao extends JFrame {
 		panel.setLayout(null);
 		
 		JLabel lblSessao = new JLabel("SESSÃO");
-		lblSessao.setBounds(804, 25, 268, 74);
+		lblSessao.setBounds(807, 22, 268, 74);
 		lblSessao.setVerticalAlignment(SwingConstants.BOTTOM);
 		lblSessao.setFont(new Font("Verdana", Font.BOLD, 60));
 		lblSessao.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblSessao);
 		
-		JPanel panel_1 = new JPanel();
-		panel_1.setLayout(null);
-		panel_1.setBackground(new Color(255, 255, 255));
-		panel_1.setBounds(-553, 238, 2558, 646);
-		contentPane.add(panel_1);
+		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBounds(71, 171, 1778, 788);
+		contentPane.add(tabbedPane);
 		
-		JLabel lblGuardioes = new JLabel("Guardiões da Galáxia 3");
-		lblGuardioes.setBounds(944, 24, 194, 14);
-		panel_1.add(lblGuardioes);
-		lblGuardioes.setFont(new Font("Verdana", Font.BOLD, 15));
+		JPanel horarios = new JPanel();
+		horarios.setBackground(new Color(255, 255, 255));
+		tabbedPane.addTab("Horários", null, horarios, null);
+		horarios.setLayout(null);
 		
-		JLabel lblNewLabel_1 = new JLabel("Barbie");
-		lblNewLabel_1.setBounds(2046, 24, 61, 14);
-		panel_1.add(lblNewLabel_1);
-		lblNewLabel_1.setFont(new Font("Verdana", Font.BOLD, 15));
+		JLabel lblGG = new JLabel("Guardiões da Galáxia");
+		lblGG.setFont(new Font("Verdana", Font.BOLD, 14));
+		lblGG.setBounds(45, 96, 167, 14);
+		horarios.add(lblGG);
 		
-		JLabel lblShrek = new JLabel("Shrek 2");
-		lblShrek.setBounds(1530, 24, 73, 14);
-		panel_1.add(lblShrek);
-		lblShrek.setFont(new Font("Verdana", Font.BOLD, 15));
+		JLabel lblS = new JLabel("Shrek 2");
+		lblS.setFont(new Font("Verdana", Font.BOLD, 14));
+		lblS.setBounds(45, 341, 65, 14);
+		horarios.add(lblS);
 		
-		JLabel labelS = new JLabel("");
-		labelS.setBounds(1441, 69, 250, 365);
-		panel_1.add(labelS);
+		JLabel lblNewLabel = new JLabel("Barbie");
+		lblNewLabel.setFont(new Font("Verdana", Font.BOLD, 14));
+		lblNewLabel.setBounds(45, 546, 65, 14);
+		horarios.add(lblNewLabel);
+		
+		JLabel lblDub = new JLabel("Dublado");
+		lblDub.setFont(new Font("Verdana", Font.BOLD, 20));
+		lblDub.setBounds(657, 46, 98, 26);
+		horarios.add(lblDub);
+		
+		JLabel lblLeg = new JLabel("Legendado");
+		lblLeg.setFont(new Font("Verdana", Font.BOLD, 20));
+		lblLeg.setBounds(1142, 48, 141, 23);
+		horarios.add(lblLeg);
+		
+		JButton btnDubladoG = new JButton("16:00h");
+		btnDubladoG.setBackground(new Color(255, 255, 255));
+		btnDubladoG.setBounds(657, 200, 112, 44);
+		horarios.add(btnDubladoG);
+		
+		JButton btnLegendadoG = new JButton("18:30h");
+		btnLegendadoG.setBackground(new Color(255, 255, 255));
+		btnLegendadoG.setBounds(1159, 200, 112, 44);
+		horarios.add(btnLegendadoG);
+		
+		JButton btnDubladoS = new JButton("20:00h");
+		btnDubladoS.setBackground(new Color(255, 255, 255));
+		btnDubladoS.setBounds(657, 413, 112, 44);
+		horarios.add(btnDubladoS);
+		
+		JButton btnLegendadoS = new JButton("19:30h");
+		btnLegendadoS.setBackground(new Color(255, 255, 255));
+		btnLegendadoS.setBounds(1159, 413, 112, 44);
+		horarios.add(btnLegendadoS);
+		
+		JButton btnDubladoB = new JButton("17:00h");
+		btnDubladoB.setBackground(new Color(255, 255, 255));
+		btnDubladoB.setBounds(657, 624, 112, 44);
+		horarios.add(btnDubladoB);
+		
+		JButton btnLegendadoB = new JButton("18:30h");
+		btnLegendadoB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnLegendadoB.setBackground(new Color(255, 255, 255));
+		btnLegendadoB.setBounds(1159, 624, 112, 44);
+		horarios.add(btnLegendadoB);
+		
+		JLabel lblGDG = new JLabel("");
+		lblGDG.setBounds(34, 114, 141, 216);
+		horarios.add(lblGDG);
+		Image img = new ImageIcon(this.getClass().getResource("/GuardioesGalaxia.png")).getImage();
+		lblGDG.setIcon(new ImageIcon(img));
+		
+		JLabel lblShrek = new JLabel("");
+		lblShrek.setBounds(45, 366, 112, 169);
+		horarios.add(lblShrek);
+		Image imgShrek = new ImageIcon(this.getClass().getResource("/shrekDois.png")).getImage();
+		lblShrek.setIcon(new ImageIcon(imgShrek));
+		
+		JLabel lblBarbie = new JLabel("");
+		lblBarbie.setBounds(45, 571, 112, 159);
+		horarios.add(lblBarbie);
+		Image imgBarb = new ImageIcon(this.getClass().getResource("/barb.png")).getImage();
+		lblBarbie.setIcon(new ImageIcon(imgBarb));
+		
+		JPanel Assentos = new JPanel();
+		tabbedPane.addTab("Assentos", null, Assentos, null);
 		Image imgS = new ImageIcon(this.getClass().getResource("/Shrek2.png")).getImage();
-		labelS.setIcon(new ImageIcon(imgS));
-		
-		JLabel labelB = new JLabel("");
-		labelB.setBounds(1968, 69, 217, 365);
-		panel_1.add(labelB);
 		Image imgB = new ImageIcon(this.getClass().getResource("/Barbie.png")).getImage();
-		labelB.setIcon(new ImageIcon(imgB));
-		
-		JLabel labelG = new JLabel("");
-		labelG.setBounds(918, 49, 278, 384);
-		panel_1.add(labelG);
-		Image imgG = new ImageIcon(this.getClass().getResource("/Guardioes.png")).getImage();
-		labelG.setIcon(new ImageIcon(imgG));
-		
-		JTextPane txtShrek = new JTextPane();
-		txtShrek.setFont(new Font("Verdana", Font.PLAIN, 14));
-		txtShrek.setText("Shrek e Fiona acabaram de voltar da lua de mel e vivem felizes em sua casa no pântano. O casal recebe um convite dos pais da princesa, que querem conhecer o novo genro, para um jantar no castelo.");
-		txtShrek.setBounds(1410, 463, 328, 107);
-		panel_1.add(txtShrek);
-		
-		JTextPane txtGuardioes = new JTextPane();
-		txtGuardioes.setFont(new Font("Verdana", Font.PLAIN, 14));
-		txtGuardioes.setText("Peter Quill deve reunir sua equipe para defender o universo e proteger um dos seus. Se a missão não for totalmente bem-sucedida, isso pode levar ao fim dos Guardiões.");
-		txtGuardioes.setBounds(903, 463, 328, 96);
-		panel_1.add(txtGuardioes);
-		
-		JTextPane txtBarbie = new JTextPane();
-		txtBarbie.setFont(new Font("Verdana", Font.PLAIN, 14));
-		txtBarbie.setText("Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.");
-		txtBarbie.setBounds(1917, 463, 328, 78);
-		panel_1.add(txtBarbie);
+		Image imgG = new ImageIcon(this.getClass().getResource("/GuardioesG.png")).getImage();
 
 	}
 }
