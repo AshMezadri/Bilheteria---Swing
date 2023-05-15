@@ -30,7 +30,6 @@ public class Login extends JFrame {
 	private JPasswordField txtSenhaLogin;
 	private ArrayList<Pessoa> ListaPessoas;
 
-
 	/**
 	 * Launch the application.
 	 */
@@ -101,38 +100,51 @@ public class Login extends JFrame {
 		// Btn
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
-                // Get the email and password from the input fields
-                String email = txtEmailLogin.getText();
-                String senha = new String(txtSenhaLogin.getPassword());
 
-                // Check if a user with the given email and password exists in the ArrayList
-                boolean userFound = false;
-                for (Pessoa pessoa : ListaPessoas) {
-                	if (pessoa.getEmail().equals(email) && pessoa.getSenha().equals(senha)) {
-                        userFound = true;
-                        // Show a welcome message to the user
-                        JOptionPane.showMessageDialog(null, "Bem-vindo, " + pessoa.getNome() + "!");
-                        break;
-                    }
-				}
+				verificarLogin();
+			}
 
-                // Show an error message if the email and password combination was not found
-                if (!userFound) {
-                    JOptionPane.showMessageDialog(null, "Email ou senha incorretos.");
-                }
-
-                // Clear the password field
-                txtSenhaLogin.setText("");
-            }
-        });
+		});
 
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnLogin.setBounds(824, 587, 402, 63);
 		getContentPane().add(btnLogin);
-		
-
 
 	}
 
+	private void verificarLogin() {
+		
+		// Receber infos
+	    String email = txtEmailLogin.getText().toLowerCase();
+	    String senha = new String(txtSenhaLogin.getPassword());
+
+	    // Ver se existem
+	    boolean loginSucesso = false;
+	    for (Pessoa pessoa : ListaPessoas) {
+	        if (pessoa.getEmail().toLowerCase().equals(email) && pessoa.getSenha().equals(senha)) {
+	            new Inicio().setVisible(true);
+	            this.dispose();
+	            loginSucesso = true;
+	            break;
+	        }
+	    }
+
+	    // Mostrar mensagem de erro se o login não foi bem-sucedido
+	    if (!loginSucesso) {
+	        JOptionPane.showMessageDialog(null, "Email ou senha incorretos.");
+			JOptionPane.showMessageDialog(null, ListaPessoas.toString());
+
+	    }
+
+	    // Limpar
+	    txtSenhaLogin.setText("");
+
+	}
+
+	public void dispose() {
+
+		setVisible(false);
+	}
 }

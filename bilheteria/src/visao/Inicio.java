@@ -9,6 +9,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
+import java.awt.CardLayout;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionListener;
@@ -18,6 +20,7 @@ public class Inicio extends JFrame {
 
 	private JPanel contentPane;
 	private JPanel panelMain;
+	private JButton btnCadastro, btnLogin;
 
 	/**
 	 * Launch the application.
@@ -40,6 +43,7 @@ public class Inicio extends JFrame {
 	 * Create the frame.
 	 */
 	public Inicio() {
+
 		setTitle("Main");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1947, 1017);
@@ -63,41 +67,45 @@ public class Inicio extends JFrame {
 		panelMain.add(lblBilheteria);
 		lblBilheteria.setFont(new Font("Verdana", Font.BOLD, 57));
 
-		JButton btnLogin = new JButton("Login");
+		btnLogin = new JButton("Login");
 		btnLogin.setBackground(Color.WHITE);
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Login().setVisible(true);
 				this.dispose();
+
 			}
 
 			private void dispose() {
-				// TODO Auto-generated method stub
-
+				setVisible(false);
 			}
 		});
 
-		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnLogin.setBounds(885, 365, 140, 47);
+		btnLogin.setFont(new Font("Verdana", Font.BOLD, 24));
+		btnLogin.setBounds(855, 365, 205, 70);
 
 		contentPane.add(btnLogin);
 
-		JButton btnCad = new JButton("Cadastro");
-		btnCad.setBackground(Color.WHITE);
-		btnCad.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnCad.setBounds(885, 495, 140, 47);
-		btnCad.addActionListener(new ActionListener() {
+		btnCadastro = new JButton("Cadastro");
+		btnCadastro.setBackground(Color.WHITE);
+		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 24));
+		btnCadastro.setBounds(855, 510, 205, 70);
+		btnCadastro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				new Cadastro().setVisible(true);
+
 				this.dispose();
+
 			}
 
 			private void dispose() {
-				// TODO Auto-generated method stub
+				setVisible(false);
 			}
+
 		});
 
-		contentPane.add(btnCad);
+		contentPane.add(btnCadastro);
 
 	}
 }
