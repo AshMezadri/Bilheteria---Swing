@@ -16,15 +16,18 @@ import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JTextField;
+import javax.swing.UIManager;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
+import javax.swing.JScrollPane;
+import javax.swing.JToggleButton;
 
 public class Historico extends JFrame {
 
 	private JPanel contentPane;
-	private JButton btnNewButton;
-	private JTextField textSemHistorico;
 
 	/**
 	 * Launch the application.
@@ -56,44 +59,45 @@ public class Historico extends JFrame {
 		
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(7, 1, 88));
-		contentPane.setToolTipText("Hitórico");
+		contentPane.setToolTipText("Histórico");
 		contentPane.setForeground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JButton btnTelaPrincipal = new JButton("Voltar");
+		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
+		btnTelaPrincipal.setBackground(Color.WHITE);
+		btnTelaPrincipal.setBounds(1150, 50, 150, 65);
+		contentPane.add(btnTelaPrincipal);
+		btnTelaPrincipal.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new Principal().setVisible(true);
+				this.dispose();
+
+			}
+
+			private void dispose() {
+				setVisible(false);
+			}
+
+		});
 
 		JPanel panel = new JPanel();
-		panel.setBounds(10, 36, 1904, 119);
+		panel.setBounds(0, 30, 1375, 125);
+		panel.setBackground(UIManager.getColor("Button.highlight"));
 		contentPane.add(panel);
 		panel.setLayout(null);
 
 		JLabel lblHistorico = new JLabel("HISTÓRICO");
-		lblHistorico.setBounds(755, 24, 395, 70);
+		lblHistorico.setBounds(30, 25, 395, 75);
 		panel.add(lblHistorico);
 		lblHistorico.setFont(new Font("Verdana", Font.BOLD, 57));
+		
+		
 
-		btnNewButton = new JButton("Voltar");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				new Principal().setVisible(true);
-				this.dispose();
-			}
-
-			private void dispose() {
-				// TODO Auto-generated method stub
-			}
-		});
-		btnNewButton.setFont(new Font("Verdana", Font.BOLD, 14));
-		btnNewButton.setBounds(1193, 612, 151, 58);
-		contentPane.add(btnNewButton);
-
-		textSemHistorico = new JTextField();
-		textSemHistorico.setBackground(new Color(255, 255, 255));
-		textSemHistorico.setEditable(false);
-		textSemHistorico.setEnabled(false);
-		textSemHistorico.setBounds(187, 259, 1023, 309);
-		contentPane.add(textSemHistorico);
-		textSemHistorico.setColumns(10);
 	}
 }

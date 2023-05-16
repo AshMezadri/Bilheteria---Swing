@@ -59,16 +59,18 @@ public class Inicio extends JFrame {
 
 		panelMain = new JPanel();
 		panelMain.setBackground(Color.WHITE);
-		panelMain.setBounds(10, 36, 1904, 119);
+		panelMain.setBounds(0, 0, 550, 705);
 		contentPane.add(panelMain);
 		panelMain.setLayout(null);
 
 		JLabel lblBilheteria = new JLabel("BILHETERIA");
-		lblBilheteria.setBounds(502, 24, 395, 70);
+		lblBilheteria.setForeground(Color.BLACK);
+		lblBilheteria.setBounds(50, 300, 400, 70);
 		panelMain.add(lblBilheteria);
 		lblBilheteria.setFont(new Font("Verdana", Font.BOLD, 57));
 
 		btnLogin = new JButton("Login");
+		btnLogin.setForeground(Color.BLACK);
 		btnLogin.setBackground(Color.WHITE);
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -83,14 +85,15 @@ public class Inicio extends JFrame {
 		});
 
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 24));
-		btnLogin.setBounds(600, 365, 205, 70);
+		btnLogin.setBounds(800, 225, 205, 70);
 
 		contentPane.add(btnLogin);
 
 		btnCadastro = new JButton("Cadastro");
+		btnCadastro.setForeground(Color.BLACK);
 		btnCadastro.setBackground(Color.WHITE);
 		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 24));
-		btnCadastro.setBounds(600, 524, 205, 70);
+		btnCadastro.setBounds(800, 450, 205, 70);
 		btnCadastro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 

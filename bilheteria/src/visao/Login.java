@@ -16,14 +16,17 @@ import javax.swing.JOptionPane;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.Toolkit;
 
 import javax.swing.JTextField;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.awt.event.ActionEvent;
+import javax.swing.JMenuBar;
 
 public class Login extends JFrame {
 
@@ -31,7 +34,6 @@ public class Login extends JFrame {
 	private JLabel lblEmailLogin, lblSenhaLogin;
 	private JTextField txtEmailLogin;
 	private JPasswordField txtSenhaLogin;
-	private ArrayList<Pessoa> ListaPessoas;
 
 	/**
 	 * Launch the application.
@@ -56,10 +58,10 @@ public class Login extends JFrame {
 	public Login() {
 		setTitle("Login");
 		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
-		setBounds(0, 0,screen.width,screen.height - 30);
+		setBounds(0, 0, screen.width, screen.height - 30);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(69, 159, 185));
 		contentPane.setToolTipText("Hitórico");
@@ -70,20 +72,18 @@ public class Login extends JFrame {
 		getContentPane().setForeground(new Color(255, 255, 255));
 		getContentPane().setLayout(null);
 
-		ListaPessoas = new ArrayList<>();
-
 		// Email
 		lblEmailLogin = new JLabel("Email: ");
 		lblEmailLogin.setForeground(new Color(255, 255, 255));
 		lblEmailLogin.setFont(new Font("Verdana", Font.BOLD, 25));
-		lblEmailLogin.setBounds(346, 155, 100, 131);
+		lblEmailLogin.setBounds(450, 190, 105, 50);
 		getContentPane().add(lblEmailLogin);
 
 		txtEmailLogin = new JTextField();
 		txtEmailLogin.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtEmailLogin.setForeground(new Color(0, 0, 0));
-		txtEmailLogin.setBackground(new Color(192, 192, 192));
-		txtEmailLogin.setBounds(482, 191, 613, 63);
+		txtEmailLogin.setBackground(Color.WHITE);
+		txtEmailLogin.setBounds(575, 190, 500, 50);
 		getContentPane().add(txtEmailLogin);
 		txtEmailLogin.setColumns(10);
 
@@ -91,19 +91,20 @@ public class Login extends JFrame {
 		lblSenhaLogin = new JLabel("Senha:");
 		lblSenhaLogin.setForeground(new Color(255, 255, 255));
 		lblSenhaLogin.setFont(new Font("Verdana", Font.BOLD, 25));
-		lblSenhaLogin.setBounds(346, 294, 100, 131);
+		lblSenhaLogin.setBounds(450, 328, 110, 50);
 		getContentPane().add(lblSenhaLogin);
 
 		txtSenhaLogin = new JPasswordField();
 		txtSenhaLogin.setForeground(Color.BLACK);
 		txtSenhaLogin.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtSenhaLogin.setColumns(10);
-		txtSenhaLogin.setBackground(new Color(192, 192, 192));
-		txtSenhaLogin.setBounds(482, 330, 613, 63);
+		txtSenhaLogin.setBackground(Color.WHITE);
+		txtSenhaLogin.setBounds(575, 330, 500, 50);
 		getContentPane().add(txtSenhaLogin);
 
 		// Btn
 		JButton btnLogin = new JButton("Login");
+		btnLogin.setBackground(Color.WHITE);
 		btnLogin.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
@@ -121,9 +122,25 @@ public class Login extends JFrame {
 		});
 
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnLogin.setBounds(482, 511, 402, 63);
+		btnLogin.setBounds(600, 500, 300, 60);
 		getContentPane().add(btnLogin);
+		
+		JPanel panelLogin = new JPanel();
+		panelLogin.setBounds(0, 0, 350, 705);
+		getContentPane().add(panelLogin);
+		panelLogin.setLayout(null);
+		
+		JLabel lblLogin = new JLabel("LogIn");
+		lblLogin.setForeground(Color.BLACK);
+		lblLogin.setFont(new Font("Verdana", Font.BOLD, 57));
+		lblLogin.setBounds(75, 250, 200, 70);
+		panelLogin.add(lblLogin);
+		
+		JLabel lblIcon = new JLabel("");
+		lblIcon.setBounds(125, 350, 75, 75);
+		panelLogin.add(lblIcon);
+		Image iconLogIn = new ImageIcon(this.getClass().getResource("/logIn.png")).getImage();
+		lblIcon.setIcon(new ImageIcon(iconLogIn));
 
 	}
-
 }
