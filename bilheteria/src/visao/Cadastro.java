@@ -58,7 +58,6 @@ public class Cadastro extends JFrame {
 	 */
 	public Cadastro() {
 		setTitle("Cadastro");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
 		setBounds(0, 0,screen.width,screen.height - 30);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);

@@ -9,8 +9,12 @@ import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Toolkit;
+
 import javax.swing.JSeparator;
 import java.awt.Color;
+import java.awt.Dimension;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -45,8 +49,11 @@ public class Historico extends JFrame {
 	public Historico() {
 
 		setTitle("Histórico de Compra");
+		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+		setBounds(0, 0,screen.width,screen.height - 30);
+		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1947, 1017);
+		
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(7, 1, 88));
 		contentPane.setToolTipText("Hitórico");

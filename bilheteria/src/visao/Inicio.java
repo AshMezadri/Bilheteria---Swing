@@ -43,7 +43,6 @@ public class Inicio extends JFrame {
 	public Inicio() {
 
 		setTitle("Main");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
 		setBounds(0, 0,screen.width,screen.height - 30);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
