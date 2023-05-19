@@ -18,6 +18,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JComboBox;
+import javax.swing.JSeparator;
 
 public class Pagamento extends JFrame {
 
@@ -38,6 +40,9 @@ public class Pagamento extends JFrame {
 	private JTextField txtPoltrona;
 	private JLabel lblSessao;
 	private JTextField txtSessao;
+	private JLabel lblMeia;
+	private JComboBox<Integer> cbInteira;
+	private JComboBox<Integer> cbMeia;
 
 	/**
 	 * Launch the application.
@@ -84,73 +89,123 @@ public class Pagamento extends JFrame {
 
 		lblPagamento = new JLabel("PAGAMENTO");
 		lblPagamento.setForeground(Color.BLACK);
-		lblPagamento.setBounds(20, 35, 340, 70);
+		lblPagamento.setBounds(30, 35, 340, 70);
 		panelCadastro.add(lblPagamento);
 		lblPagamento.setFont(new Font("Verdana", Font.BOLD, 47));
-		
+
+		// quantidade ingressos
+
+		JLabel lblInteira = new JLabel("Inteira: ");
+		lblInteira.setHorizontalAlignment(SwingConstants.CENTER);
+		lblInteira.setForeground(Color.BLACK);
+		lblInteira.setFont(new Font("Verdana", Font.BOLD, 17));
+		lblInteira.setBounds(75, 135, 80, 40);
+		panelCadastro.add(lblInteira);
+
+		lblMeia = new JLabel("Meia: ");
+		lblMeia.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMeia.setForeground(Color.BLACK);
+		lblMeia.setFont(new Font("Verdana", Font.BOLD, 17));
+		lblMeia.setBounds(94, 211, 60, 40);
+		panelCadastro.add(lblMeia);
+
+		cbInteira = new JComboBox<Integer>();
+		cbInteira.setBounds(190, 141, 80, 30);
+		panelCadastro.add(cbInteira);
+
+		for (int i = 0; i < 8; i++) {
+
+			cbInteira.addItem(i + 1);
+		}
+
+		Integer itemSelecionadoInteira = Integer.parseInt(cbInteira.getSelectedItem().toString());
+
+		cbMeia = new JComboBox<>();
+		cbMeia.setEnabled(false);
+		cbMeia.setBounds(190, 223, 80, 30);
+		panelCadastro.add(cbMeia);
+
+		if (itemSelecionadoInteira > 1) {
+
+			cbMeia.setEnabled(true);
+
+			for (int i = 0; i < itemSelecionadoInteira; i++) {
+				cbMeia.addItem(i + 1);
+			}
+
+		}
+
+		// infos
+
 		lblValor = new JLabel("Valor: ");
 		lblValor.setHorizontalAlignment(SwingConstants.CENTER);
 		lblValor.setForeground(Color.BLACK);
 		lblValor.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblValor.setBounds(75, 175, 70, 40);
+		lblValor.setBounds(75, 370, 70, 40);
 		panelCadastro.add(lblValor);
-		
+
 		txtValor = new JTextField();
 		txtValor.setEnabled(false);
 		txtValor.setEditable(false);
 		txtValor.setForeground(Color.BLACK);
 		txtValor.setFont(new Font("Verdana", Font.BOLD, 20));
-		txtValor.setBackground(Color.LIGHT_GRAY);
-		txtValor.setBounds(155, 175, 150, 40);
+		txtValor.setBackground(new Color(243, 243, 243));
+		txtValor.setBounds(155, 370, 150, 40);
 		panelCadastro.add(txtValor);
-		
+
 		lblQuantidade = new JLabel("Quantidade:");
 		lblQuantidade.setHorizontalAlignment(SwingConstants.CENTER);
 		lblQuantidade.setForeground(Color.BLACK);
 		lblQuantidade.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblQuantidade.setBounds(20, 250, 125, 40);
+		lblQuantidade.setBounds(20, 445, 125, 40);
 		panelCadastro.add(lblQuantidade);
-		
+
 		txtQuant = new JTextField();
+		txtQuant.setEnabled(false);
 		txtQuant.setForeground(Color.BLACK);
 		txtQuant.setFont(new Font("Verdana", Font.BOLD, 20));
-		txtQuant.setEnabled(false);
 		txtQuant.setEditable(false);
-		txtQuant.setBackground(Color.LIGHT_GRAY);
-		txtQuant.setBounds(155, 250, 150, 40);
+		txtQuant.setBackground(new Color(243, 243, 243));
+		txtQuant.setBounds(155, 445, 150, 40);
 		panelCadastro.add(txtQuant);
-		
+
+		txtQuant.setText(String.valueOf(itemSelecionadoInteira));
+
 		lblPoltrona = new JLabel("Poltrona: ");
 		lblPoltrona.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPoltrona.setForeground(Color.BLACK);
 		lblPoltrona.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblPoltrona.setBounds(45, 325, 100, 40);
+		lblPoltrona.setBounds(45, 520, 100, 40);
 		panelCadastro.add(lblPoltrona);
-		
+
 		txtPoltrona = new JTextField();
 		txtPoltrona.setForeground(Color.BLACK);
 		txtPoltrona.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtPoltrona.setEnabled(false);
 		txtPoltrona.setEditable(false);
-		txtPoltrona.setBackground(Color.LIGHT_GRAY);
-		txtPoltrona.setBounds(155, 325, 150, 40);
+		txtPoltrona.setBackground(new Color(243, 243, 243));
+		txtPoltrona.setBounds(155, 520, 150, 40);
 		panelCadastro.add(txtPoltrona);
-		
+
 		lblSessao = new JLabel("Sessão:");
 		lblSessao.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSessao.setForeground(Color.BLACK);
 		lblSessao.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblSessao.setBounds(45, 400, 90, 40);
+		lblSessao.setBounds(45, 595, 90, 40);
 		panelCadastro.add(lblSessao);
-		
+
 		txtSessao = new JTextField();
 		txtSessao.setForeground(Color.BLACK);
 		txtSessao.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtSessao.setEnabled(false);
 		txtSessao.setEditable(false);
-		txtSessao.setBackground(Color.LIGHT_GRAY);
-		txtSessao.setBounds(155, 400, 150, 40);
+		txtSessao.setBackground(new Color(243, 243, 243));
+		txtSessao.setBounds(155, 595, 150, 40);
 		panelCadastro.add(txtSessao);
+
+		JSeparator separator = new JSeparator();
+		separator.setBounds(10, 315, 380, 2);
+		panelCadastro.add(separator);
 
 		// Nome
 		lblTitular = new JLabel("Titular:");
@@ -204,7 +259,7 @@ public class Pagamento extends JFrame {
 		lblCVV.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCVV.setForeground(new Color(255, 255, 255));
 		lblCVV.setFont(new Font("Verdana", Font.BOLD, 20));
-		lblCVV.setBounds(825, 400, 70, 50);
+		lblCVV.setBounds(845, 400, 70, 50);
 		getContentPane().add(lblCVV);
 
 		// Btn Cadastro
@@ -246,14 +301,14 @@ public class Pagamento extends JFrame {
 		});
 
 		getContentPane().add(btnTelaPrincipal);
-		
+
 		lblDocartao = new JLabel("do cartão: ");
 		lblDocartao.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDocartao.setForeground(Color.WHITE);
 		lblDocartao.setFont(new Font("Verdana", Font.BOLD, 20));
 		lblDocartao.setBounds(485, 275, 130, 50);
 		getContentPane().add(lblDocartao);
-		
+
 		txtCVV = new JTextField();
 		txtCVV.setForeground(Color.BLACK);
 		txtCVV.setFont(new Font("Verdana", Font.BOLD, 20));
