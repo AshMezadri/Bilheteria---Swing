@@ -8,11 +8,13 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -20,6 +22,7 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import javax.swing.text.MaskFormatter;
 
 import controle.PessoaDAO;
 import modelo.Pessoa;
@@ -55,7 +58,7 @@ public class Cadastro extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * CONSTRUTOR DA CLASSE
 	 */
 	public Cadastro() {
 		setTitle("Cadastro");
@@ -85,8 +88,8 @@ public class Cadastro extends JFrame {
 		lblCadastro.setBounds(21, 250, 330, 70);
 		panelCadastro.add(lblCadastro);
 		lblCadastro.setFont(new Font("Verdana", Font.BOLD, 53));
-		
-		JLabel lblIconCadastro= new JLabel("");
+
+		JLabel lblIconCadastro = new JLabel("");
 		lblIconCadastro.setBounds(150, 350, 75, 75);
 		panelCadastro.add(lblIconCadastro);
 		Image iconCadastro = new ImageIcon(this.getClass().getResource("/signUp.png")).getImage();
@@ -131,7 +134,16 @@ public class Cadastro extends JFrame {
 		lblCPFCadastro.setBounds(520, 335, 75, 50);
 		getContentPane().add(lblCPFCadastro);
 
-		txtCPFCadastro = new JTextField();
+		/*****************/
+		MaskFormatter mascaraCpf = null;
+		try {
+			mascaraCpf = new MaskFormatter("###.###.###-##");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtCPFCadastro = new JFormattedTextField(mascaraCpf);
+		/*****************/
+		
 		txtCPFCadastro.setForeground(Color.BLACK);
 		txtCPFCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtCPFCadastro.setColumns(10);
