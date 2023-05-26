@@ -169,8 +169,8 @@ public class Cadastro extends JFrame {
 
 		// Btn Cadastro
 		btnCadastro = new JButton("Cadastrar");
-		btnCadastro.setForeground(Color.BLACK);
-		btnCadastro.setBackground(Color.WHITE);
+		btnCadastro.setForeground(new Color(0, 0, 0));
+		btnCadastro.setBackground(new Color(183, 232, 174));
 		btnCadastro.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
@@ -187,7 +187,7 @@ public class Cadastro extends JFrame {
 		btnTelaPrincipal = new JButton("Voltar");
 		btnTelaPrincipal.setForeground(Color.BLACK);
 		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnTelaPrincipal.setBackground(Color.WHITE);
+		btnTelaPrincipal.setBackground(new Color(242, 146, 132));
 		btnTelaPrincipal.setBounds(925, 575, 275, 55);
 
 		btnTelaPrincipal.addActionListener(new ActionListener() {

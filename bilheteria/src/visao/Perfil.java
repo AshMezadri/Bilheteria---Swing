@@ -9,6 +9,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -90,7 +92,7 @@ public class Perfil extends JFrame {
 
 		// btn atualizar infos
 		btnAtualizar = new JButton("Atualizar");
-		btnAtualizar.setBackground(Color.WHITE);
+		btnAtualizar.setBackground(new Color(202, 220, 249));
 		btnAtualizar.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnAtualizar.setBounds(475, 560, 200, 65);
 		JanelaPerfil.add(btnAtualizar);
@@ -101,7 +103,7 @@ public class Perfil extends JFrame {
 
 		// btn salvar
 		btnSalvar = new JButton("Salvar");
-		btnSalvar.setBackground(Color.WHITE);
+		btnSalvar.setBackground(new Color(146, 241, 170));
 		btnSalvar.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnSalvar.setBounds(725, 560, 200, 65);
 		JanelaPerfil.add(btnSalvar);
@@ -112,12 +114,23 @@ public class Perfil extends JFrame {
 
 		// btn deletar
 		JButton btnDeletar = new JButton("Deletar conta");
-		btnDeletar.setBackground(Color.WHITE);
+		btnDeletar.setBackground(new Color(242, 146, 132));
 		btnDeletar.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnDeletar.setBounds(975, 560, 200, 65);
 		JanelaPerfil.add(btnDeletar);
 		btnDeletar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				  int opcao_escolhida = JOptionPane.showConfirmDialog(null, "Deseja sair do sistema ?", "Sair",  JOptionPane.YES_NO_OPTION);
+				        if (opcao_escolhida == JOptionPane.YES_OPTION)
+				        {
+				        	new Inicio().setVisible(true);
+							this.dispose();
+						}
+			}
+
+			private void dispose() {
+				// TODO Auto-generated method stub
+				
 			}
 		});
 
