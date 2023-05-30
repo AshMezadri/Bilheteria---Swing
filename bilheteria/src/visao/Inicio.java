@@ -19,6 +19,7 @@ public class Inicio extends JFrame {
 	private JPanel contentPane;
 	private JPanel panelMain;
 	private JButton btnCadastro, btnLogin;
+	private JLabel lblBilheteria;
 
 	/**
 	 * Launch the application.
@@ -44,10 +45,10 @@ public class Inicio extends JFrame {
 
 		setTitle("Main");
 		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
-		setBounds(0, 0,screen.width,screen.height - 30);
+		setBounds(0, 0, screen.width, screen.height - 30);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(7, 1, 88));
 		contentPane.setToolTipText("Main");
@@ -63,12 +64,14 @@ public class Inicio extends JFrame {
 		contentPane.add(panelMain);
 		panelMain.setLayout(null);
 
-		JLabel lblBilheteria = new JLabel("BILHETERIA");
+		// lbl bilheteria
+		lblBilheteria = new JLabel("BILHETERIA");
 		lblBilheteria.setForeground(Color.BLACK);
 		lblBilheteria.setBounds(50, 300, 400, 70);
 		panelMain.add(lblBilheteria);
 		lblBilheteria.setFont(new Font("Verdana", Font.BOLD, 57));
 
+		// btn login
 		btnLogin = new JButton("Login");
 		btnLogin.setForeground(Color.BLACK);
 		btnLogin.setBackground(Color.WHITE);
@@ -89,6 +92,7 @@ public class Inicio extends JFrame {
 
 		contentPane.add(btnLogin);
 
+		// btn cadastro
 		btnCadastro = new JButton("Cadastro");
 		btnCadastro.setForeground(Color.BLACK);
 		btnCadastro.setBackground(Color.WHITE);

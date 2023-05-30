@@ -32,13 +32,14 @@ import javax.swing.SwingConstants;
 public class Cadastro extends JFrame {
 
 	private JPanel contentPane;
-	private JLabel lblEmailCadastro, lblSenhaCadastro, lblCPFCadastro, lblNomeCadastro, lblCadastro;
+	private JLabel lblEmailCadastro, lblSenhaCadastro, lblCPFCadastro, lblNomeCadastro, lblCadastro, lblIconCadastro;
 	private JTextField txtNomeCadastro;
 	private JPasswordField txtSenhaCadastro;
 	private JTextField txtEmailCadastro;
 	private JTextField txtCPFCadastro;
 	private JPanel panelCadastro;
 	private JButton btnTelaPrincipal, btnCadastro;
+	private MaskFormatter mascaraCpf;
 
 	/**
 	 * Launch the application.
@@ -83,13 +84,15 @@ public class Cadastro extends JFrame {
 		getContentPane().add(panelCadastro);
 		panelCadastro.setLayout(null);
 
+		// lbl cadastro
 		lblCadastro = new JLabel("CADASTRO");
 		lblCadastro.setForeground(Color.BLACK);
 		lblCadastro.setBounds(21, 250, 330, 70);
 		panelCadastro.add(lblCadastro);
 		lblCadastro.setFont(new Font("Verdana", Font.BOLD, 53));
 
-		JLabel lblIconCadastro = new JLabel("");
+		// lbl icon
+		lblIconCadastro = new JLabel("");
 		lblIconCadastro.setBounds(150, 350, 75, 75);
 		panelCadastro.add(lblIconCadastro);
 		Image iconCadastro = new ImageIcon(this.getClass().getResource("/signUp.png")).getImage();
@@ -135,7 +138,7 @@ public class Cadastro extends JFrame {
 		getContentPane().add(lblCPFCadastro);
 
 		/*****************/
-		MaskFormatter mascaraCpf = null;
+		mascaraCpf = null;
 		try {
 			mascaraCpf = new MaskFormatter("###.###.###-##");
 		} catch (ParseException e) {
@@ -143,7 +146,7 @@ public class Cadastro extends JFrame {
 		}
 		txtCPFCadastro = new JFormattedTextField(mascaraCpf);
 		/*****************/
-		
+
 		txtCPFCadastro.setForeground(Color.BLACK);
 		txtCPFCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtCPFCadastro.setColumns(10);
