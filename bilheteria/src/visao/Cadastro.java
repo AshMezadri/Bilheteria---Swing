@@ -28,6 +28,7 @@ import controle.PessoaDAO;
 import modelo.Pessoa;
 import java.awt.Button;
 import javax.swing.SwingConstants;
+import javax.swing.border.LineBorder;
 
 public class Cadastro extends JFrame {
 
@@ -37,8 +38,9 @@ public class Cadastro extends JFrame {
 	private JPasswordField txtSenhaCadastro;
 	private JTextField txtEmailCadastro;
 	private JTextField txtCPFCadastro;
-	private JPanel panelCadastro;
 	private JButton btnTelaPrincipal, btnCadastro;
+	private JLabel lblNewLabel;
+	private JLabel lblFaaSeuCadastro;
 
 	/**
 	 * Launch the application.
@@ -76,38 +78,21 @@ public class Cadastro extends JFrame {
 		contentPane.setToolTipText("Histórico");
 		contentPane.setForeground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
-		panelCadastro = new JPanel();
-		panelCadastro.setBackground(Color.WHITE);
-		panelCadastro.setBounds(0, 0, 400, 705);
-		getContentPane().add(panelCadastro);
-		panelCadastro.setLayout(null);
-
-		lblCadastro = new JLabel("CADASTRO");
-		lblCadastro.setForeground(Color.BLACK);
-		lblCadastro.setBounds(21, 250, 330, 70);
-		panelCadastro.add(lblCadastro);
-		lblCadastro.setFont(new Font("Verdana", Font.BOLD, 53));
-
-		JLabel lblIconCadastro = new JLabel("");
-		lblIconCadastro.setBounds(150, 350, 75, 75);
-		panelCadastro.add(lblIconCadastro);
 		Image iconCadastro = new ImageIcon(this.getClass().getResource("/signUp.png")).getImage();
-		lblIconCadastro.setIcon(new ImageIcon(iconCadastro));
 
 		// Nome
 		lblNomeCadastro = new JLabel("Nome: ");
 		lblNomeCadastro.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNomeCadastro.setForeground(Color.WHITE);
 		lblNomeCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
-		lblNomeCadastro.setBounds(500, 135, 95, 50);
+		lblNomeCadastro.setBounds(613, 135, 95, 50);
 		getContentPane().add(lblNomeCadastro);
 
 		txtNomeCadastro = new JTextField();
 		txtNomeCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtNomeCadastro.setForeground(new Color(0, 0, 0));
 		txtNomeCadastro.setBackground(Color.WHITE);
-		txtNomeCadastro.setBounds(625, 135, 500, 50);
+		txtNomeCadastro.setBounds(755, 135, 500, 50);
 		getContentPane().add(txtNomeCadastro);
 
 		// Email
@@ -115,7 +100,7 @@ public class Cadastro extends JFrame {
 		lblEmailCadastro.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEmailCadastro.setForeground(new Color(255, 255, 255));
 		lblEmailCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
-		lblEmailCadastro.setBounds(500, 235, 90, 50);
+		lblEmailCadastro.setBounds(613, 235, 90, 50);
 		getContentPane().add(lblEmailCadastro);
 
 		txtEmailCadastro = new JTextField();
@@ -123,7 +108,7 @@ public class Cadastro extends JFrame {
 		txtEmailCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtEmailCadastro.setColumns(10);
 		txtEmailCadastro.setBackground(Color.WHITE);
-		txtEmailCadastro.setBounds(625, 235, 500, 50);
+		txtEmailCadastro.setBounds(755, 235, 500, 50);
 		getContentPane().add(txtEmailCadastro);
 
 		// CPF
@@ -131,7 +116,7 @@ public class Cadastro extends JFrame {
 		lblCPFCadastro.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCPFCadastro.setForeground(Color.WHITE);
 		lblCPFCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
-		lblCPFCadastro.setBounds(520, 335, 75, 50);
+		lblCPFCadastro.setBounds(613, 335, 75, 50);
 		getContentPane().add(lblCPFCadastro);
 
 		/*****************/
@@ -148,7 +133,7 @@ public class Cadastro extends JFrame {
 		txtCPFCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtCPFCadastro.setColumns(10);
 		txtCPFCadastro.setBackground(Color.WHITE);
-		txtCPFCadastro.setBounds(625, 335, 500, 50);
+		txtCPFCadastro.setBounds(755, 335, 500, 50);
 		getContentPane().add(txtCPFCadastro);
 
 		// Senha
@@ -156,7 +141,7 @@ public class Cadastro extends JFrame {
 		lblSenhaCadastro.setHorizontalAlignment(SwingConstants.CENTER);
 		lblSenhaCadastro.setForeground(new Color(255, 255, 255));
 		lblSenhaCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
-		lblSenhaCadastro.setBounds(500, 435, 95, 50);
+		lblSenhaCadastro.setBounds(613, 435, 95, 50);
 		getContentPane().add(lblSenhaCadastro);
 
 		txtSenhaCadastro = new JPasswordField();
@@ -164,11 +149,12 @@ public class Cadastro extends JFrame {
 		txtSenhaCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtSenhaCadastro.setColumns(10);
 		txtSenhaCadastro.setBackground(Color.WHITE);
-		txtSenhaCadastro.setBounds(625, 435, 500, 50);
+		txtSenhaCadastro.setBounds(755, 435, 500, 50);
 		getContentPane().add(txtSenhaCadastro);
 
 		// Btn Cadastro
 		btnCadastro = new JButton("Cadastrar");
+		btnCadastro.setBorder(new LineBorder(new Color(149, 232, 236), 4));
 		btnCadastro.setForeground(new Color(0, 0, 0));
 		btnCadastro.setBackground(new Color(183, 232, 174));
 		btnCadastro.addActionListener(new ActionListener() {
@@ -180,15 +166,16 @@ public class Cadastro extends JFrame {
 		});
 
 		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 19));
-		btnCadastro.setBounds(525, 575, 275, 55);
+		btnCadastro.setBounds(683, 575, 275, 55);
 		getContentPane().add(btnCadastro);
 
 		// Btn TelaPrincipal
 		btnTelaPrincipal = new JButton("Voltar");
+		btnTelaPrincipal.setBorder(new LineBorder(new Color(255, 155, 200), 4));
 		btnTelaPrincipal.setForeground(Color.BLACK);
 		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnTelaPrincipal.setBackground(new Color(242, 146, 132));
-		btnTelaPrincipal.setBounds(925, 575, 275, 55);
+		btnTelaPrincipal.setBounds(1031, 575, 275, 55);
 
 		btnTelaPrincipal.addActionListener(new ActionListener() {
 
@@ -206,6 +193,27 @@ public class Cadastro extends JFrame {
 		});
 
 		getContentPane().add(btnTelaPrincipal);
+		
+				lblCadastro = new JLabel(" Seja Bem-Vindo! ");
+				lblCadastro.setBorder(new LineBorder(new Color(0, 0, 160), 4));
+				lblCadastro.setBackground(new Color(0, 0, 160));
+				lblCadastro.setBounds(63, 23, 330, 70);
+				getContentPane().add(lblCadastro);
+				lblCadastro.setForeground(new Color(0, 0, 160));
+				lblCadastro.setFont(new Font("Verdana", Font.BOLD, 30));
+				
+				lblNewLabel = new JLabel("");
+				lblNewLabel.setBackground(Color.WHITE);
+				lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Downloads\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story (1).png"));
+				lblNewLabel.setBounds(-310, -430, 774, 1183);
+				getContentPane().add(lblNewLabel);
+				
+				lblFaaSeuCadastro = new JLabel("Faça seu cadastro:");
+				lblFaaSeuCadastro.setForeground(Color.WHITE);
+				lblFaaSeuCadastro.setFont(new Font("Verdana", Font.BOLD, 30));
+				lblFaaSeuCadastro.setBackground(Color.BLACK);
+				lblFaaSeuCadastro.setBounds(807, 34, 330, 70);
+				getContentPane().add(lblFaaSeuCadastro);
 
 	}
 
