@@ -21,6 +21,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
+import javax.swing.border.LineBorder;
+import java.awt.Cursor;
 
 public class Principal extends JFrame {
 
@@ -79,7 +81,7 @@ public class Principal extends JFrame {
 		btnSessoes.setBounds(850, 30, 140, 65);
 		panel.add(btnSessoes);
 		btnSessoes.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnSessoes.setBackground(new Color(203, 199, 254));
+		btnSessoes.setBackground(new Color(148, 121, 255));
 		btnSessoes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new Sessao().setVisible(true);
@@ -97,7 +99,7 @@ public class Principal extends JFrame {
 		
 		JButton btnPerfil = new JButton("Perfil");
 		btnPerfil.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnPerfil.setBackground(new Color(203, 199, 254));
+		btnPerfil.setBackground(new Color(160, 254, 165));
 		btnPerfil.setBounds(1000, 30, 140, 65);
 		panel.add(btnPerfil);
 		btnPerfil.addActionListener(new ActionListener() {
@@ -117,7 +119,7 @@ public class Principal extends JFrame {
 		// btn historico
 		JButton btnHistorico = new JButton("Histórico");
 		btnHistorico.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnHistorico.setBackground(new Color(203, 199, 254));
+		btnHistorico.setBackground(new Color(254, 141, 129));
 		btnHistorico.setBounds(1150, 30, 140, 65);
 		panel.add(btnHistorico);
 		btnHistorico.addActionListener(new ActionListener() {
@@ -135,6 +137,7 @@ public class Principal extends JFrame {
 		
 
 		JPanel panelMain = new JPanel();
+		panelMain.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
 		panelMain.setLayout(null);
 		panelMain.setBackground(new Color(255, 255, 255));
 		panelMain.setBounds(0, 257, 1375, 450);
@@ -156,24 +159,28 @@ public class Principal extends JFrame {
 		lblShrek.setFont(new Font("Verdana", Font.BOLD, 16));
 
 		JLabel lblPosterShrek = new JLabel("");
+		lblPosterShrek.setBorder(new LineBorder(Color.BLACK, 3));
 		lblPosterShrek.setBounds(994, 80, 150, 215);
 		panelMain.add(lblPosterShrek);
 		Image imgS = new ImageIcon(this.getClass().getResource("/Shrek2Resized.png")).getImage();
 		lblPosterShrek.setIcon(new ImageIcon(imgS));
 
 		JLabel lblPosterBarbie = new JLabel("");
+		lblPosterBarbie.setBorder(new LineBorder(new Color(0, 0, 0), 3));
 		lblPosterBarbie.setBounds(589, 80, 150, 215);
 		panelMain.add(lblPosterBarbie);
 		Image imgB = new ImageIcon(this.getClass().getResource("/BarbieResized.png")).getImage();
 		lblPosterBarbie.setIcon(new ImageIcon(imgB));
 
 		JLabel lblPosterGuardioes = new JLabel("");
-		lblPosterGuardioes.setBounds(169, 80, 150, 215);
+		lblPosterGuardioes.setBorder(new LineBorder(new Color(0, 0, 0), 3));
+		lblPosterGuardioes.setBounds(163, 80, 156, 215);
 		panelMain.add(lblPosterGuardioes);
 		Image imgG = new ImageIcon(this.getClass().getResource("/GuardioesGalaxia.png")).getImage();
 		lblPosterGuardioes.setIcon(new ImageIcon(imgG));
 
 		JTextPane txtShrek = new JTextPane();
+		txtShrek.setEditable(false);
 		txtShrek.setFont(new Font("Verdana", Font.PLAIN, 14));
 		txtShrek.setText(
 				"Shrek e Fiona acabaram de voltar da lua de mel e vivem felizes em sua casa no pântano. O casal recebe um convite dos pais da princesa, que querem conhecer o novo genro, para um jantar no castelo.");
@@ -181,6 +188,8 @@ public class Principal extends JFrame {
 		panelMain.add(txtShrek);
 
 		JTextPane txtGuardioes = new JTextPane();
+		txtGuardioes.setEditable(false);
+		txtGuardioes.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
 		txtGuardioes.setBackground(Color.WHITE);
 		txtGuardioes.setFont(new Font("Verdana", Font.PLAIN, 14));
 		txtGuardioes.setText(
@@ -189,6 +198,7 @@ public class Principal extends JFrame {
 		panelMain.add(txtGuardioes);
 
 		JTextPane txtBarbie = new JTextPane();
+		txtBarbie.setEditable(false);
 		txtBarbie.setFont(new Font("Verdana", Font.PLAIN, 14));
 		txtBarbie.setText(
 				"Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.");

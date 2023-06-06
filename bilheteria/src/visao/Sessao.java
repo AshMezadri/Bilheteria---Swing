@@ -22,6 +22,7 @@ import javax.swing.JButton;
 import javax.swing.JTabbedPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.border.LineBorder;
 
 public class Sessao extends JFrame {
 
@@ -329,6 +330,7 @@ public class Sessao extends JFrame {
 		Assentos.add(btn5D);
 		
 		JButton btnPagamento = new JButton("PAGAR");
+		btnPagamento.setBorder(new LineBorder(new Color(142, 223, 147), 3));
 		btnPagamento.setBounds(925, 200, 200, 70);
 		Assentos.add(btnPagamento);
 		btnPagamento.setFont(new Font("Verdana", Font.BOLD, 22));

@@ -93,6 +93,8 @@ public class Login extends JFrame {
 		txtEmailLogin.setBounds(775, 192, 500, 50);
 		getContentPane().add(txtEmailLogin);
 		txtEmailLogin.setColumns(10);
+		
+		
 
 		// Senha
 		lblSenhaLogin = new JLabel("Senha:");
@@ -141,8 +143,8 @@ public class Login extends JFrame {
 		lblLogin.setFont(new Font("Verdana", Font.BOLD, 42));
 		
 		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Downloads\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story.png"));
-		lblNewLabel.setBounds(-156, 0, 663, 787);
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story.png"));
+		lblNewLabel.setBounds(-156, 0, 713, 787);
 		getContentPane().add(lblNewLabel);
 
 	}

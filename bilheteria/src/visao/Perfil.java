@@ -25,6 +25,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.border.LineBorder;
 
 public class Perfil extends JFrame {
 
@@ -73,11 +74,6 @@ public class Perfil extends JFrame {
 		setContentPane(JanelaPerfil);
 		JanelaPerfil.setLayout(null);
 
-		JLabel lblPerfil = new JLabel("Perfil");
-		lblPerfil.setFont(new Font("Verdana", Font.BOLD, 53));
-		lblPerfil.setBounds(110, 250, 175, 70);
-		JanelaPerfil.add(lblPerfil);
-
 		faixa = new JPanel();
 		faixa.setBackground(Color.WHITE);
 		faixa.setBounds(0, 0, 400, 705);
@@ -85,13 +81,20 @@ public class Perfil extends JFrame {
 		faixa.setLayout(null);
 
 		JLabel lblIconPerfil = new JLabel("");
-		lblIconPerfil.setBounds(150, 350, 75, 75);
+		lblIconPerfil.setBounds(137, 151, 114, 221);
 		faixa.add(lblIconPerfil);
 		Image iconPerfil = new ImageIcon(this.getClass().getResource("/profileResized.png")).getImage();
-		lblIconPerfil.setIcon(new ImageIcon(iconPerfil));
+		lblIconPerfil.setIcon(new ImageIcon("C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\profileResized.png"));
+		
+				JLabel lblPerfil = new JLabel(" Perfil");
+				lblPerfil.setBounds(74, 82, 200, 70);
+				faixa.add(lblPerfil);
+				lblPerfil.setBorder(new LineBorder(new Color(128, 128, 128), 3));
+				lblPerfil.setFont(new Font("Verdana", Font.BOLD, 53));
 
 		// btn atualizar infos
 		btnAtualizar = new JButton("Atualizar");
+		btnAtualizar.setBorder(new LineBorder(new Color(192, 192, 192), 4));
 		btnAtualizar.setBackground(new Color(202, 220, 249));
 		btnAtualizar.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnAtualizar.setBounds(475, 560, 200, 65);
@@ -103,6 +106,7 @@ public class Perfil extends JFrame {
 
 		// btn salvar
 		btnSalvar = new JButton("Salvar");
+		btnSalvar.setBorder(new LineBorder(new Color(94, 217, 210), 4));
 		btnSalvar.setBackground(new Color(146, 241, 170));
 		btnSalvar.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnSalvar.setBounds(725, 560, 200, 65);
@@ -114,6 +118,7 @@ public class Perfil extends JFrame {
 
 		// btn deletar
 		JButton btnDeletar = new JButton("Deletar conta");
+		btnDeletar.setBorder(new LineBorder(new Color(255, 128, 128), 4));
 		btnDeletar.setBackground(new Color(242, 146, 132));
 		btnDeletar.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnDeletar.setBounds(975, 560, 200, 65);

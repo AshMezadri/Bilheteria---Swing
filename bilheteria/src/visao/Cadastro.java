@@ -197,14 +197,14 @@ public class Cadastro extends JFrame {
 				lblCadastro = new JLabel(" Seja Bem-Vindo! ");
 				lblCadastro.setBorder(new LineBorder(new Color(0, 0, 160), 4));
 				lblCadastro.setBackground(new Color(0, 0, 160));
-				lblCadastro.setBounds(63, 23, 330, 70);
+				lblCadastro.setBounds(49, 34, 330, 70);
 				getContentPane().add(lblCadastro);
 				lblCadastro.setForeground(new Color(0, 0, 160));
 				lblCadastro.setFont(new Font("Verdana", Font.BOLD, 30));
 				
 				lblNewLabel = new JLabel("");
 				lblNewLabel.setBackground(Color.WHITE);
-				lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Downloads\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story (1).png"));
+				lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story (1).png"));
 				lblNewLabel.setBounds(-310, -430, 774, 1183);
 				getContentPane().add(lblNewLabel);
 				

@@ -63,7 +63,7 @@ public class Inicio extends JFrame {
 		panelMain = new JPanel();
 		panelMain.setBorder(new MatteBorder(0, 0, 0, 5, (Color) new Color(0, 0, 0)));
 		panelMain.setBackground(Color.WHITE);
-		panelMain.setBounds(0, 0, 550, 705);
+		panelMain.setBounds(0, 0, 550, 710);
 		contentPane.add(panelMain);
 		panelMain.setLayout(null);
 
@@ -75,8 +75,8 @@ public class Inicio extends JFrame {
 		lblBilheteria.setFont(new Font("Verdana", Font.BOLD, 57));
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Usuario\\Downloads\\Bilheteria-Swing\\bilheteria\\img\\image-removebg-preview (1).png"));
-		lblNewLabel.setBounds(108, 104, 248, 227);
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\image-removebg-preview (1).png"));
+		lblNewLabel.setBounds(120, 105, 248, 227);
 		panelMain.add(lblNewLabel);
 
 		btnLogin = new JButton("Login");
