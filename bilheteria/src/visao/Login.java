@@ -94,6 +94,8 @@ public class Login extends JFrame {
 		getContentPane().add(txtEmailLogin);
 		txtEmailLogin.setColumns(10);
 		
+
+		
 		
 
 		// Senha
@@ -119,6 +121,12 @@ public class Login extends JFrame {
 
 			public void actionPerformed(ActionEvent e) {
 
+				if (txtEmailLogin == null) {
+					JOptionPane.showMessageDialog(null,"O e-mail deve ser inserido!");
+				}
+				if (txtSenhaLogin == null) {
+					JOptionPane.showMessageDialog(null,"A senha deve ser inserida!");
+				}
 				new Principal().setVisible(true);
 
 				this.dispose();
