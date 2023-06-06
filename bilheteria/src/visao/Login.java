@@ -120,16 +120,19 @@ public class Login extends JFrame {
 		btnLogin.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-
-				if (txtEmailLogin == null) {
-					JOptionPane.showMessageDialog(null,"O e-mail deve ser inserido!");
-				}
-				if (txtSenhaLogin == null) {
-					JOptionPane.showMessageDialog(null,"A senha deve ser inserida!");
-				}
-				new Principal().setVisible(true);
-
-				this.dispose();
+				
+			
+			if ((txtEmailLogin.getText().length()>0) &&(txtSenhaLogin.getText().length()> 0)){
+			            new Principal().setVisible(true);
+                        this.dispose();
+			        } 
+                       if (txtEmailLogin.getText().isEmpty())  {
+			        	JOptionPane.showMessageDialog(null, "O e-mail deve ser inserido!");
+                       }
+			        	if (txtSenhaLogin.getText().isEmpty()) {
+			        	JOptionPane.showMessageDialog(null, "A senha deve ser inserida!");
+			}
+				
 			}
 
 			public void dispose() {
