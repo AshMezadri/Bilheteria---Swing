@@ -146,6 +146,7 @@ public class Cadastro extends JFrame {
 		}
 		txtCPFCadastro = new JFormattedTextField(mascaraCpf);
 		/*****************/
+		
 
 		txtCPFCadastro.setForeground(Color.BLACK);
 		txtCPFCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
@@ -177,7 +178,12 @@ public class Cadastro extends JFrame {
 		btnCadastro.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-
+				JPasswordField field = txtSenhaCadastro;
+				char[] password = field.getPassword();
+				
+				if(password.length < 8) {
+					JOptionPane.showMessageDialog(null, "A senha deve conter pelo menos 8 caracteres!");
+				}
 				// saveUserInfo();
 			}
 		});
