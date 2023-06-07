@@ -122,7 +122,7 @@ public class Login extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 			
-			if ((txtEmailLogin.getText().length()>0) &&(txtSenhaLogin.getText().length()> 0)){
+			if ((txtEmailLogin.getText().length()>0) &&(txtSenhaLogin.getText().length()> 0)&& (txtSenhaLogin.getText().length() > 8)){
 			            new Principal().setVisible(true);
                         this.dispose();
 			        } 
@@ -132,7 +132,9 @@ public class Login extends JFrame {
 			        	if (txtSenhaLogin.getText().isEmpty()) {
 			        	JOptionPane.showMessageDialog(null, "A senha deve ser inserida!");
 			}
-				
+			        	if(txtSenhaLogin.getText().length() < 8){
+			        		JOptionPane.showMessageDialog(null,"A senha deve ter pelo menos 8 caracteres");
+			    		}
 			}
 
 			public void dispose() {
