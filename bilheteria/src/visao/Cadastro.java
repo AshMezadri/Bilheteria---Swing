@@ -152,6 +152,7 @@ public class Cadastro extends JFrame {
 		txtSenhaCadastro.setBounds(755, 435, 500, 50);
 		getContentPane().add(txtSenhaCadastro);
 
+		
 		// Btn Cadastro
 		btnCadastro = new JButton("Cadastrar");
 		btnCadastro.setBorder(new LineBorder(new Color(149, 232, 236), 4));
@@ -162,7 +163,34 @@ public class Cadastro extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				// saveUserInfo();
+				
+				if ((txtNomeCadastro.getText().length()>0) &&(txtEmailCadastro.getText().length()> 0) &&(txtCPFCadastro.getText().length()> 0) 
+						&&(txtSenhaCadastro.getText().length()> 0) && (txtSenhaCadastro.getText().length() > 8)){
+		            new Principal().setVisible(true);
+                    this.dispose();
+		        } 
+                   if (txtNomeCadastro.getText().isEmpty())  {
+		        	JOptionPane.showMessageDialog(null, "O nome deve ser inserido!");
+                   }
+		        	if (txtEmailCadastro.getText().isEmpty()) {
+		        	JOptionPane.showMessageDialog(null, "O e-mail deve ser inserido!");
+		}
+		        	if (txtCPFCadastro.getText().isEmpty()) {
+			        	JOptionPane.showMessageDialog(null, "O cpf deve ser inserido!");
 			}
+		        	if (txtSenhaCadastro.getText().isEmpty()) {
+			        	JOptionPane.showMessageDialog(null, "A senha deve ser inserida!");
+			}
+		        	if(txtSenhaCadastro.getText().length() < 8){
+		        		JOptionPane.showMessageDialog(null,"A senha deve ter pelo menos 8 caracteres");
+		    		}
+		}
+
+		public void dispose() {
+
+			setVisible(false);
+		}
+			
 		});
 
 		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 19));
