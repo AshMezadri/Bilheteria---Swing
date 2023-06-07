@@ -131,8 +131,7 @@ public class Login extends JFrame {
                        }
 			        	if (txtSenhaLogin.getText().isEmpty()) {
 			        	JOptionPane.showMessageDialog(null, "A senha deve ser inserida!");
-			}
-			        	if(txtSenhaLogin.getText().length() < 8){
+			}           else if(txtSenhaLogin.getText().length()<8) {
 			        		JOptionPane.showMessageDialog(null,"A senha deve ter pelo menos 8 caracteres");
 			    		}
 			}

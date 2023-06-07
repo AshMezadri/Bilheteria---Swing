@@ -152,7 +152,7 @@ public class Cadastro extends JFrame {
 		txtSenhaCadastro.setBounds(755, 435, 500, 50);
 		getContentPane().add(txtSenhaCadastro);
 
-		
+	
 		// Btn Cadastro
 		btnCadastro = new JButton("Cadastrar");
 		btnCadastro.setBorder(new LineBorder(new Color(149, 232, 236), 4));
@@ -161,7 +161,8 @@ public class Cadastro extends JFrame {
 		btnCadastro.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-
+				
+				
 				// saveUserInfo();
 				
 				if ((txtNomeCadastro.getText().length()>0) &&(txtEmailCadastro.getText().length()> 0) &&(txtCPFCadastro.getText().length()> 0) 
@@ -181,7 +182,7 @@ public class Cadastro extends JFrame {
 		        	if (txtSenhaCadastro.getText().isEmpty()) {
 			        	JOptionPane.showMessageDialog(null, "A senha deve ser inserida!");
 			}
-		        	if(txtSenhaCadastro.getText().length() < 8){
+		        	else if(txtSenhaCadastro.getText().length() < 8){
 		        		JOptionPane.showMessageDialog(null,"A senha deve ter pelo menos 8 caracteres");
 		    		}
 		}
