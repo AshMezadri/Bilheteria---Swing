@@ -110,6 +110,7 @@ public class Cadastro extends JFrame {
 		txtEmailCadastro.setBackground(Color.WHITE);
 		txtEmailCadastro.setBounds(755, 235, 500, 50);
 		getContentPane().add(txtEmailCadastro);
+		
 
 		// CPF
 		lblCPFCadastro = new JLabel("CPF: ");
