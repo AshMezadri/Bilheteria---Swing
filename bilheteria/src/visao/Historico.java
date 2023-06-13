@@ -16,6 +16,14 @@ import javax.swing.UIManager;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+<<<<<<< HEAD
+=======
+import javax.swing.JTabbedPane;
+import javax.swing.JTable;
+import javax.swing.JScrollPane;
+import javax.swing.JToggleButton;
+import javax.swing.border.LineBorder;
+>>>>>>> cor
 
 public class Historico extends JFrame {
 
@@ -59,6 +67,7 @@ public class Historico extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnTelaPrincipal = new JButton("Voltar");
+		btnTelaPrincipal.setBorder(new LineBorder(new Color(210, 123, 132), 4));
 		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnTelaPrincipal.setBackground(Color.WHITE);
 		btnTelaPrincipal.setBounds(1150, 50, 150, 65);

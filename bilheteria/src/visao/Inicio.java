@@ -13,6 +13,9 @@ import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import javax.swing.border.LineBorder;
+import javax.swing.border.MatteBorder;
 
 public class Inicio extends JFrame {
 
@@ -59,20 +62,32 @@ public class Inicio extends JFrame {
 		contentPane.setLayout(null);
 
 		panelMain = new JPanel();
+		panelMain.setBorder(new MatteBorder(0, 0, 0, 5, (Color) new Color(0, 0, 0)));
 		panelMain.setBackground(Color.WHITE);
-		panelMain.setBounds(0, 0, 550, 705);
+		panelMain.setBounds(0, 0, 550, 710);
 		contentPane.add(panelMain);
 		panelMain.setLayout(null);
 
+<<<<<<< HEAD
 		// lbl bilheteria
 		lblBilheteria = new JLabel("BILHETERIA");
+=======
+		JLabel lblBilheteria = new JLabel("BILHETERIA");
+		lblBilheteria.setBorder(new LineBorder(new Color(201, 201, 201), 3));
+>>>>>>> cor
 		lblBilheteria.setForeground(Color.BLACK);
-		lblBilheteria.setBounds(50, 300, 400, 70);
+		lblBilheteria.setBounds(50, 300, 406, 107);
 		panelMain.add(lblBilheteria);
 		lblBilheteria.setFont(new Font("Verdana", Font.BOLD, 57));
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\image-removebg-preview (1).png"));
+		lblNewLabel.setBounds(120, 105, 248, 227);
+		panelMain.add(lblNewLabel);
 
 		// btn login
 		btnLogin = new JButton("Login");
+		btnLogin.setBorder(new LineBorder(new Color(125, 169, 240), 5));
 		btnLogin.setForeground(Color.BLACK);
 		btnLogin.setBackground(Color.WHITE);
 		btnLogin.addActionListener(new ActionListener() {
@@ -94,6 +109,7 @@ public class Inicio extends JFrame {
 
 		// btn cadastro
 		btnCadastro = new JButton("Cadastro");
+		btnCadastro.setBorder(new LineBorder(new Color(122, 166, 239), 5));
 		btnCadastro.setForeground(Color.BLACK);
 		btnCadastro.setBackground(Color.WHITE);
 		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 24));

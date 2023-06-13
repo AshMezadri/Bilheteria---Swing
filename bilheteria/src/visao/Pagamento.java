@@ -17,6 +17,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JComboBox;
 import javax.swing.JSeparator;
+import javax.swing.border.LineBorder;
 
 public class Pagamento extends JFrame {
 
@@ -80,7 +81,7 @@ public class Pagamento extends JFrame {
 
 		panelCadastro = new JPanel();
 		panelCadastro.setBackground(Color.WHITE);
-		panelCadastro.setBounds(0, 0, 400, 705);
+		panelCadastro.setBounds(0, 0, 425, 705);
 		getContentPane().add(panelCadastro);
 		panelCadastro.setLayout(null);
 
@@ -118,7 +119,6 @@ public class Pagamento extends JFrame {
 		Integer itemSelecionadoInteira = Integer.parseInt(cbInteira.getSelectedItem().toString());
 
 		cbMeia = new JComboBox<>();
-		cbMeia.setEnabled(false);
 		cbMeia.setBounds(190, 223, 80, 30);
 		panelCadastro.add(cbMeia);
 
@@ -261,6 +261,7 @@ public class Pagamento extends JFrame {
 
 		// Btn Cadastro
 		btnCompra = new JButton("Realizar Compra");
+		btnCompra.setBorder(new LineBorder(new Color(70, 230, 230), 3));
 		btnCompra.setForeground(Color.BLACK);
 		btnCompra.setBackground(Color.WHITE);
 		btnCompra.addActionListener(new ActionListener() {
@@ -277,6 +278,7 @@ public class Pagamento extends JFrame {
 
 		// Btn TelaPrincipal
 		btnTelaPrincipal = new JButton("Voltar");
+		btnTelaPrincipal.setBorder(new LineBorder(new Color(255, 81, 81), 3));
 		btnTelaPrincipal.setForeground(Color.BLACK);
 		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnTelaPrincipal.setBackground(Color.WHITE);
