@@ -148,7 +148,7 @@ public class Login extends JFrame {
 		getContentPane().add(btnLogin);
 		Image iconLogIn = new ImageIcon(this.getClass().getResource("/logIn.png")).getImage();
 		
-		JLabel lblLogin = new JLabel("Olá, faça seu LogIn");
+		JLabel lblLogin = new JLabel("Olá, faça seu Login");
 		lblLogin.setBounds(775, 39, 460, 73);
 		getContentPane().add(lblLogin);
 		lblLogin.setForeground(Color.WHITE);
