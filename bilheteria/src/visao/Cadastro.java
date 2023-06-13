@@ -21,8 +21,12 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
 
+import controle.PessoaDAO;
+
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
+
+import modelo.Pessoa;
 
 public class Cadastro extends JFrame {
 
@@ -36,6 +40,8 @@ public class Cadastro extends JFrame {
 	private MaskFormatter mascaraCpf;
 	private JLabel lblNewLabel;
 	private JLabel lblFaaSeuCadastro;
+	private PessoaDAO pDAO = PessoaDAO.getInstancia();
+
 
 	/**
 	 * Launch the application.
@@ -123,7 +129,6 @@ public class Cadastro extends JFrame {
 		txtEmailCadastro.setBackground(Color.WHITE);
 		txtEmailCadastro.setBounds(755, 235, 500, 50);
 		getContentPane().add(txtEmailCadastro);
-		
 
 		// CPF
 		lblCPFCadastro = new JLabel("CPF: ");
@@ -134,7 +139,7 @@ public class Cadastro extends JFrame {
 		getContentPane().add(lblCPFCadastro);
 
 		/*****************/
-		mascaraCpf = null;
+		MaskFormatter mascaraCpf = null;
 		try {
 			mascaraCpf = new MaskFormatter("###.###.###-##");
 		} catch (ParseException e) {
@@ -142,7 +147,6 @@ public class Cadastro extends JFrame {
 		}
 		txtCPFCadastro = new JFormattedTextField(mascaraCpf);
 		/*****************/
-		
 
 		txtCPFCadastro.setForeground(Color.BLACK);
 		txtCPFCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
@@ -167,7 +171,6 @@ public class Cadastro extends JFrame {
 		txtSenhaCadastro.setBounds(755, 435, 500, 50);
 		getContentPane().add(txtSenhaCadastro);
 
-	
 		// Btn Cadastro
 		btnCadastro = new JButton("Cadastrar");
 		btnCadastro.setBorder(new LineBorder(new Color(149, 232, 236), 4));
@@ -176,42 +179,47 @@ public class Cadastro extends JFrame {
 		btnCadastro.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				JPasswordField field = txtSenhaCadastro;
-				char[] password = field.getPassword();
-				
-				if(password.length < 8) {
-					JOptionPane.showMessageDialog(null, "A senha deve conter pelo menos 8 caracteres!");
+
+				Pessoa p = new Pessoa();
+				String senha = String.valueOf(txtSenhaCadastro.getPassword());
+				String cpfS = String.valueOf(txtCPFCadastro.getText());
+
+				if (txtNomeCadastro.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "O nome deve ser inserido!");
+				} else if (txtEmailCadastro.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "O email deve ser inserido!");
+				} else if (txtCPFCadastro.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "O CPF deve ser inserido!");
+				} else if (senha.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "A senha deve ser inserido!");
+				} else {
+					cpfS = cpfS.replace(".", "");
+					cpfS = cpfS.replace("-", "");
+					cpfS = cpfS.trim();
+					Long cpf = Long.parseLong(cpfS);
+
+					
+					String email = txtEmailCadastro.getText();
+					String nome = txtNomeCadastro.getText();
+					
+					p.setCpf(cpf);
+					p.setEmail(email);
+					p.setNome(nome);
+					p.setSenha(senha);
+					
+					Boolean cadastro = pDAO.cadastrarPessoa(p);
+					
+					if (cadastro) {
+						JOptionPane.showMessageDialog(null, "Cadastro concluído com sucesso");
+
+					} else {
+						JOptionPane.showMessageDialog(null, "Cadastro não concluído");
+					}
+					
+					System.out.println(p);
 				}
 
-				// saveUserInfo();
-				
-				if ((txtNomeCadastro.getText().length()>0) &&(txtEmailCadastro.getText().length()> 0) &&(txtCPFCadastro.getText().length()> 0) 
-						&&(txtSenhaCadastro.getText().length()> 0) && (txtSenhaCadastro.getText().length() > 8)){
-		            new Principal().setVisible(true);
-                    this.dispose();
-		        } 
-                   if (txtNomeCadastro.getText().isEmpty())  {
-		        	JOptionPane.showMessageDialog(null, "O nome deve ser inserido!");
-                   }
-		        	if (txtEmailCadastro.getText().isEmpty()) {
-		        	JOptionPane.showMessageDialog(null, "O e-mail deve ser inserido!");
-		}
-		        	if (txtCPFCadastro.getText().isEmpty()) {
-			        	JOptionPane.showMessageDialog(null, "O cpf deve ser inserido!");
 			}
-		        	if (txtSenhaCadastro.getText().isEmpty()) {
-			        	JOptionPane.showMessageDialog(null, "A senha deve ser inserida!");
-			}
-		        	else if(txtSenhaCadastro.getText().length() < 8){
-		        		JOptionPane.showMessageDialog(null,"A senha deve ter pelo menos 8 caracteres");
-		    		}
-		}
-
-		public void dispose() {
-
-			setVisible(false);
-		}
-			
 		});
 
 		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 19));
@@ -242,27 +250,28 @@ public class Cadastro extends JFrame {
 		});
 
 		getContentPane().add(btnTelaPrincipal);
-		
-				lblCadastro = new JLabel(" Seja Bem-Vindo! ");
-				lblCadastro.setBorder(new LineBorder(new Color(0, 0, 160), 4));
-				lblCadastro.setBackground(new Color(0, 0, 160));
-				lblCadastro.setBounds(49, 34, 330, 70);
-				getContentPane().add(lblCadastro);
-				lblCadastro.setForeground(new Color(0, 0, 160));
-				lblCadastro.setFont(new Font("Verdana", Font.BOLD, 30));
-				
-				lblNewLabel = new JLabel("");
-				lblNewLabel.setBackground(Color.WHITE);
-				lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story (1).png"));
-				lblNewLabel.setBounds(-310, -430, 774, 1183);
-				getContentPane().add(lblNewLabel);
-				
-				lblFaaSeuCadastro = new JLabel("Faça seu cadastro:");
-				lblFaaSeuCadastro.setForeground(Color.WHITE);
-				lblFaaSeuCadastro.setFont(new Font("Verdana", Font.BOLD, 30));
-				lblFaaSeuCadastro.setBackground(Color.BLACK);
-				lblFaaSeuCadastro.setBounds(807, 34, 330, 70);
-				getContentPane().add(lblFaaSeuCadastro);
+
+		lblCadastro = new JLabel(" Seja Bem-Vindo! ");
+		lblCadastro.setBorder(new LineBorder(new Color(0, 0, 160), 4));
+		lblCadastro.setBackground(new Color(0, 0, 160));
+		lblCadastro.setBounds(49, 34, 330, 70);
+		getContentPane().add(lblCadastro);
+		lblCadastro.setForeground(new Color(0, 0, 160));
+		lblCadastro.setFont(new Font("Verdana", Font.BOLD, 30));
+
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setBackground(Color.WHITE);
+		lblNewLabel.setIcon(new ImageIcon(
+				"C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story (1).png"));
+		lblNewLabel.setBounds(-310, -430, 774, 1183);
+		getContentPane().add(lblNewLabel);
+
+		lblFaaSeuCadastro = new JLabel("Faça seu cadastro:");
+		lblFaaSeuCadastro.setForeground(Color.WHITE);
+		lblFaaSeuCadastro.setFont(new Font("Verdana", Font.BOLD, 30));
+		lblFaaSeuCadastro.setBackground(Color.BLACK);
+		lblFaaSeuCadastro.setBounds(807, 34, 330, 70);
+		getContentPane().add(lblFaaSeuCadastro);
 
 	}
 
