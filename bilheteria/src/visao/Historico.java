@@ -16,14 +16,7 @@ import javax.swing.UIManager;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-<<<<<<< HEAD
-=======
-import javax.swing.JTabbedPane;
-import javax.swing.JTable;
-import javax.swing.JScrollPane;
-import javax.swing.JToggleButton;
 import javax.swing.border.LineBorder;
->>>>>>> cor
 
 public class Historico extends JFrame {
 

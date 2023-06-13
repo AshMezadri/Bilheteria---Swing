@@ -21,16 +21,13 @@ import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
 
 import java.awt.event.ActionListener;
-<<<<<<< HEAD
 import java.awt.event.ActionEvent;
-=======
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
-import java.awt.event.ActionEvent;
 import javax.swing.JMenuBar;
+import javax.swing.JOptionPane;
 import javax.swing.border.LineBorder;
->>>>>>> cor
 
 public class Login extends JFrame {
 
@@ -38,11 +35,8 @@ public class Login extends JFrame {
 	private JLabel lblEmailLogin, lblSenhaLogin, lblLogin, lblIcon;
 	private JTextField txtEmailLogin;
 	private JPasswordField txtSenhaLogin;
-<<<<<<< HEAD
 	private JButton btnLogin;
-=======
 	private JLabel lblNewLabel;
->>>>>>> cor
 
 	/**
 	 * Launch the application.
@@ -98,10 +92,6 @@ public class Login extends JFrame {
 		getContentPane().add(txtEmailLogin);
 		txtEmailLogin.setColumns(10);
 		
-
-		
-		
-
 		// Senha
 		lblSenhaLogin = new JLabel("Senha:");
 		lblSenhaLogin.setForeground(new Color(255, 255, 255));
@@ -117,17 +107,13 @@ public class Login extends JFrame {
 		txtSenhaLogin.setBounds(775, 330, 500, 50);
 		getContentPane().add(txtSenhaLogin);
 
-<<<<<<< HEAD
 		// Btn login
 		btnLogin = new JButton("Login");
-=======
-		// Btn
-		JButton btnLogin = new JButton("Login");
 		btnLogin.setBorder(new LineBorder(new Color(226, 226, 197), 4));
->>>>>>> cor
 		btnLogin.setBackground(Color.WHITE);
 		btnLogin.addActionListener(new ActionListener() {
 
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
 				
 			
@@ -155,7 +141,6 @@ public class Login extends JFrame {
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnLogin.setBounds(889, 450, 300, 60);
 		getContentPane().add(btnLogin);
-<<<<<<< HEAD
 
 		// panel
 		panelLogin = new JPanel();
@@ -176,8 +161,7 @@ public class Login extends JFrame {
 		panelLogin.add(lblIcon);
 		Image iconLogIn = new ImageIcon(this.getClass().getResource("/logIn.png")).getImage();
 		lblIcon.setIcon(new ImageIcon(iconLogIn));
-=======
-		Image iconLogIn = new ImageIcon(this.getClass().getResource("/logIn.png")).getImage();
+		Image iconLogIn1 = new ImageIcon(this.getClass().getResource("/logIn.png")).getImage();
 		
 		JLabel lblLogin = new JLabel("Olá, faça seu Login");
 		lblLogin.setBounds(775, 39, 460, 73);
@@ -189,7 +173,6 @@ public class Login extends JFrame {
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story.png"));
 		lblNewLabel.setBounds(-156, 0, 713, 787);
 		getContentPane().add(lblNewLabel);
->>>>>>> cor
 
 	}
 }

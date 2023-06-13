@@ -9,9 +9,6 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFormattedTextField;
@@ -24,27 +21,21 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
 
-import controle.PessoaDAO;
-import modelo.Pessoa;
-import java.awt.Button;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
 public class Cadastro extends JFrame {
 
-	private JPanel contentPane;
+	private JPanel contentPane, panelCadastro;
 	private JLabel lblEmailCadastro, lblSenhaCadastro, lblCPFCadastro, lblNomeCadastro, lblCadastro, lblIconCadastro;
 	private JTextField txtNomeCadastro;
 	private JPasswordField txtSenhaCadastro;
 	private JTextField txtEmailCadastro;
 	private JTextField txtCPFCadastro;
 	private JButton btnTelaPrincipal, btnCadastro;
-<<<<<<< HEAD
 	private MaskFormatter mascaraCpf;
-=======
 	private JLabel lblNewLabel;
 	private JLabel lblFaaSeuCadastro;
->>>>>>> cor
 
 	/**
 	 * Launch the application.
@@ -82,8 +73,6 @@ public class Cadastro extends JFrame {
 		contentPane.setToolTipText("Histórico");
 		contentPane.setForeground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-<<<<<<< HEAD
-
 		panelCadastro = new JPanel();
 		panelCadastro.setBackground(Color.WHITE);
 		panelCadastro.setBounds(0, 0, 400, 705);
@@ -101,8 +90,7 @@ public class Cadastro extends JFrame {
 		lblIconCadastro = new JLabel("");
 		lblIconCadastro.setBounds(150, 350, 75, 75);
 		panelCadastro.add(lblIconCadastro);
-=======
->>>>>>> cor
+
 		Image iconCadastro = new ImageIcon(this.getClass().getResource("/signUp.png")).getImage();
 
 		// Nome
@@ -188,17 +176,13 @@ public class Cadastro extends JFrame {
 		btnCadastro.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
 				JPasswordField field = txtSenhaCadastro;
 				char[] password = field.getPassword();
 				
 				if(password.length < 8) {
 					JOptionPane.showMessageDialog(null, "A senha deve conter pelo menos 8 caracteres!");
 				}
-=======
-				
-				
->>>>>>> cor
+
 				// saveUserInfo();
 				
 				if ((txtNomeCadastro.getText().length()>0) &&(txtEmailCadastro.getText().length()> 0) &&(txtCPFCadastro.getText().length()> 0) 

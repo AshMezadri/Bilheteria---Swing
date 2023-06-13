@@ -68,13 +68,10 @@ public class Inicio extends JFrame {
 		contentPane.add(panelMain);
 		panelMain.setLayout(null);
 
-<<<<<<< HEAD
 		// lbl bilheteria
 		lblBilheteria = new JLabel("BILHETERIA");
-=======
 		JLabel lblBilheteria = new JLabel("BILHETERIA");
 		lblBilheteria.setBorder(new LineBorder(new Color(201, 201, 201), 3));
->>>>>>> cor
 		lblBilheteria.setForeground(Color.BLACK);
 		lblBilheteria.setBounds(50, 300, 406, 107);
 		panelMain.add(lblBilheteria);
