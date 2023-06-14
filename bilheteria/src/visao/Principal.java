@@ -20,16 +20,16 @@ import javax.swing.JTextPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.awt.SystemColor;
 import javax.swing.border.LineBorder;
 import java.awt.Cursor;
 
 public class Principal extends JFrame {
 
 	private JPanel contentPane, panel;
-	private JLabel lblHome, lblGuardioes, lblBarbie, lblShrek, lblPosterGuardioes;
+	private JLabel lblHome, lblGuardioes, lblBarbie, lblShrek;
 	private JButton btnSessoes, btnPerfil, btnHistorico;
 	private Image imgS, imgB, imgG;
+	private JTextPane txtGuardioes, txtBarbie, txtShrek;
 
 	/**
 	 * Launch the application.
@@ -72,12 +72,6 @@ public class Principal extends JFrame {
 		panel.setBackground(UIManager.getColor("Button.highlight"));
 		contentPane.add(panel);
 		panel.setLayout(null);
-
-		JPanel panelMain = new JPanel();
-		panelMain.setLayout(null);
-		panelMain.setBackground(new Color(255, 255, 255));
-		panelMain.setBounds(0, 257, 1375, 450);
-		contentPane.add(panelMain);
 
 		// lbl home
 		lblHome = new JLabel("Home");
@@ -153,6 +147,7 @@ public class Principal extends JFrame {
 
 		// ======filmes======
 		lblGuardioes = new JLabel("Guardiões da Galáxia 3");
+		lblGuardioes.setBackground(new Color(255, 255, 255));
 		lblGuardioes.setBounds(139, 45, 210, 15);
 		panelMain1.add(lblGuardioes);
 		lblGuardioes.setFont(new Font("Verdana", Font.BOLD, 16));
@@ -167,7 +162,6 @@ public class Principal extends JFrame {
 		panelMain1.add(lblShrek);
 		lblShrek.setFont(new Font("Verdana", Font.BOLD, 16));
 
-		new JLabel("");
 		JLabel lblPosterShrek = new JLabel("");
 		lblPosterShrek.setBorder(new LineBorder(Color.BLACK, 3));
 		lblPosterShrek.setBounds(994, 80, 150, 215);
@@ -175,7 +169,6 @@ public class Principal extends JFrame {
 		imgS = new ImageIcon(this.getClass().getResource("/Shrek2Resized.png")).getImage();
 		lblPosterShrek.setIcon(new ImageIcon(imgS));
 
-		new JLabel("");
 		JLabel lblPosterBarbie = new JLabel("");
 		lblPosterBarbie.setBorder(new LineBorder(new Color(0, 0, 0), 3));
 		lblPosterBarbie.setBounds(589, 80, 150, 215);
@@ -183,8 +176,6 @@ public class Principal extends JFrame {
 		imgB = new ImageIcon(this.getClass().getResource("/BarbieResized.png")).getImage();
 		lblPosterBarbie.setIcon(new ImageIcon(imgB));
 
-		lblPosterGuardioes = new JLabel("");
-		lblPosterGuardioes.setBounds(169, 80, 150, 215);
 		JLabel lblPosterGuardioes = new JLabel("");
 		lblPosterGuardioes.setBorder(new LineBorder(new Color(0, 0, 0), 3));
 		lblPosterGuardioes.setBounds(163, 80, 156, 215);
@@ -193,7 +184,7 @@ public class Principal extends JFrame {
 		lblPosterGuardioes.setIcon(new ImageIcon(imgG));
 
 		// =====sinopse=====
-		JTextPane txtShrek = new JTextPane();
+		txtShrek = new JTextPane();
 		txtShrek.setEditable(false);
 		txtShrek.setFont(new Font("Verdana", Font.PLAIN, 14));
 		txtShrek.setText(
@@ -201,7 +192,7 @@ public class Principal extends JFrame {
 		txtShrek.setBounds(914, 315, 300, 100);
 		panelMain1.add(txtShrek);
 
-		JTextPane txtGuardioes = new JTextPane();
+		txtGuardioes = new JTextPane();
 		txtGuardioes.setEditable(false);
 		txtGuardioes.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
 		txtGuardioes.setBackground(Color.WHITE);
@@ -211,13 +202,14 @@ public class Principal extends JFrame {
 		txtGuardioes.setBounds(109, 315, 300, 100);
 		panelMain1.add(txtGuardioes);
 
-		JTextPane txtBarbie = new JTextPane();
+		txtBarbie = new JTextPane();
 		txtBarbie.setEditable(false);
 		txtBarbie.setFont(new Font("Verdana", Font.PLAIN, 14));
 		txtBarbie.setText(
 				"Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.");
 		txtBarbie.setBounds(514, 315, 300, 100);
 		panelMain1.add(txtBarbie);
+
 
 	}
 }
