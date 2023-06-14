@@ -37,11 +37,9 @@ public class Cadastro extends JFrame {
 	private JTextField txtEmailCadastro;
 	private JTextField txtCPFCadastro;
 	private JButton btnTelaPrincipal, btnCadastro;
-	private MaskFormatter mascaraCpf;
 	private JLabel lblNewLabel;
 	private JLabel lblFaaSeuCadastro;
 	private PessoaDAO pDAO = PessoaDAO.getInstancia();
-
 
 	/**
 	 * Launch the application.
@@ -97,7 +95,7 @@ public class Cadastro extends JFrame {
 		lblIconCadastro.setBounds(150, 350, 75, 75);
 		panelCadastro.add(lblIconCadastro);
 
-		Image iconCadastro = new ImageIcon(this.getClass().getResource("/signUp.png")).getImage();
+		new ImageIcon(this.getClass().getResource("/signUp.png")).getImage();
 
 		// Nome
 		lblNomeCadastro = new JLabel("Nome: ");
@@ -198,25 +196,29 @@ public class Cadastro extends JFrame {
 					cpfS = cpfS.trim();
 					Long cpf = Long.parseLong(cpfS);
 
-					
 					String email = txtEmailCadastro.getText();
 					String nome = txtNomeCadastro.getText();
-					
+
 					p.setCpf(cpf);
 					p.setEmail(email);
 					p.setNome(nome);
 					p.setSenha(senha);
-					
+
 					Boolean cadastro = pDAO.cadastrarPessoa(p);
-					
+
 					if (cadastro) {
 						JOptionPane.showMessageDialog(null, "Cadastro concluído com sucesso");
 
 					} else {
 						JOptionPane.showMessageDialog(null, "Cadastro não concluído");
 					}
-					
+
 					System.out.println(p);
+
+					txtNomeCadastro.setText("");
+					txtCPFCadastro.setText("");
+					txtSenhaCadastro.setText("");
+					txtEmailCadastro.setText("");
 				}
 
 			}

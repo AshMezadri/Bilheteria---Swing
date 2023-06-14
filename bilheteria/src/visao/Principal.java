@@ -143,7 +143,6 @@ public class Principal extends JFrame {
 
 		});
 		panel.add(btnHistorico);
-		
 
 		JPanel panelMain1 = new JPanel();
 		panelMain1.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
@@ -152,7 +151,7 @@ public class Principal extends JFrame {
 		panelMain1.setBounds(0, 257, 1375, 450);
 		contentPane.add(panelMain1);
 
-		//======filmes====== 
+		// ======filmes======
 		lblGuardioes = new JLabel("Guardiões da Galáxia 3");
 		lblGuardioes.setBounds(139, 45, 210, 15);
 		panelMain1.add(lblGuardioes);
@@ -193,7 +192,7 @@ public class Principal extends JFrame {
 		imgG = new ImageIcon(this.getClass().getResource("/GuardioesGalaxia.png")).getImage();
 		lblPosterGuardioes.setIcon(new ImageIcon(imgG));
 
-		//=====sinopse=====
+		// =====sinopse=====
 		JTextPane txtShrek = new JTextPane();
 		txtShrek.setEditable(false);
 		txtShrek.setFont(new Font("Verdana", Font.PLAIN, 14));

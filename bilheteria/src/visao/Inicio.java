@@ -76,9 +76,10 @@ public class Inicio extends JFrame {
 		lblBilheteria.setBounds(50, 300, 406, 107);
 		panelMain.add(lblBilheteria);
 		lblBilheteria.setFont(new Font("Verdana", Font.BOLD, 57));
-		
+
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\image-removebg-preview (1).png"));
+		lblNewLabel.setIcon(new ImageIcon(
+				"C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\image-removebg-preview (1).png"));
 		lblNewLabel.setBounds(120, 105, 248, 227);
 		panelMain.add(lblNewLabel);
 

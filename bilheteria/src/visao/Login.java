@@ -10,6 +10,8 @@ import javax.swing.JPasswordField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
 
+import modelo.Pessoa;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Image;
@@ -29,6 +31,9 @@ import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 import javax.swing.border.LineBorder;
 
+import modelo.Pessoa;
+import controle.PessoaDAO;
+
 public class Login extends JFrame {
 
 	private JPanel contentPane, panelLogin;
@@ -37,6 +42,7 @@ public class Login extends JFrame {
 	private JPasswordField txtSenhaLogin;
 	private JButton btnLogin;
 	private JLabel lblNewLabel;
+	private PessoaDAO pDAO = PessoaDAO.getInstancia();
 
 	/**
 	 * Launch the application.
@@ -82,7 +88,6 @@ public class Login extends JFrame {
 		lblEmailLogin.setFont(new Font("Verdana", Font.BOLD, 25));
 		lblEmailLogin.setBounds(644, 192, 105, 50);
 		getContentPane().add(lblEmailLogin);
-		
 
 		txtEmailLogin = new JTextField();
 		txtEmailLogin.setFont(new Font("Verdana", Font.BOLD, 20));
@@ -91,7 +96,7 @@ public class Login extends JFrame {
 		txtEmailLogin.setBounds(775, 192, 500, 50);
 		getContentPane().add(txtEmailLogin);
 		txtEmailLogin.setColumns(10);
-		
+
 		// Senha
 		lblSenhaLogin = new JLabel("Senha:");
 		lblSenhaLogin.setForeground(new Color(255, 255, 255));
@@ -113,29 +118,39 @@ public class Login extends JFrame {
 		btnLogin.setBackground(Color.WHITE);
 		btnLogin.addActionListener(new ActionListener() {
 
-			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
-				
-			
-			if ((txtEmailLogin.getText().length()>0) &&(txtSenhaLogin.getText().length()> 0)&& (txtSenhaLogin.getText().length() > 8)){
-			            new Principal().setVisible(true);
-                        this.dispose();
-			        } 
-                       if (txtEmailLogin.getText().isEmpty())  {
-			        	JOptionPane.showMessageDialog(null, "O e-mail deve ser inserido!");
-                       }
-			        	if (txtSenhaLogin.getText().isEmpty()) {
-			        	JOptionPane.showMessageDialog(null, "A senha deve ser inserida!");
-			}           else if(txtSenhaLogin.getText().length()<8) {
-			        		JOptionPane.showMessageDialog(null,"A senha deve ter pelo menos 8 caracteres");
-			    		}
+				String senha = String.valueOf(txtSenhaLogin.getPassword());
+
+				if (txtEmailLogin.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "O email deve ser inserido!");
+				} else if (senha.isEmpty()) {
+					JOptionPane.showMessageDialog(null, "A senha deve ser inserida!");
+				} else {
+					boolean loginSucesso = false;
+					for (Pessoa pessoa : pDAO.listaPessoas()) {
+						if (pessoa.getEmail().equals(txtEmailLogin.getText()) && pessoa.getSenha().equals(senha)) {
+							loginSucesso = true;
+							break;
+						}
+					}
+
+					if (loginSucesso) {
+						JOptionPane.showMessageDialog(null, "Login bem-sucedido!");
+						// Lógica adicional após o login bem-sucedido
+						new Principal().setVisible(true);
+						this.dispose();
+
+					} else {
+						JOptionPane.showMessageDialog(null, "O login não foi possível");
+					}
+				}
+
 			}
 
-			public void dispose() {
-
+			private void dispose() {
 				setVisible(false);
-			}
 
+			}
 		});
 
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
@@ -159,18 +174,21 @@ public class Login extends JFrame {
 		lblIcon = new JLabel("");
 		lblIcon.setBounds(125, 350, 75, 75);
 		panelLogin.add(lblIcon);
+
 		Image iconLogIn = new ImageIcon(this.getClass().getResource("/logIn.png")).getImage();
 		lblIcon.setIcon(new ImageIcon(iconLogIn));
 		Image iconLogIn1 = new ImageIcon(this.getClass().getResource("/logIn.png")).getImage();
-		
+
 		JLabel lblLogin = new JLabel("Olá, faça seu Login");
 		lblLogin.setBounds(775, 39, 460, 73);
+
 		getContentPane().add(lblLogin);
 		lblLogin.setForeground(Color.WHITE);
 		lblLogin.setFont(new Font("Verdana", Font.BOLD, 42));
-		
+
 		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story.png"));
+		lblNewLabel.setIcon(new ImageIcon(
+				"C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story.png"));
 		lblNewLabel.setBounds(-156, 0, 713, 787);
 		getContentPane().add(lblNewLabel);
 

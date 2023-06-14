@@ -46,10 +46,10 @@ public class Historico extends JFrame {
 
 		setTitle("Histórico de Compra");
 		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
-		setBounds(0, 0,screen.width,screen.height - 30);
+		setBounds(0, 0, screen.width, screen.height - 30);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(7, 1, 88));
 		contentPane.setToolTipText("Histórico");
@@ -58,7 +58,7 @@ public class Historico extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JButton btnTelaPrincipal = new JButton("Voltar");
 		btnTelaPrincipal.setBorder(new LineBorder(new Color(210, 123, 132), 4));
 		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
@@ -90,8 +90,6 @@ public class Historico extends JFrame {
 		lblHistorico.setBounds(30, 25, 395, 75);
 		panel.add(lblHistorico);
 		lblHistorico.setFont(new Font("Verdana", Font.BOLD, 57));
-		
-		
 
 	}
 }

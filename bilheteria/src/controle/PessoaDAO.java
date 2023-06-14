@@ -62,6 +62,6 @@ public class PessoaDAO implements IPessoaDAO {
 	@Override
 	public ArrayList<Pessoa> listaPessoas() {
 
-		return null;
+		return listaPessoas;
 	}
 }
