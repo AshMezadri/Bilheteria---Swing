@@ -3,7 +3,6 @@ package visao;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -22,8 +21,6 @@ public class Inicio extends JFrame {
 	private JPanel contentPane;
 	private JPanel panelMain;
 	private JButton btnCadastro, btnLogin;
-	private JLabel lblBilheteria;
-
 	/**
 	 * Launch the application.
 	 */
@@ -68,8 +65,7 @@ public class Inicio extends JFrame {
 		contentPane.add(panelMain);
 		panelMain.setLayout(null);
 
-		// lbl bilheteria
-		lblBilheteria = new JLabel("BILHETERIA");
+		new JLabel("BILHETERIA");
 		JLabel lblBilheteria = new JLabel("BILHETERIA");
 		lblBilheteria.setBorder(new LineBorder(new Color(201, 201, 201), 3));
 		lblBilheteria.setForeground(Color.BLACK);
@@ -107,7 +103,7 @@ public class Inicio extends JFrame {
 
 		// btn cadastro
 		btnCadastro = new JButton("Cadastro");
-		btnCadastro.setBorder(new LineBorder(new Color(122, 166, 239), 5));
+		btnCadastro.setBorder(new LineBorder(new Color(122, 166, 239), 4, true));
 		btnCadastro.setForeground(Color.BLACK);
 		btnCadastro.setBackground(Color.WHITE);
 		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 24));

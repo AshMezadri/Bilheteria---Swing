@@ -33,14 +33,14 @@ public class PessoaDAO implements IPessoaDAO {
 
 	@Override
 	public boolean alterarPessoa(Pessoa p, Long cpf, String nome, String email, String senha) {
-
 		for (Pessoa pessoa : listaPessoas) {
-			if (pessoa.getCpf() == (cpf)) {
-				pessoa.setCpf(cpf);
+			if (pessoa.getSenha().equals(senha)) {
+				if (cpf != null) {
+					pessoa.setCpf(cpf.longValue());
+				}
 				pessoa.setNome(nome);
 				pessoa.setEmail(email);
 				pessoa.setSenha(senha);
-
 				return true;
 			}
 		}

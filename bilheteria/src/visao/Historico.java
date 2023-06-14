@@ -8,10 +8,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Toolkit;
-
 import java.awt.Color;
 import java.awt.Dimension;
-
 import javax.swing.UIManager;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;

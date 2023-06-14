@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
-import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,13 +19,11 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.text.MaskFormatter;
-
-import controle.PessoaDAO;
-
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
 import modelo.Pessoa;
+import controle.PessoaDAO;
 
 public class Cadastro extends JFrame {
 
@@ -212,8 +209,6 @@ public class Cadastro extends JFrame {
 					} else {
 						JOptionPane.showMessageDialog(null, "Cadastro não concluído");
 					}
-
-					System.out.println(p);
 
 					txtNomeCadastro.setText("");
 					txtCPFCadastro.setText("");

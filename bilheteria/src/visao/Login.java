@@ -3,36 +3,24 @@ package visao;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.border.EmptyBorder;
-import javax.swing.text.MaskFormatter;
-
-import modelo.Pessoa;
-
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
-
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFormattedTextField;
-
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
 import javax.swing.border.LineBorder;
 
-import modelo.Pessoa;
 import controle.PessoaDAO;
+import modelo.Pessoa;
 
 public class Login extends JFrame {
 
@@ -149,7 +137,6 @@ public class Login extends JFrame {
 
 			private void dispose() {
 				setVisible(false);
-
 			}
 		});
 
