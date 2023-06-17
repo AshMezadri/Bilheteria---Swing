@@ -33,19 +33,24 @@ public class PessoaDAO implements IPessoaDAO {
 
 	@Override
 	public boolean alterarPessoa(Pessoa p, Long cpf, String nome, String email, String senha) {
-		for (Pessoa pessoa : listaPessoas) {
-			if (pessoa.getSenha().equals(senha)) {
-				if (cpf != null) {
-					pessoa.setCpf(cpf.longValue());
-				}
-				pessoa.setNome(nome);
-				pessoa.setEmail(email);
-				pessoa.setSenha(senha);
-				return true;
-			}
-		}
-		return false;
+	    for (Pessoa pessoa : listaPessoas) {
+	        if (pessoa.getSenha().equals(senha)) {
+	            if (cpf != null) {
+	                pessoa.setCpf(cpf);
+	            }
+	            if (nome != null) {
+	                pessoa.setNome(nome);
+	            }
+	            if (email != null) {
+	                pessoa.setEmail(email);
+	            }
+	            pessoa.setSenha(senha);
+	            return true;
+	        }
+	    }
+	    return false;
 	}
+
 
 	@Override
 	public boolean deletarPessoa(Pessoa p, Long cpf) {

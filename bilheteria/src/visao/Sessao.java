@@ -7,26 +7,29 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.Dimension;
-
 import javax.swing.UIManager;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
-
 import javax.swing.ImageIcon;
-
 import javax.swing.JButton;
-
 import javax.swing.JTabbedPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.border.LineBorder;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+
+import controle.SessaoDAO;
 
 public class Sessao extends JFrame {
 
 	private JPanel contentPane;
+    private String sessaoSelecionada;
+	private SessaoDAO sDAO = SessaoDAO.getInstancia();
+
 
 	/**
 	 * Launch the application.
@@ -49,6 +52,7 @@ public class Sessao extends JFrame {
 	 * Create the frame.
 	 */
 	public Sessao() {
+		
 		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
 		setBounds(0, 0, screen.width, screen.height - 30);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -61,7 +65,6 @@ public class Sessao extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
 
 		JPanel panel = new JPanel();
 		panel.setBounds(0, 30, 1375, 115);
@@ -89,6 +92,8 @@ public class Sessao extends JFrame {
 		tabbedPane.addTab("Horários", null, horarios, null);
 		horarios.setLayout(null);
 
+		//
+		
 		JLabel lblGuardioes = new JLabel("Guardiões da Galáxia");
 		lblGuardioes.setFont(new Font("Verdana", Font.BOLD, 14));
 		lblGuardioes.setBounds(265, 25, 170, 15);
@@ -114,46 +119,6 @@ public class Sessao extends JFrame {
 		lblLeg.setBounds(30, 402, 130, 23);
 		horarios.add(lblLeg);
 
-		JButton btnDubladoG = new JButton("16:00h");
-		btnDubladoG.setFont(new Font("Verdana", Font.BOLD, 16));
-		btnDubladoG.setBackground(Color.WHITE);
-		btnDubladoG.setBounds(295, 315, 115, 50);
-		horarios.add(btnDubladoG);
-
-		JButton btnLegendadoG = new JButton("18:30h");
-		btnLegendadoG.setBackground(new Color(255, 255, 255));
-		btnLegendadoG.setFont(new Font("Verdana", Font.BOLD, 16));
-		btnLegendadoG.setBounds(295, 400, 115, 50);
-		horarios.add(btnLegendadoG);
-
-		JButton btnDubladoS = new JButton("20:00h");
-		btnDubladoS.setBackground(new Color(255, 255, 255));
-		btnDubladoS.setFont(new Font("Verdana", Font.BOLD, 16));
-		btnDubladoS.setBounds(590, 315, 112, 44);
-		horarios.add(btnDubladoS);
-
-		JButton btnLegendadoS = new JButton("19:30h");
-		btnLegendadoS.setFont(new Font("Verdana", Font.BOLD, 16));
-		btnLegendadoS.setBackground(new Color(255, 255, 255));
-		btnLegendadoS.setBounds(590, 400, 112, 44);
-		horarios.add(btnLegendadoS);
-
-		JButton btnDubladoB = new JButton("17:00h");
-		btnDubladoB.setFont(new Font("Verdana", Font.BOLD, 16));
-		btnDubladoB.setBackground(new Color(255, 255, 255));
-		btnDubladoB.setBounds(890, 315, 112, 44);
-		horarios.add(btnDubladoB);
-
-		JButton btnLegendadoB = new JButton("18:30h");
-		btnLegendadoB.setFont(new Font("Verdana", Font.BOLD, 16));
-		btnLegendadoB.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnLegendadoB.setBackground(new Color(255, 255, 255));
-		btnLegendadoB.setBounds(890, 400, 112, 44);
-		horarios.add(btnLegendadoB);
-
 		JLabel lblPosterGuardioes = new JLabel("");
 		lblPosterGuardioes.setBounds(275, 50, 150, 215);
 		horarios.add(lblPosterGuardioes);
@@ -168,6 +133,75 @@ public class Sessao extends JFrame {
 		lblPosterBarbie.setBounds(865, 50, 150, 215);
 		horarios.add(lblPosterBarbie);
 		lblPosterBarbie.setIcon(new ImageIcon(imgBarb));
+
+		JRadioButton rdbtnDubladoG = new JRadioButton("16:00h");
+		rdbtnDubladoG.setBackground(Color.LIGHT_GRAY);
+		rdbtnDubladoG.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnDubladoG.setFont(new Font("Verdana", Font.BOLD, 16));
+		rdbtnDubladoG.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		rdbtnDubladoG.setBounds(295, 315, 115, 50);
+
+		rdbtnDubladoG.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+		});
+
+		horarios.add(rdbtnDubladoG);
+
+		JRadioButton rdbtnLegendadoG = new JRadioButton("18:30h");
+		rdbtnLegendadoG.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnLegendadoG.setFont(new Font("Verdana", Font.BOLD, 16));
+		rdbtnLegendadoG.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		rdbtnLegendadoG.setBackground(Color.LIGHT_GRAY);
+		rdbtnLegendadoG.setBounds(295, 400, 115, 50);
+		horarios.add(rdbtnLegendadoG);
+
+		JRadioButton rdbtnLegendadoS = new JRadioButton("20:00h");
+		rdbtnLegendadoS.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnLegendadoS.setFont(new Font("Verdana", Font.BOLD, 16));
+		rdbtnLegendadoS.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		rdbtnLegendadoS.setBackground(Color.LIGHT_GRAY);
+		rdbtnLegendadoS.setBounds(590, 400, 115, 50);
+		horarios.add(rdbtnLegendadoS);
+
+		JRadioButton rdbtnDubladoS = new JRadioButton("19:00h");
+		rdbtnDubladoS.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnDubladoS.setFont(new Font("Verdana", Font.BOLD, 16));
+		rdbtnDubladoS.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		rdbtnDubladoS.setBackground(Color.LIGHT_GRAY);
+		rdbtnDubladoS.setBounds(590, 315, 115, 50);
+		horarios.add(rdbtnDubladoS);
+
+		JRadioButton rdbtnLegendadoB = new JRadioButton("18:00h");
+		rdbtnLegendadoB.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnLegendadoB.setFont(new Font("Verdana", Font.BOLD, 16));
+		rdbtnLegendadoB.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		rdbtnLegendadoB.setBackground(Color.LIGHT_GRAY);
+		rdbtnLegendadoB.setBounds(890, 400, 115, 50);
+		horarios.add(rdbtnLegendadoB);
+
+		JRadioButton rdbtnDubladoB = new JRadioButton("16:30h");
+		rdbtnDubladoB.setHorizontalAlignment(SwingConstants.CENTER);
+		rdbtnDubladoB.setFont(new Font("Verdana", Font.BOLD, 16));
+		rdbtnDubladoB.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		rdbtnDubladoB.setBackground(Color.LIGHT_GRAY);
+		rdbtnDubladoB.setBounds(890, 309, 115, 50);
+		horarios.add(rdbtnDubladoB);
+
+		ButtonGroup buttonGroup = new ButtonGroup();
+		buttonGroup.add(rdbtnDubladoG);
+		buttonGroup.add(rdbtnLegendadoG);
+		buttonGroup.add(rdbtnDubladoS);
+		buttonGroup.add(rdbtnLegendadoS);
+		buttonGroup.add(rdbtnDubladoB);
+		buttonGroup.add(rdbtnLegendadoB);
+
+		//
 
 		JPanel Assentos = new JPanel();
 		Assentos.setBackground(new Color(255, 255, 255));
@@ -328,7 +362,7 @@ public class Sessao extends JFrame {
 		btn5D.setBackground(new Color(255, 255, 255));
 		btn5D.setBounds(526, 335, 66, 65);
 		Assentos.add(btn5D);
-		
+
 		JButton btnPagamento = new JButton("PAGAR");
 		btnPagamento.setBorder(new LineBorder(new Color(142, 223, 147), 3));
 		btnPagamento.setBounds(925, 200, 200, 70);
@@ -349,7 +383,7 @@ public class Sessao extends JFrame {
 			}
 
 		});
-		
+
 		JButton btnTelaPrincipal = new JButton("Voltar");
 		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnTelaPrincipal.setBackground(Color.WHITE);
@@ -369,8 +403,7 @@ public class Sessao extends JFrame {
 			}
 
 		});
-		
-		
+
 		Image imgS = new ImageIcon(this.getClass().getResource("/Shrek2.png")).getImage();
 		Image imgB = new ImageIcon(this.getClass().getResource("/Barbie.png")).getImage();
 		Image imgG = new ImageIcon(this.getClass().getResource("/GuardioesG.png")).getImage();

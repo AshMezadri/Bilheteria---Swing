@@ -182,14 +182,13 @@ public class Perfil extends JFrame {
 		btnAtualizar.setBounds(475, 560, 200, 65);
 		JanelaPerfil.add(btnAtualizar);
 		btnAtualizar.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
 
 				String senhaAtualizar = String.valueOf(JOptionPane.showInputDialog("Informe sua senha: "));
 
 				for (Pessoa pessoa : pDAO.listaPessoas()) {
-
 					if (pessoa.getSenha().equals(senhaAtualizar)) {
-
 						txtNome.setEnabled(true);
 						txtNome.setEditable(true);
 
@@ -207,38 +206,32 @@ public class Perfil extends JFrame {
 						btnSalvar.setBounds(1150, 128, 150, 65);
 						JanelaPerfil.add(btnSalvar);
 						btnSalvar.addActionListener(new ActionListener() {
+
 							public void actionPerformed(ActionEvent e) {
 
-								boolean atualizacao = pDAO.alterarPessoa(p, null, senhaAtualizar, senhaAtualizar,
+								boolean atualizacao = pDAO.alterarPessoa(p, null, txtNome.getText(), txtEmail.getText(),
 										senhaAtualizar);
 
 								if (atualizacao) {
 									JOptionPane.showMessageDialog(null, "Atualização concluída com sucesso");
-
 								} else {
 									JOptionPane.showMessageDialog(null, "Atualização não concluída");
 								}
 
 								for (Pessoa pessoa : pDAO.listaPessoas()) {
-
-									String cpf = String.valueOf(pessoa.cpf);
-
-									txtNome.setText(pessoa.nome);
-									txtEmail.setText(pessoa.email);
+									String cpf = String.valueOf(pessoa.getCpf());
+									txtNome.setText(pessoa.getNome());
+									txtEmail.setText(pessoa.getEmail());
 									txtCPF.setText(cpf);
-									txtSenha.setText(pessoa.senha);
+									txtSenha.setText(pessoa.getSenha());
 								}
-
 							}
-
 						});
 
 					} else {
 						JOptionPane.showInputDialog("Senha não compatível.");
 					}
-
 				}
-
 			}
 		});
 
@@ -252,16 +245,31 @@ public class Perfil extends JFrame {
 		btnDeletar.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				int opcao_escolhida = JOptionPane.showConfirmDialog(null, "Deseja sair do sistema ?", "Sair",
-						JOptionPane.YES_NO_OPTION);
-				if (opcao_escolhida == JOptionPane.YES_OPTION) {
-					new Inicio().setVisible(true);
-					this.dispose();
+
+				String senhaDeletar = String.valueOf(JOptionPane.showInputDialog("Informe sua senha: "));
+
+				for (Pessoa pessoa : pDAO.listaPessoas()) {
+					if (pessoa.getSenha().equals(senhaDeletar)) {
+
+						boolean deletado = pDAO.deletarPessoa(pessoa, pessoa.getCpf());
+						if (deletado) {
+							JOptionPane.showMessageDialog(null, "Pessoa deletada com sucesso");
+
+							new Principal().setVisible(true);
+							this.dispose();
+							// Restaurar campos para valores vazios ou desabilitados, se necessário
+						} else {
+							JOptionPane.showMessageDialog(null, "Falha ao deletar pessoa");
+						}
+						break;
+					}
 				}
+
 			}
 
 			private void dispose() {
 				setVisible(false);
+
 			}
 		});
 
