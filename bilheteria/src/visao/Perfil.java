@@ -278,7 +278,7 @@ public class Perfil extends JFrame {
 		btnTelaPrincipal.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
 		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnTelaPrincipal.setBackground(Color.WHITE);
-		btnTelaPrincipal.setBounds(1150, 30, 150, 65);
+		btnTelaPrincipal.setBounds(730, 560, 200, 65);
 		JanelaPerfil.add(btnTelaPrincipal);
 		btnTelaPrincipal.addActionListener(new ActionListener() {
 
