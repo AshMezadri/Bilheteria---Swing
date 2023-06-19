@@ -35,7 +35,7 @@ public class Pagamento extends JFrame {
 	private JLabel lblNumero, lblCVV, lblValidade, lblTitular, lblPagamento, lblTipo;
 	private JTextField txtTitular;
 	private JTextField txtNumeroCartao;
-	private JTextField txtCPFCadastro;
+	private JTextField txtValidade;
 	private JPanel panelCadastro;
 	private JButton btnTelaPrincipal, btnCompra;
 	private JLabel lblDocartao;
@@ -234,13 +234,20 @@ public class Pagamento extends JFrame {
 		lblValidade.setBounds(490, 400, 115, 50);
 		getContentPane().add(lblValidade);
 
-		txtCPFCadastro = new JTextField();
-		txtCPFCadastro.setForeground(Color.BLACK);
-		txtCPFCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
-		txtCPFCadastro.setColumns(10);
-		txtCPFCadastro.setBackground(Color.WHITE);
-		txtCPFCadastro.setBounds(615, 400, 200, 50);
-		getContentPane().add(txtCPFCadastro);
+		txtValidade = new JTextField();
+		txtValidade.setForeground(Color.BLACK);
+		txtValidade.setFont(new Font("Verdana", Font.BOLD, 20));
+		MaskFormatter mascaraValidade = null;
+		try {
+			mascaraValidade = new MaskFormatter("##/####");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtValidade= new JFormattedTextField(mascaraValidade);
+		txtValidade.setColumns(10);
+		txtValidade.setBackground(Color.WHITE);
+		txtValidade.setBounds(615, 400, 200, 50);
+		getContentPane().add(txtValidade);
 
 		// Senha
 		lblCVV = new JLabel("CVV:");
