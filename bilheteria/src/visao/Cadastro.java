@@ -34,7 +34,6 @@ public class Cadastro extends JFrame {
 	private JTextField txtEmailCadastro;
 	private JTextField txtCPFCadastro;
 	private JButton btnTelaPrincipal, btnCadastro;
-	private JLabel lblNewLabel;
 	private JLabel lblFaaSeuCadastro;
 	private PessoaDAO pDAO = PessoaDAO.getInstancia();
 
@@ -255,13 +254,6 @@ public class Cadastro extends JFrame {
 		getContentPane().add(lblCadastro);
 		lblCadastro.setForeground(new Color(0, 0, 160));
 		lblCadastro.setFont(new Font("Verdana", Font.BOLD, 30));
-
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setBackground(Color.WHITE);
-		lblNewLabel.setIcon(new ImageIcon(
-				"C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story (1).png"));
-		lblNewLabel.setBounds(-310, -430, 774, 1183);
-		getContentPane().add(lblNewLabel);
 
 		lblFaaSeuCadastro = new JLabel("Faça seu cadastro:");
 		lblFaaSeuCadastro.setForeground(Color.WHITE);

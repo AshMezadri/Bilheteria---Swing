@@ -29,7 +29,6 @@ public class Login extends JFrame {
 	private JTextField txtEmailLogin;
 	private JPasswordField txtSenhaLogin;
 	private JButton btnLogin;
-	private JLabel lblNewLabel;
 	private PessoaDAO pDAO = PessoaDAO.getInstancia();
 
 	/**
@@ -146,7 +145,7 @@ public class Login extends JFrame {
 
 		// panel
 		panelLogin = new JPanel();
-		panelLogin.setBounds(0, 0, 350, 705);
+		panelLogin.setBounds(0, 0, 372, 781);
 		getContentPane().add(panelLogin);
 		panelLogin.setLayout(null);
 
@@ -154,12 +153,12 @@ public class Login extends JFrame {
 		lblLogin = new JLabel("LogIn");
 		lblLogin.setForeground(Color.BLACK);
 		lblLogin.setFont(new Font("Verdana", Font.BOLD, 57));
-		lblLogin.setBounds(75, 250, 200, 70);
+		lblLogin.setBounds(68, 342, 200, 70);
 		panelLogin.add(lblLogin);
 
 		// lbl icon
 		lblIcon = new JLabel("");
-		lblIcon.setBounds(125, 350, 75, 75);
+		lblIcon.setBounds(118, 455, 75, 75);
 		panelLogin.add(lblIcon);
 
 		Image iconLogIn = new ImageIcon(this.getClass().getResource("/logIn.png")).getImage();
@@ -172,12 +171,6 @@ public class Login extends JFrame {
 		getContentPane().add(lblLogin);
 		lblLogin.setForeground(Color.WHITE);
 		lblLogin.setFont(new Font("Verdana", Font.BOLD, 42));
-
-		lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(
-				"C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story.png"));
-		lblNewLabel.setBounds(-156, 0, 713, 787);
-		getContentPane().add(lblNewLabel);
 		
 		JButton btnCadastro = new JButton("Cadastro");
 		btnCadastro.addActionListener(new ActionListener() {
