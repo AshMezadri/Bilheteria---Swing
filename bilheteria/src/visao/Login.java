@@ -129,7 +129,7 @@ public class Login extends JFrame {
 						this.dispose();
 
 					} else {
-						JOptionPane.showMessageDialog(null, "O login não foi possível");
+						JOptionPane.showMessageDialog(null, "Você não é cadastrado");
 					}
 				}
 
@@ -141,7 +141,7 @@ public class Login extends JFrame {
 		});
 
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnLogin.setBounds(889, 450, 300, 60);
+		btnLogin.setBounds(887, 443, 300, 60);
 		getContentPane().add(btnLogin);
 
 		// panel
@@ -178,6 +178,33 @@ public class Login extends JFrame {
 				"C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\Red Orange Cinema Festival Your Story.png"));
 		lblNewLabel.setBounds(-156, 0, 713, 787);
 		getContentPane().add(lblNewLabel);
+		
+		JButton btnCadastro = new JButton("Cadastro");
+		btnCadastro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
+		btnCadastro.setBorder(new LineBorder(new Color(226, 226, 197), 4));
+		btnCadastro.setBackground(Color.WHITE);
+		btnCadastro.setBounds(887, 558, 300, 60);
+		
+		btnCadastro.addActionListener(new ActionListener() {
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		        	
+		        new Cadastro().setVisible(true);
+		        dispose();
+		    }
+
+		    private void dispose() {
+		        setVisible(false);
+		    }
+		});
+
+		getContentPane().add(btnCadastro);
+		
+		
 
 	}
 }
