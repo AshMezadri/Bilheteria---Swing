@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 import java.util.Iterator;
 
 import javax.swing.JButton;
@@ -17,8 +18,10 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JSeparator;
 import javax.swing.border.LineBorder;
+import javax.swing.text.MaskFormatter;
 
 import controle.IngressoDAO;
 import modelo.Filme;
@@ -298,10 +301,19 @@ public class Pagamento extends JFrame {
 		txtCVV = new JTextField();
 		txtCVV.setForeground(Color.BLACK);
 		txtCVV.setFont(new Font("Verdana", Font.BOLD, 20));
+		MaskFormatter mascaraCVV = null;
+		try {
+			mascaraCVV = new MaskFormatter("###");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtCVV= new JFormattedTextField(mascaraCVV);
 		txtCVV.setColumns(10);
 		txtCVV.setBackground(Color.WHITE);
 		txtCVV.setBounds(925, 400, 200, 50);
 		getContentPane().add(txtCVV);
+		
+		
 
 	}
 }
