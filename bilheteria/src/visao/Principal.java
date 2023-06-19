@@ -86,7 +86,7 @@ public class Principal extends JFrame {
 		btnSessoes.setBackground(new Color(148, 121, 255));
 		btnSessoes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new Sessao().setVisible(true);
+				new TelaSessao().setVisible(true);
 				this.dispose();
 
 			}

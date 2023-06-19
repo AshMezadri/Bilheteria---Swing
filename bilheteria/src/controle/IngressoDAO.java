@@ -2,6 +2,7 @@ package controle;
 
 import java.util.ArrayList;
 
+import modelo.Filme;
 import modelo.IIngressoDAO;
 import modelo.Ingresso;
 import modelo.Pessoa;
@@ -34,7 +35,7 @@ public class IngressoDAO implements IIngressoDAO {
 	}
 
 	@Override
-	public boolean alterarIngresso(Ingresso i, Long idIngresso, Sessao sessao, Pessoa pessoa, Double valor,
+	public boolean alterarIngresso(Ingresso i, Integer idIngresso, Sessao sessao, Pessoa pessoa, Filme filme, Double valor,
 			Character fileira, Integer numCadeira) {
 
 		for (Ingresso ingresso : listaIngressos) {
@@ -42,6 +43,7 @@ public class IngressoDAO implements IIngressoDAO {
 				ingresso.setIdIngresso(idIngresso);
 				ingresso.setSessao(sessao);
 				ingresso.setPessoa(pessoa);
+				ingresso.setFilme(filme);
 				ingresso.setValor(valor);
 				ingresso.setFileira(fileira);
 				ingresso.setNumCadeira(numCadeira);
@@ -53,7 +55,7 @@ public class IngressoDAO implements IIngressoDAO {
 	}
 
 	@Override
-	public boolean deletarIngresso(Ingresso i, Long idIngresso) {
+	public boolean deletarIngresso(Ingresso i, Integer idIngresso) {
 
 		for (Ingresso ingresso : listaIngressos) {
 			if (ingresso.getIdIngresso().equals(idIngresso)) {
@@ -68,6 +70,15 @@ public class IngressoDAO implements IIngressoDAO {
 	@Override
 	public ArrayList<Ingresso> listaIngressos() {
 
+		return null;
+	}
+	
+	public Ingresso getIngressoById(Integer idIngresso) {
+		for (Ingresso ingresso : listaIngressos) {
+			if (ingresso.getIdIngresso().equals(idIngresso)) {
+				return ingresso;
+			}
+		}
 		return null;
 	}
 

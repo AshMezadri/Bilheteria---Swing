@@ -36,7 +36,7 @@ public class SessaoDAO implements ISessaoDAO {
 	}
 
 	@Override
-	public boolean alterarSessao(Sessao s, Long idSessao, Filme filme, Integer numeroSala,
+	public boolean alterarSessao(Sessao s, Integer idSessao, Filme filme, Integer numeroSala,
 			Integer quantIngressosDisp) {
 
 		for (Sessao sessao : listaSessoes) {
@@ -54,7 +54,7 @@ public class SessaoDAO implements ISessaoDAO {
 	}
 
 	@Override
-	public boolean deletarSessao(Sessao s, Long idSessao) {
+	public boolean deletarSessao(Sessao s, Integer idSessao) {
 
 		for (Sessao sessao : listaSessoes) {
 			if (sessao.getIdSessao().equals(idSessao)) {

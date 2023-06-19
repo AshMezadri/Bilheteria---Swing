@@ -6,9 +6,9 @@ public interface ISessaoDAO {
 
 	public boolean cadastrarSessao(Sessao sessao);
 
-	public boolean alterarSessao(Sessao sessao, Long idSessao, Filme filme,  Integer numeroSala,Integer quantIngressosDisp);
+	public boolean alterarSessao(Sessao sessao, Integer idSessao, Filme filme,  Integer numeroSala,Integer quantIngressosDisp);
 
-	public boolean deletarSessao(Sessao sessao, Long idSessao);
+	public boolean deletarSessao(Sessao sessao, Integer idSessao);
 
 	public ArrayList<Sessao> listaSessoes();
 

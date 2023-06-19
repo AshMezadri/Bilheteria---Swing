@@ -33,7 +33,7 @@ public class FilmeDAO implements IFilmeDAO {
 	}
 
 	@Override
-	public boolean alterarFilme(Filme f, String nomeFilme, Long idFilme, LocalDateTime horarioFilmeDublado,
+	public boolean alterarFilme(Filme f, String nomeFilme, Integer idFilme, LocalDateTime horarioFilmeDublado,
 			LocalDateTime horarioFilmeLegendado) {
 		for (Filme filme : listaFilmes) {
 			if (filme.getIdFilme().equals(idFilme)) {
@@ -51,25 +51,35 @@ public class FilmeDAO implements IFilmeDAO {
 	}
 
 	@Override
-	public boolean deletarFilme(Filme f, Long idFilme) {
-		
+	public boolean deletarFilme(Filme f, Integer idFilme) {
+
 		for (Filme filme : listaFilmes) {
 			if (filme.getIdFilme().equals(idFilme)) {
 				listaFilmes.remove(filme);
 				return true;
 			}
 		}
-		
+
 		return false;
 	}
 
 	@Override
 	public ArrayList<Filme> listaFilmes() {
 		if (!listaFilmes.isEmpty()) {
-			for (Filme filme: listaFilmes) {
+			for (Filme filme : listaFilmes) {
 
 			}
-		}		return null;
+		}
+		return null;
+	}
+
+	public Filme getFilmeById(int idFilme) {
+		for (Filme filme : listaFilmes) {
+			if (filme.getIdFilme().equals(idFilme)) {
+				return filme;
+			}
+		}
+		return null;
 	}
 
 }
