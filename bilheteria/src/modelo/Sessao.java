@@ -45,8 +45,8 @@ public class Sessao {
 	
 	@Override
 	public String toString() {
-		return "Sessao [idSessao =" + idSessao + ", Filme =" + filme + ", Número sala =" + numeroSala
-				+ ", Ingressos Disp. =" + quantIngressosDisp + "]";
+		return "[ idSessao : " + idSessao + "  //Filme : " + filme + " //Número sala : " + numeroSala
+				+ " //Ingressos Disp. : " + quantIngressosDisp + " ]";
 	}
 
 }

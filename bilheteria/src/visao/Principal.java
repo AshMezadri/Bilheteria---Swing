@@ -123,6 +123,7 @@ public class Principal extends JFrame {
 		btnHistorico.setBackground(new Color(254, 141, 129));
 		btnHistorico.setBounds(1150, 30, 140, 65);
 		btnHistorico.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
 				new Historico().setVisible(true);
 				this.dispose();
@@ -207,7 +208,6 @@ public class Principal extends JFrame {
 				"Depois de ser expulsa da Barbieland por ser uma boneca de aparência menos do que perfeita, Barbie parte para o mundo humano em busca da verdadeira felicidade.");
 		txtBarbie.setBounds(514, 315, 300, 100);
 		panelMain1.add(txtBarbie);
-
 
 	}
 }

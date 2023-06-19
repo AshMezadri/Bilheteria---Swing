@@ -2,6 +2,7 @@ package controle;
 
 import java.util.ArrayList;
 
+import modelo.Filme;
 import modelo.IPessoaDAO;
 import modelo.Pessoa;
 
@@ -69,4 +70,17 @@ public class PessoaDAO implements IPessoaDAO {
 
 		return listaPessoas;
 	}
+	
+	public Pessoa getPessoaByCPF(Long cpf) {
+	    for (Pessoa pessoa : listaPessoas) {
+	        if (pessoa.getCpf() == (cpf)) {
+	            return pessoa;
+	        }
+	    }
+	    return null;
+	}
+
+
+
+
 }

@@ -19,10 +19,16 @@ import javax.swing.JComboBox;
 import javax.swing.JSeparator;
 import javax.swing.border.LineBorder;
 
+import controle.IngressoDAO;
+import modelo.Filme;
+import modelo.Ingresso;
+import modelo.Pessoa;
+import modelo.Sessao;
+
 public class Pagamento extends JFrame {
 
 	private JPanel contentPane;
-	private JLabel lblNumero, lblCVV, lblValidade, lblTitular, lblPagamento;
+	private JLabel lblNumero, lblCVV, lblValidade, lblTitular, lblPagamento, lblTipo;
 	private JTextField txtTitular;
 	private JTextField txtNumeroCartao;
 	private JTextField txtCPFCadastro;
@@ -32,15 +38,14 @@ public class Pagamento extends JFrame {
 	private JTextField txtCVV;
 	private JLabel lblValor;
 	private JTextField txtValor;
-	private JLabel lblQuantidade;
-	private JTextField txtQuant;
 	private JLabel lblPoltrona;
 	private JTextField txtPoltrona;
-	private JLabel lblSessao;
-	private JTextField txtSessao;
-	private JLabel lblMeia;
-	private JComboBox<Integer> cbInteira;
-	private JComboBox<Integer> cbMeia;
+	private JLabel lblIngresso;
+	private JTextField txtIngresso;
+	private JComboBox<String> cbInteiraMeia;
+	private IngressoDAO iDAO = IngressoDAO.getInstancia();
+	private String tipoIngresso;
+	private Double valorIngresso = 00.00;
 
 	/**
 	 * Launch the application.
@@ -91,54 +96,19 @@ public class Pagamento extends JFrame {
 		panelCadastro.add(lblPagamento);
 		lblPagamento.setFont(new Font("Verdana", Font.BOLD, 47));
 
-		// quantidade ingressos
-
-		JLabel lblInteira = new JLabel("Inteira: ");
-		lblInteira.setHorizontalAlignment(SwingConstants.CENTER);
-		lblInteira.setForeground(Color.BLACK);
-		lblInteira.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblInteira.setBounds(75, 135, 80, 40);
-		panelCadastro.add(lblInteira);
-
-		lblMeia = new JLabel("Meia: ");
-		lblMeia.setHorizontalAlignment(SwingConstants.CENTER);
-		lblMeia.setForeground(Color.BLACK);
-		lblMeia.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblMeia.setBounds(94, 211, 60, 40);
-		panelCadastro.add(lblMeia);
-
-		cbInteira = new JComboBox<Integer>();
-		cbInteira.setBounds(190, 141, 80, 30);
-		panelCadastro.add(cbInteira);
-
-		for (int i = 0; i < 8; i++) {
-
-			cbInteira.addItem(i + 1);
-		}
-
-		Integer itemSelecionadoInteira = Integer.parseInt(cbInteira.getSelectedItem().toString());
-
-		cbMeia = new JComboBox<>();
-		cbMeia.setBounds(190, 223, 80, 30);
-		panelCadastro.add(cbMeia);
-
-		if (itemSelecionadoInteira > 1) {
-
-			cbMeia.setEnabled(true);
-
-			for (int i = 0; i < itemSelecionadoInteira; i++) {
-				cbMeia.addItem(i + 1);
-			}
-
-		}
-
 		// infos
+		lblTipo = new JLabel("Tipo: ");
+		lblTipo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTipo.setForeground(Color.BLACK);
+		lblTipo.setFont(new Font("Verdana", Font.BOLD, 17));
+		lblTipo.setBounds(75, 370, 70, 40);
+		panelCadastro.add(lblTipo);
 
 		lblValor = new JLabel("Valor: ");
 		lblValor.setHorizontalAlignment(SwingConstants.CENTER);
 		lblValor.setForeground(Color.BLACK);
 		lblValor.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblValor.setBounds(75, 370, 70, 40);
+		lblValor.setBounds(75, 440, 70, 40);
 		panelCadastro.add(lblValor);
 
 		txtValor = new JTextField();
@@ -147,58 +117,75 @@ public class Pagamento extends JFrame {
 		txtValor.setForeground(Color.BLACK);
 		txtValor.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtValor.setBackground(new Color(243, 243, 243));
-		txtValor.setBounds(155, 370, 150, 40);
+		txtValor.setBounds(155, 440, 150, 40);
 		panelCadastro.add(txtValor);
-
-		lblQuantidade = new JLabel("Quantidade:");
-		lblQuantidade.setHorizontalAlignment(SwingConstants.CENTER);
-		lblQuantidade.setForeground(Color.BLACK);
-		lblQuantidade.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblQuantidade.setBounds(20, 445, 125, 40);
-		panelCadastro.add(lblQuantidade);
-
-		txtQuant = new JTextField();
-		txtQuant.setEnabled(false);
-		txtQuant.setForeground(Color.BLACK);
-		txtQuant.setFont(new Font("Verdana", Font.BOLD, 20));
-		txtQuant.setEditable(false);
-		txtQuant.setBackground(new Color(243, 243, 243));
-		txtQuant.setBounds(155, 445, 150, 40);
-		panelCadastro.add(txtQuant);
-
-		txtQuant.setText(String.valueOf(itemSelecionadoInteira));
 
 		lblPoltrona = new JLabel("Poltrona: ");
 		lblPoltrona.setHorizontalAlignment(SwingConstants.CENTER);
 		lblPoltrona.setForeground(Color.BLACK);
 		lblPoltrona.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblPoltrona.setBounds(45, 520, 100, 40);
+		lblPoltrona.setBounds(45, 510, 100, 40);
 		panelCadastro.add(lblPoltrona);
 
 		txtPoltrona = new JTextField();
 		txtPoltrona.setForeground(Color.BLACK);
 		txtPoltrona.setFont(new Font("Verdana", Font.BOLD, 20));
-		txtPoltrona.setEnabled(false);
+		txtPoltrona.setEnabled(true);
 		txtPoltrona.setEditable(false);
 		txtPoltrona.setBackground(new Color(243, 243, 243));
-		txtPoltrona.setBounds(155, 520, 150, 40);
+		txtPoltrona.setBounds(155, 510, 150, 40);
 		panelCadastro.add(txtPoltrona);
 
-		lblSessao = new JLabel("Sessão:");
-		lblSessao.setHorizontalAlignment(SwingConstants.CENTER);
-		lblSessao.setForeground(Color.BLACK);
-		lblSessao.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblSessao.setBounds(45, 595, 90, 40);
-		panelCadastro.add(lblSessao);
+		lblIngresso = new JLabel("Sessão:");
+		lblIngresso.setHorizontalAlignment(SwingConstants.CENTER);
+		lblIngresso.setForeground(Color.BLACK);
+		lblIngresso.setFont(new Font("Verdana", Font.BOLD, 17));
+		lblIngresso.setBounds(45, 580, 90, 40);
+		panelCadastro.add(lblIngresso);
 
-		txtSessao = new JTextField();
-		txtSessao.setForeground(Color.BLACK);
-		txtSessao.setFont(new Font("Verdana", Font.BOLD, 20));
-		txtSessao.setEnabled(false);
-		txtSessao.setEditable(false);
-		txtSessao.setBackground(new Color(243, 243, 243));
-		txtSessao.setBounds(155, 595, 150, 40);
-		panelCadastro.add(txtSessao);
+		txtIngresso = new JTextField();
+		txtIngresso.setForeground(Color.BLACK);
+		txtIngresso.setFont(new Font("Verdana", Font.BOLD, 20));
+		txtIngresso.setEnabled(false);
+		txtIngresso.setEditable(false);
+		txtIngresso.setBackground(new Color(243, 243, 243));
+		txtIngresso.setBounds(155, 580, 150, 40);
+		panelCadastro.add(txtIngresso);
+
+		cbInteiraMeia = new JComboBox<>();
+		cbInteiraMeia.setFont(new Font("Verdana", Font.PLAIN, 15));
+		cbInteiraMeia.setBounds(155, 370, 150, 40);
+
+		cbInteiraMeia.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tipoIngresso = cbInteiraMeia.getSelectedItem().toString();
+
+				if (tipoIngresso.equals("Inteira")) {
+					valorIngresso = 20.00;
+				} else if (tipoIngresso.equals("Meia")) {
+					valorIngresso = 10.00;
+				}
+
+				for (Ingresso ingresso : iDAO.listaIngressos()) {
+					Character fileira = ingresso.getFileira();
+					System.out.println(fileira);
+					Integer cadeira = ingresso.getNumCadeira();
+					Integer idIngresso = ingresso.getIdIngresso();
+
+					txtIngresso.setText(String.valueOf(idIngresso));
+					txtPoltrona.setText(fileira.toString() + cadeira.toString());
+					txtValor.setText(String.valueOf(valorIngresso));
+
+					ingresso.setValor(valorIngresso);
+				}
+			}
+		});
+
+		panelCadastro.add(cbInteiraMeia);
+
+		cbInteiraMeia.addItem("- Selecione");
+		cbInteiraMeia.addItem("Inteira");
+		cbInteiraMeia.addItem("Meia");
 
 		JSeparator separator = new JSeparator();
 		separator.setBounds(10, 315, 380, 2);
@@ -259,7 +246,7 @@ public class Pagamento extends JFrame {
 		lblCVV.setBounds(845, 400, 70, 50);
 		getContentPane().add(lblCVV);
 
-		// Btn Cadastro
+		// Btn Compra
 		btnCompra = new JButton("Realizar Compra");
 		btnCompra.setBorder(new LineBorder(new Color(70, 230, 230), 3));
 		btnCompra.setForeground(Color.BLACK);

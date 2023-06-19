@@ -70,7 +70,7 @@ public class SessaoDAO implements ISessaoDAO {
 	@Override
 	public ArrayList<Sessao> listaSessoes() {
 
-		return null;
+		return listaSessoes;
 	}
 
 }

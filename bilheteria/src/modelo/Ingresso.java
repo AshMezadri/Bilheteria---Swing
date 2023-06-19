@@ -9,16 +9,17 @@ public class Ingresso {
 	public Double valor;
 	public Character fileira;
 	public Integer numCadeira;
-	
-	public Ingresso(Integer idIngresso, Sessao sessao, Pessoa pessoa, Filme filme, Double valor, Character fileira, Integer numCadeira) {
-        this.idIngresso = idIngresso;
-        this.sessao = sessao;
-        this.pessoa = pessoa;
-        this.filme = filme;
-        this.valor = valor;
-        this.fileira = fileira;
-        this.numCadeira = numCadeira;
-    }
+
+	public Ingresso(Integer idIngresso, Sessao sessao, Pessoa pessoa, Filme filme, Double valor, Character fileira,
+			Integer numCadeira) {
+		this.idIngresso = idIngresso;
+		this.sessao = sessao;
+		this.pessoa = pessoa;
+		this.filme = filme;
+		this.valor = valor;
+		this.fileira = fileira;
+		this.numCadeira = numCadeira;
+	}
 
 	public Ingresso() {
 		// TODO Auto-generated constructor stub
@@ -47,7 +48,7 @@ public class Ingresso {
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
 	}
-	
+
 	public Filme getFilme() {
 		return filme;
 	}
@@ -79,7 +80,11 @@ public class Ingresso {
 	public void setNumCadeira(Integer numCadeira) {
 		this.numCadeira = numCadeira;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "Ingresso [ idIngresso : " + idIngresso + " //Sessao : " + sessao + " //Pessoa : " + pessoa
+				+ " //Valor  : " + valor + " //Fileira : " + fileira + " //Cadeira : " + numCadeira + " ]";
+	}
 
 }

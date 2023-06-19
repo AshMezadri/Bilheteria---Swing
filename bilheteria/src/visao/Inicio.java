@@ -21,6 +21,7 @@ public class Inicio extends JFrame {
 	private JPanel contentPane;
 	private JPanel panelMain;
 	private JButton btnCadastro, btnLogin;
+
 	/**
 	 * Launch the application.
 	 */

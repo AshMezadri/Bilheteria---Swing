@@ -12,6 +12,7 @@ public class IngressoDAO implements IIngressoDAO {
 
 	private static ArrayList<Ingresso> listaIngressos;
 	private static IngressoDAO instancia;
+	private static Integer contador = 100;
 
 	private IngressoDAO() {
 	}
@@ -27,6 +28,8 @@ public class IngressoDAO implements IIngressoDAO {
 	@Override
 	public boolean cadastrarIngresso(Ingresso ingresso) {
 		if (ingresso != null) {
+			contador++;
+			ingresso.setIdIngresso(contador);
 			listaIngressos.add(ingresso);
 			return true;
 		}
@@ -70,7 +73,7 @@ public class IngressoDAO implements IIngressoDAO {
 	@Override
 	public ArrayList<Ingresso> listaIngressos() {
 
-		return null;
+		return listaIngressos;
 	}
 	
 	public Ingresso getIngressoById(Integer idIngresso) {

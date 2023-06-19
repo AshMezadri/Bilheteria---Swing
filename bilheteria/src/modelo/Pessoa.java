@@ -39,7 +39,7 @@ public class Pessoa {
 	
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Nome: " + this.getNome() + " //CPF : " + this.getCpf() + " //Email : " + this.getEmail() + " //Senha : " + this.getSenha() ;
+		return "[ Nome: " + this.getNome() + " //CPF : " + this.getCpf() + " //Email : " + this.getEmail() + " ]";
 	}
 
 }

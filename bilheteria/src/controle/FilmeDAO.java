@@ -65,15 +65,11 @@ public class FilmeDAO implements IFilmeDAO {
 
 	@Override
 	public ArrayList<Filme> listaFilmes() {
-		if (!listaFilmes.isEmpty()) {
-			for (Filme filme : listaFilmes) {
-
-			}
-		}
-		return null;
+	    return listaFilmes;
 	}
 
-	public Filme getFilmeById(int idFilme) {
+
+	public Filme getFilmeById(Integer idFilme) {
 		for (Filme filme : listaFilmes) {
 			if (filme.getIdFilme().equals(idFilme)) {
 				return filme;

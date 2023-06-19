@@ -54,8 +54,8 @@ public class Filme {
 
 	@Override
 	public String toString() {
-		return "Filme [idFilme=" + idFilme + ", nomeFilme=" + nomeFilme + ", horarioFilmeDublado=" + horarioFilmeDublado
-				+ ", horarioFilmeLegendado=" + horarioFilmeLegendado + "]";
+		return "[ idFilme : " + idFilme + " //nomeFilme : " + nomeFilme + " //horarioFilmeDublado : " + horarioFilmeDublado
+				+ " //horarioFilmeLegendado : " + horarioFilmeLegendado + " ]";
 	}
 
 }

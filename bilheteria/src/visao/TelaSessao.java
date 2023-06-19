@@ -25,16 +25,20 @@ import javax.swing.border.LineBorder;
 
 import controle.FilmeDAO;
 import controle.IngressoDAO;
+import controle.PessoaDAO;
 import controle.SessaoDAO;
+import modelo.Sessao;
 import modelo.Filme;
 import modelo.Ingresso;
-import modelo.Sessao;
+import modelo.Pessoa;
 
 public class TelaSessao extends JFrame {
 
 	private JPanel contentPane;
 	private IngressoDAO iDAO = IngressoDAO.getInstancia();
 	private FilmeDAO fDAO = FilmeDAO.getInstancia();
+	private PessoaDAO pDAO = PessoaDAO.getInstancia();
+	private SessaoDAO sDAO = SessaoDAO.getInstancia();
 	private JButton[][] assentos = new JButton[5][5];
 	private JLabel[][] lugares = new JLabel[5][5];
 
@@ -213,6 +217,7 @@ public class TelaSessao extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				Filme f = new Filme();
+				Sessao s = new Sessao();
 
 				if (rdbtnDubladoG.isSelected()) {
 					System.out.println("DubladoG");
@@ -225,6 +230,13 @@ public class TelaSessao extends JFrame {
 					System.out.println(f);
 
 					fDAO.cadastrarFilme(f);
+
+					s.setFilme(f);
+					s.setIdSessao(101);
+					s.setNumeroSala(1);
+					s.setQuantIngressosDisp(20);
+
+					sDAO.cadastrarSessao(s);
 
 					tabbedPane.setEnabledAt(1, true);
 
@@ -240,6 +252,13 @@ public class TelaSessao extends JFrame {
 
 					fDAO.cadastrarFilme(f);
 
+					s.setFilme(f);
+					s.setIdSessao(102);
+					s.setNumeroSala(1);
+					s.setQuantIngressosDisp(20);
+
+					sDAO.cadastrarSessao(s);
+
 					tabbedPane.setEnabledAt(1, true);
 
 				} else if (rdbtnDubladoB.isSelected()) {
@@ -253,6 +272,13 @@ public class TelaSessao extends JFrame {
 					System.out.println(f);
 
 					fDAO.cadastrarFilme(f);
+
+					s.setFilme(f);
+					s.setIdSessao(103);
+					s.setNumeroSala(2);
+					s.setQuantIngressosDisp(20);
+
+					sDAO.cadastrarSessao(s);
 
 					tabbedPane.setEnabledAt(1, true);
 
@@ -268,6 +294,13 @@ public class TelaSessao extends JFrame {
 
 					fDAO.cadastrarFilme(f);
 
+					s.setFilme(f);
+					s.setIdSessao(104);
+					s.setNumeroSala(2);
+					s.setQuantIngressosDisp(20);
+
+					sDAO.cadastrarSessao(s);
+
 					tabbedPane.setEnabledAt(1, true);
 
 				} else if (rdbtnDubladoS.isSelected()) {
@@ -282,6 +315,13 @@ public class TelaSessao extends JFrame {
 
 					fDAO.cadastrarFilme(f);
 
+					s.setFilme(f);
+					s.setIdSessao(105);
+					s.setNumeroSala(3);
+					s.setQuantIngressosDisp(20);
+
+					sDAO.cadastrarSessao(s);
+
 					tabbedPane.setEnabledAt(1, true);
 
 				} else {
@@ -295,6 +335,13 @@ public class TelaSessao extends JFrame {
 					System.out.println(f);
 
 					fDAO.cadastrarFilme(f);
+
+					s.setFilme(f);
+					s.setIdSessao(106);
+					s.setNumeroSala(3);
+					s.setQuantIngressosDisp(20);
+
+					sDAO.cadastrarSessao(s);
 
 					tabbedPane.setEnabledAt(1, true);
 				}
@@ -323,26 +370,39 @@ public class TelaSessao extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+
 				Ingresso i = new Ingresso();
 
-				int idFilmeSelecionado = 123; // Substitua pelo ID do filme selecionado
-		        Filme filmeSelecionado = FilmeDAO.getInstancia().getFilmeById(idFilmeSelecionado);
+				for (Filme filme : fDAO.listaFilmes()) {
 
-				i.setFilme(filmeSelecionado);
-				
-				
+					i.setFilme(filme);
+
+				}
+
+				for (Pessoa pessoa : pDAO.listaPessoas()) {
+
+					i.setPessoa(pessoa);
+
+				}
+
+				for (Sessao sessao : sDAO.listaSessoes()) {
+
+					i.setSessao(sessao);
+				}
+
 				for (int row = 0; row < 5; row++) {
 					for (int col = 0; col < 5; col++) {
 						JButton btnSelecionado = assentos[row][col];
 						if (btnSelecionado.isSelected()) {
-							
-							
+
 							// O assento na posição (row, col) está selecionado
 							i.setFileira((char) ('A' + row));
 							i.setNumCadeira(col + 1);
-							
+
+							iDAO.cadastrarIngresso(i);
+
 							System.out.println("Assento selecionado: " + i.getFileira() + i.getNumCadeira());
+							System.out.println(i);
 						}
 					}
 				}
@@ -360,6 +420,8 @@ public class TelaSessao extends JFrame {
 
 		// Criação da matriz de botões de ingresso
 
+		boolean[][] ingressosDisponiveis = new boolean[5][5];
+
 		for (int row = 0; row < 5; row++) {
 			for (int col = 0; col < 5; col++) {
 				// Cria um JLabel para exibir o lugar correspondente
@@ -373,7 +435,6 @@ public class TelaSessao extends JFrame {
 				btnIngresso.setBounds(185 + (col * 90), 101 + (row * 90), 66, 65);
 				Assentos.add(btnIngresso);
 
-				// Adiciona um ouvinte ao botão de ingresso
 				final int finalRow = row;
 				final int finalCol = col;
 				btnIngresso.addActionListener(new ActionListener() {
@@ -383,6 +444,10 @@ public class TelaSessao extends JFrame {
 						btn.setBackground(btn.isSelected() ? Color.RED : Color.WHITE);
 
 						btn.setSelected(!btn.isSelected()); // Inverte o estado de seleção do botão
+
+						// Atualiza o estado do ingresso correspondente na matriz de ingressos
+						// disponíveis
+						ingressosDisponiveis[finalRow][finalCol] = btn.isSelected();
 
 						// Verifica se algum ingresso está selecionado
 						boolean algumIngressoSelecionado = false;
