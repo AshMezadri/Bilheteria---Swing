@@ -97,28 +97,6 @@ public class Historico extends JFrame {
 		panel.add(lblHistorico);
 		lblHistorico.setFont(new Font("Verdana", Font.BOLD, 57));
 
-		tblIngressos = new JTable();
-		tblIngressos.setBorder(new LineBorder(new Color(0, 0, 128), 3, true));
-
-		DefaultTableModel tableModel = new DefaultTableModel(null,
-				new String[] { "ID do Ingresso", "Filme", "Tipo de Ingresso", "Valor" });
-		tblIngressos.setModel(tableModel);
-
-		// Preencha a tabela com os dados dos ingressos
-		for (Ingresso ingresso : iDAO.listaIngressos()) {
-			Object[] rowData = new Object[4]; // Array para armazenar os dados de cada linha
-
-			// Preencha os dados do ingresso nas colunas correspondentes
-			rowData[0] = ingresso.getIdIngresso();
-			rowData[1] = ingresso.getFilme();
-			rowData[2] = ingresso.getValor();
-
-			tableModel.addRow(rowData); // Adicione a linha à tabela
-		}
-
-		// Defina o tamanho e a posição da tabela
-		tblIngressos.setBounds(350, 275, 700, 300);
-
 		contentPane.add(tblIngressos);
 
 	}

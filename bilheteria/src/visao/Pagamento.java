@@ -7,6 +7,7 @@ import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Iterator;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -272,19 +273,18 @@ public class Pagamento extends JFrame {
 		btnTelaPrincipal.setBounds(925, 575, 275, 55);
 
 		btnTelaPrincipal.addActionListener(new ActionListener() {
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		        	
+		        new Principal().setVisible(true);
+		        dispose();
+		    }
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				new Principal().setVisible(true);
-				this.dispose();
-
-			}
-
-			private void dispose() {
-				setVisible(false);
-			}
-
+		    private void dispose() {
+		        setVisible(false);
+		    }
 		});
+
 
 		getContentPane().add(btnTelaPrincipal);
 
