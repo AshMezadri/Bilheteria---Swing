@@ -191,9 +191,6 @@ public class Perfil extends JFrame {
 						txtEmail.setEditable(true);
 						txtEmail.setEnabled(true);
 
-						txtCPF.setEnabled(true);
-						txtCPF.setEditable(true);
-
 						// btn salvar
 						btnSalvar = new JButton("Salvar");
 						btnSalvar.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
