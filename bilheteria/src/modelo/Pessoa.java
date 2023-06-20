@@ -29,7 +29,7 @@ public class Pessoa {
         this.senha = senha;
     }
 
-    public long getCpf() {
+    public Long getCpf() {
         return cpf;
     }
 

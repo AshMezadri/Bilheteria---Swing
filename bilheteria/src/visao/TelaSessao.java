@@ -41,6 +41,8 @@ public class TelaSessao extends JFrame {
 	private SessaoDAO sDAO = SessaoDAO.getInstancia();
 	private JButton[][] assentos = new JButton[5][5];
 	private JLabel[][] lugares = new JLabel[5][5];
+	private Character fileira;
+	private Integer cadeira;
 
 	/**
 	 * Launch the application.
@@ -396,12 +398,14 @@ public class TelaSessao extends JFrame {
 						if (btnSelecionado.isSelected()) {
 
 							// O assento na posição (row, col) está selecionado
+
 							i.setFileira((char) ('A' + row));
 							i.setNumCadeira(col + 1);
 
 							iDAO.cadastrarIngresso(i);
 
 							System.out.println("Assento selecionado: " + i.getFileira() + i.getNumCadeira());
+
 							System.out.println(i);
 						}
 					}

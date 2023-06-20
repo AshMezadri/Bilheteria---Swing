@@ -38,8 +38,8 @@ public class IngressoDAO implements IIngressoDAO {
 	}
 
 	@Override
-	public boolean alterarIngresso(Ingresso i, Integer idIngresso, Sessao sessao, Pessoa pessoa, Filme filme, Double valor,
-			Character fileira, Integer numCadeira) {
+	public boolean alterarIngresso(Ingresso i, Integer idIngresso, Sessao sessao, Pessoa pessoa, Filme filme,
+			Double valor, Character fileira, Integer numCadeira) {
 
 		for (Ingresso ingresso : listaIngressos) {
 			if (ingresso.getIdIngresso().equals(idIngresso)) {
@@ -51,6 +51,7 @@ public class IngressoDAO implements IIngressoDAO {
 				ingresso.setFileira(fileira);
 				ingresso.setNumCadeira(numCadeira);
 
+				return true;
 			}
 		}
 
@@ -66,7 +67,7 @@ public class IngressoDAO implements IIngressoDAO {
 				return true;
 			}
 		}
-		
+
 		return false;
 	}
 
@@ -75,7 +76,7 @@ public class IngressoDAO implements IIngressoDAO {
 
 		return listaIngressos;
 	}
-	
+
 	public Ingresso getIngressoById(Integer idIngresso) {
 		for (Ingresso ingresso : listaIngressos) {
 			if (ingresso.getIdIngresso().equals(idIngresso)) {

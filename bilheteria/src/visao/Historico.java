@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -13,6 +14,8 @@ import java.awt.Dimension;
 import javax.swing.UIManager;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
@@ -21,12 +24,15 @@ import controle.IngressoDAO;
 import modelo.Ingresso;
 
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 public class Historico extends JFrame {
 
 	private JPanel contentPane;
-	private JTable tblIngressos;
+	private JTextField txtNome, txtCPF;
 	private IngressoDAO iDAO = IngressoDAO.getInstancia();
+	private JTable tbIngresso;
+	private Ingresso ingressoSelecionado;
 
 	/**
 	 * Launch the application.
@@ -97,7 +103,29 @@ public class Historico extends JFrame {
 		panel.add(lblHistorico);
 		lblHistorico.setFont(new Font("Verdana", Font.BOLD, 57));
 
-		contentPane.add(tblIngressos);
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(300, 270, 700, 300);
+		contentPane.add(scrollPane);
+
+		tbIngresso = new JTable();
+		tbIngresso.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+
+				DefaultTableModel modelo = new DefaultTableModel(new Object[][] {},
+						new String[] { "ID Ingresso", "Filme", "Assento" });
+
+				for (Ingresso ingresso : iDAO.listaIngressos()) {
+					modelo.addRow(new Object[] { ingresso.getIdIngresso(), ingresso.getFilme().getNomeFilme(),
+							ingresso.getFileira() + ingresso.getNumCadeira() });
+
+				}
+
+			}
+		});
+		scrollPane.setViewportView(tbIngresso);
+		tbIngresso
+				.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "ID Ingresso", "Filme", "Assento" }));
 
 	}
 }

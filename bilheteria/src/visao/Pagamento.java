@@ -8,11 +8,10 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
-import java.util.Iterator;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -23,7 +22,10 @@ import javax.swing.JSeparator;
 import javax.swing.border.LineBorder;
 import javax.swing.text.MaskFormatter;
 
+import controle.FilmeDAO;
 import controle.IngressoDAO;
+import controle.PessoaDAO;
+import controle.SessaoDAO;
 import modelo.Filme;
 import modelo.Ingresso;
 import modelo.Pessoa;
@@ -48,8 +50,21 @@ public class Pagamento extends JFrame {
 	private JTextField txtIngresso;
 	private JComboBox<String> cbInteiraMeia;
 	private IngressoDAO iDAO = IngressoDAO.getInstancia();
+	private FilmeDAO fDAO = FilmeDAO.getInstancia();
+	private SessaoDAO sDAO = SessaoDAO.getInstancia();
+	private PessoaDAO pDAO = PessoaDAO.getInstancia();
+
 	private String tipoIngresso;
 	private Double valorIngresso = 00.00;
+
+	private Ingresso ingresso = new Ingresso();
+	private Sessao sessao = new Sessao();
+	private Filme filme = new Filme();
+	private Pessoa pessoa = new Pessoa();
+
+	private Integer idIngresso;
+	private Character fileira;
+	private Integer cadeira;
 
 	/**
 	 * Launch the application.
@@ -162,6 +177,7 @@ public class Pagamento extends JFrame {
 
 		cbInteiraMeia.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				tipoIngresso = cbInteiraMeia.getSelectedItem().toString();
 
 				if (tipoIngresso.equals("Inteira")) {
@@ -171,18 +187,19 @@ public class Pagamento extends JFrame {
 				}
 
 				for (Ingresso ingresso : iDAO.listaIngressos()) {
-					Character fileira = ingresso.getFileira();
-					System.out.println(fileira);
-					Integer cadeira = ingresso.getNumCadeira();
-					Integer idIngresso = ingresso.getIdIngresso();
 
-					txtIngresso.setText(String.valueOf(idIngresso));
-					txtPoltrona.setText(fileira.toString() + cadeira.toString());
+					fileira = ingresso.getFileira();
+					cadeira = ingresso.getNumCadeira();
+					idIngresso = ingresso.getIdIngresso();
+
 					txtValor.setText(String.valueOf(valorIngresso));
+					txtIngresso.setText(String.valueOf(ingresso.idIngresso));
+					txtPoltrona.setText(fileira.toString() + cadeira.toString());
 
-					ingresso.setValor(valorIngresso);
 				}
+
 			}
+
 		});
 
 		panelCadastro.add(cbInteiraMeia);
@@ -201,6 +218,7 @@ public class Pagamento extends JFrame {
 		lblTitular.setForeground(Color.WHITE);
 		lblTitular.setFont(new Font("Verdana", Font.BOLD, 20));
 		lblTitular.setBounds(500, 135, 95, 50);
+
 		getContentPane().add(lblTitular);
 
 		txtTitular = new JTextField();
@@ -243,7 +261,7 @@ public class Pagamento extends JFrame {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		txtValidade= new JFormattedTextField(mascaraValidade);
+		txtValidade = new JFormattedTextField(mascaraValidade);
 		txtValidade.setColumns(10);
 		txtValidade.setBackground(Color.WHITE);
 		txtValidade.setBounds(615, 400, 200, 50);
@@ -256,47 +274,6 @@ public class Pagamento extends JFrame {
 		lblCVV.setFont(new Font("Verdana", Font.BOLD, 20));
 		lblCVV.setBounds(845, 400, 70, 50);
 		getContentPane().add(lblCVV);
-
-		// Btn Compra
-		btnCompra = new JButton("Realizar Compra");
-		btnCompra.setBorder(new LineBorder(new Color(70, 230, 230), 3));
-		btnCompra.setForeground(Color.BLACK);
-		btnCompra.setBackground(Color.WHITE);
-		btnCompra.addActionListener(new ActionListener() {
-
-			public void actionPerformed(ActionEvent e) {
-
-				// saveUserInfo();
-			}
-		});
-
-		btnCompra.setFont(new Font("Verdana", Font.BOLD, 19));
-		btnCompra.setBounds(525, 575, 275, 55);
-		getContentPane().add(btnCompra);
-
-		// Btn TelaPrincipal
-		btnTelaPrincipal = new JButton("Voltar");
-		btnTelaPrincipal.setBorder(new LineBorder(new Color(255, 81, 81), 3));
-		btnTelaPrincipal.setForeground(Color.BLACK);
-		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnTelaPrincipal.setBackground(Color.WHITE);
-		btnTelaPrincipal.setBounds(925, 575, 275, 55);
-
-		btnTelaPrincipal.addActionListener(new ActionListener() {
-		    @Override
-		    public void actionPerformed(ActionEvent e) {
-		        	
-		        new Principal().setVisible(true);
-		        dispose();
-		    }
-
-		    private void dispose() {
-		        setVisible(false);
-		    }
-		});
-
-
-		getContentPane().add(btnTelaPrincipal);
 
 		lblDocartao = new JLabel("do cartão: ");
 		lblDocartao.setHorizontalAlignment(SwingConstants.CENTER);
@@ -314,13 +291,137 @@ public class Pagamento extends JFrame {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		txtCVV= new JFormattedTextField(mascaraCVV);
+		txtCVV = new JFormattedTextField(mascaraCVV);
 		txtCVV.setColumns(10);
 		txtCVV.setBackground(Color.WHITE);
 		txtCVV.setBounds(925, 400, 200, 50);
 		getContentPane().add(txtCVV);
-		
-		
 
+		// Btn Compra
+		btnCompra = new JButton("Realizar Compra");
+		btnCompra.setBorder(new LineBorder(new Color(70, 230, 230), 3));
+		btnCompra.setForeground(Color.BLACK);
+		btnCompra.setBackground(Color.WHITE);
+		btnCompra.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+
+				if (txtTitular.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "O campo do titular deve ser preenchido!");
+				} else if (txtNumeroCartao.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "O campo do número do cartão deve ser preenchido!");
+				} else if (txtValidade.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "O campo da validade deve ser preenchido!");
+				} else if (txtCVV.getText().isEmpty()) {
+					JOptionPane.showMessageDialog(null, "O campo do cvv deve ser preenchido!");
+				} else {
+
+					for (Filme filme : fDAO.listaFilmes()) {
+
+						ingresso.setFilme(filme);
+						System.out.println(ingresso.getFilme());
+
+					}
+
+					for (Pessoa pessoa : pDAO.listaPessoas()) {
+
+						ingresso.setPessoa(pessoa);
+						System.out.println(ingresso.getPessoa());
+
+					}
+
+					for (Sessao sessao : sDAO.listaSessoes()) {
+
+						ingresso.setSessao(sessao);
+						System.out.println(ingresso.getSessao());
+
+					}
+
+					Ingresso ingresso = null;
+
+					for (Ingresso ing : iDAO.listaIngressos()) {
+
+						ingresso = ing;
+
+						fileira = (ingresso.getFileira());
+						idIngresso = (ingresso.getIdIngresso());
+						cadeira = (ingresso.getNumCadeira());
+						ingresso.setValor(valorIngresso);
+
+					}
+
+					System.out.println("DEBUG: " + ingresso);
+
+					boolean atualizacao = iDAO.alterarIngresso(ingresso, idIngresso, sessao, pessoa, filme,
+							valorIngresso, fileira, cadeira);
+					if (atualizacao) {
+						JOptionPane.showMessageDialog(null, "Atualização concluída com sucesso");
+					} else {
+						JOptionPane.showMessageDialog(null, "Atualização não concluída");
+					}
+
+				}
+
+				new Principal().setVisible(true);
+				dispose();
+			}
+
+			private void dispose() {
+				setVisible(false);
+			}
+		});
+
+		btnCompra.setFont(new Font("Verdana", Font.BOLD, 19));
+		btnCompra.setBounds(525, 575, 275, 55);
+		getContentPane().add(btnCompra);
+
+		// Btn TelaPrincipal
+		btnTelaPrincipal = new JButton("Voltar");
+		btnTelaPrincipal.setBorder(new LineBorder(new Color(255, 81, 81), 3));
+		btnTelaPrincipal.setForeground(Color.BLACK);
+		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
+		btnTelaPrincipal.setBackground(Color.WHITE);
+		btnTelaPrincipal.setBounds(925, 575, 275, 55);
+
+		btnTelaPrincipal.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				for (Ingresso ingresso : iDAO.listaIngressos()) {
+
+					Boolean excluir = iDAO.deletarIngresso(ingresso, ingresso.getIdIngresso());
+					if (excluir) {
+						JOptionPane.showMessageDialog(null, "Compra não realizada");
+
+						new Principal().setVisible(true);
+						dispose();
+					} else {
+						JOptionPane.showMessageDialog(null, "Não foi possível voltar para a tela principal");
+					}
+					break;
+				}
+			}
+
+			private void dispose() {
+				setVisible(false);
+			}
+		});
+
+		getContentPane().add(btnTelaPrincipal);
+
+	}
+
+	private void atualizarIngresso() {
+		Ingresso ingresso = iDAO.getIngressoById(idIngresso);
+		if (ingresso != null) {
+			ingresso.setValor(valorIngresso);
+
+			boolean atualizado = iDAO.alterarIngresso(ingresso, idIngresso, null, null, null, valorIngresso, null,
+					idIngresso);
+			if (atualizado) {
+				JOptionPane.showMessageDialog(null, "Informações do ingresso atualizadas com sucesso!");
+			} else {
+				JOptionPane.showMessageDialog(null, "Falha ao atualizar as informações do ingresso.");
+			}
+		}
 	}
 }
