@@ -1,5 +1,4 @@
-# Bilheteria-Swing
-Estudo de caso - PDS
+# Estudo de caso - Bilheteria
 
 ## Descrição Textual das Funcionalidades do Sistema
 
