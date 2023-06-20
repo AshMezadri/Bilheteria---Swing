@@ -207,6 +207,9 @@ public class Perfil extends JFrame {
 
 								if (atualizacao) {
 									JOptionPane.showMessageDialog(null, "Atualização concluída com sucesso");
+
+									new Principal().setVisible(true);
+									this.dispose();
 								} else {
 									JOptionPane.showMessageDialog(null, "Atualização não concluída");
 								}
@@ -218,6 +221,11 @@ public class Perfil extends JFrame {
 									txtCPF.setText(cpf);
 									txtSenha.setText(pessoa.getSenha());
 								}
+							}
+
+							private void dispose() {
+
+								setVisible(false);
 							}
 						});
 
