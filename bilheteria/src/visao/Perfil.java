@@ -252,7 +252,7 @@ public class Perfil extends JFrame {
 						if (deletado) {
 							JOptionPane.showMessageDialog(null, "Pessoa deletada com sucesso");
 
-							new Principal().setVisible(true);
+							new Inicio().setVisible(true);
 							this.dispose();
 							// Restaurar campos para valores vazios ou desabilitados, se necessário
 						} else {

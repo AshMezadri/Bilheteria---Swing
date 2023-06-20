@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.Color;
@@ -20,17 +22,23 @@ import java.awt.event.ActionEvent;
 import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 
+import controle.FilmeDAO;
 import controle.IngressoDAO;
 import modelo.Ingresso;
+import modelo.Filme;
 
 import javax.swing.JTable;
-import javax.swing.JTextField;
 
 public class Historico extends JFrame {
 
 	private JPanel contentPane;
 	private IngressoDAO iDAO = IngressoDAO.getInstancia();
+	private FilmeDAO fDAO = FilmeDAO.getInstancia();
 	private JTable tbIngresso;
+	private JButton btnDeletar;
+	private Character fileira;
+	private Integer cadeira;
+	private Filme filme = new Filme();
 
 	/**
 	 * Launch the application.
@@ -80,14 +88,8 @@ public class Historico extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new Principal().setVisible(true);
-				this.dispose();
-
+				dispose();
 			}
-
-			private void dispose() {
-				setVisible(false);
-			}
-
 		});
 
 		JPanel panel = new JPanel();
@@ -106,24 +108,72 @@ public class Historico extends JFrame {
 		contentPane.add(scrollPane);
 
 		tbIngresso = new JTable();
+		tbIngresso.setDefaultEditor(Object.class, null);
+
 		tbIngresso.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				int selectedRow = tbIngresso.getSelectedRow();
+				if (selectedRow != -1) {
+					btnDeletar.setEnabled(true);
+				} else {
+					btnDeletar.setEnabled(false);
+				}
+			}
+		});
+		scrollPane.setViewportView(tbIngresso);
+		DefaultTableModel modelo = new DefaultTableModel(new Object[][] {},
+				new String[] { "ID Ingresso", "Filme", "Assento" });
+		tbIngresso.setModel(modelo);
 
-				DefaultTableModel modelo = new DefaultTableModel(new Object[][] {},
-						new String[] { "ID Ingresso", "Filme", "Assento" });
+		btnDeletar = new JButton("Deletar");
+		btnDeletar.setBackground(Color.WHITE);
+		btnDeletar.setFont(new Font("Verdana", Font.BOLD, 15));
+		btnDeletar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				Integer idDeletar = Integer.valueOf(JOptionPane.showInputDialog("Informe a id do Ingresso: "));
 
 				for (Ingresso ingresso : iDAO.listaIngressos()) {
-					modelo.addRow(new Object[] { ingresso.getIdIngresso(), ingresso.getFilme().getNomeFilme(),
-							ingresso.getFileira() + ingresso.getNumCadeira() });
+					if (ingresso.getIdIngresso().equals(idDeletar)) {
 
+						boolean deletado = iDAO.deletarIngresso(ingresso, idDeletar);
+						if (deletado) {
+							JOptionPane.showMessageDialog(null, "Ingresso cancelado com sucesso");
+
+							int selectedRow = tbIngresso.getSelectedRow();
+							if (selectedRow != -1) {
+								int idIngresso = (int) tbIngresso.getValueAt(selectedRow, 0);
+								iDAO.deletarIngresso(ingresso, idIngresso);
+								modelo.removeRow(selectedRow);
+								btnDeletar.setEnabled(false);
+							}
+							// Restaurar campos para valores vazios ou desabilitados, se necessário
+						} else {
+							JOptionPane.showMessageDialog(null, "Falha ao cancelar ingresso.");
+						}
+						break;
+					}
 				}
 
 			}
 		});
-		scrollPane.setViewportView(tbIngresso);
-		tbIngresso
-				.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "ID Ingresso", "Filme", "Assento" }));
+		btnDeletar.setBounds(1010, 270, 100, 50);
+		contentPane.add(btnDeletar);
+
+		for (Ingresso ingresso : iDAO.listaIngressos()) {
+			fileira = ingresso.getFileira();
+			cadeira = ingresso.getNumCadeira();
+
+			for (Filme filme : fDAO.listaFilmes()) {
+
+				ingresso.setFilme(filme);
+				System.out.println(ingresso.getFilme());
+
+			}
+			modelo.addRow(new Object[] { ingresso.getIdIngresso(), ingresso.getFilme().getNomeFilme(),
+					fileira.toString() + cadeira.toString() });
+		}
 
 	}
 }

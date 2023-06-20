@@ -68,7 +68,7 @@ public class Inicio extends JFrame {
 		panelMain.setLayout(null);
 
 		lblBilheteria = new JLabel("BILHETERIA");
-		lblBilheteria.setBorder(new LineBorder(new Color(201, 201, 201), 3));
+		lblBilheteria.setBorder(null);
 		lblBilheteria.setForeground(Color.BLACK);
 		lblBilheteria.setBounds(50, 300, 405, 110);
 		panelMain.add(lblBilheteria);
