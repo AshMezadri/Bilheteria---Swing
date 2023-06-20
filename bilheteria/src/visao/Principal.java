@@ -81,9 +81,10 @@ public class Principal extends JFrame {
 
 		// btn Sessoes
 		btnSessoes = new JButton("Sessões");
+		btnSessoes.setBorder(new LineBorder(new Color(0, 128, 192), 3, true));
 		btnSessoes.setBounds(850, 30, 140, 65);
 		btnSessoes.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnSessoes.setBackground(new Color(148, 121, 255));
+		btnSessoes.setBackground(Color.WHITE);
 		btnSessoes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				new TelaSessao().setVisible(true);
@@ -100,8 +101,9 @@ public class Principal extends JFrame {
 
 		// btn perfil
 		btnPerfil = new JButton("Perfil");
+		btnPerfil.setBorder(new LineBorder(new Color(128, 255, 128), 3, true));
 		btnPerfil.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnPerfil.setBackground(new Color(160, 254, 165));
+		btnPerfil.setBackground(Color.WHITE);
 		btnPerfil.setBounds(1000, 30, 140, 65);
 		btnPerfil.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -119,8 +121,9 @@ public class Principal extends JFrame {
 
 		// btn historico
 		btnHistorico = new JButton("Histórico");
+		btnHistorico.setBorder(new LineBorder(new Color(255, 128, 128), 3, true));
 		btnHistorico.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnHistorico.setBackground(new Color(254, 141, 129));
+		btnHistorico.setBackground(Color.WHITE);
 		btnHistorico.setBounds(1150, 30, 140, 65);
 		btnHistorico.addActionListener(new ActionListener() {
 
@@ -146,17 +149,20 @@ public class Principal extends JFrame {
 
 		// ======filmes======
 		lblGuardioes = new JLabel("Guardiões da Galáxia 3");
+		lblGuardioes.setForeground(Color.BLACK);
 		lblGuardioes.setBackground(new Color(255, 255, 255));
 		lblGuardioes.setBounds(139, 45, 210, 15);
 		panelMain1.add(lblGuardioes);
 		lblGuardioes.setFont(new Font("Verdana", Font.BOLD, 16));
 
 		lblBarbie = new JLabel("Barbie");
+		lblBarbie.setForeground(Color.BLACK);
 		lblBarbie.setBounds(639, 45, 65, 15);
 		panelMain1.add(lblBarbie);
 		lblBarbie.setFont(new Font("Verdana", Font.BOLD, 16));
 
 		lblShrek = new JLabel("Shrek 2");
+		lblShrek.setForeground(Color.BLACK);
 		lblShrek.setBounds(1039, 45, 75, 15);
 		panelMain1.add(lblShrek);
 		lblShrek.setFont(new Font("Verdana", Font.BOLD, 16));

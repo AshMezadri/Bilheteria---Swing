@@ -79,7 +79,7 @@ public class TelaSessao extends JFrame {
 		contentPane.setLayout(null);
 
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 30, 1375, 115);
+		panel.setBounds(0, 30, 1350, 115);
 		panel.setBackground(UIManager.getColor("Button.highlight"));
 		contentPane.add(panel);
 		panel.setLayout(null);
@@ -90,6 +90,27 @@ public class TelaSessao extends JFrame {
 		lblSessao.setFont(new Font("Verdana", Font.BOLD, 55));
 		lblSessao.setHorizontalAlignment(SwingConstants.CENTER);
 		panel.add(lblSessao);
+		
+				JButton btnTelaPrincipal = new JButton("HOME");
+				btnTelaPrincipal.setBorder(new LineBorder(new Color(125, 169, 240), 3, true));
+				btnTelaPrincipal.setBounds(1100, 22, 150, 70);
+				panel.add(btnTelaPrincipal);
+				btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
+				btnTelaPrincipal.setBackground(Color.WHITE);
+				btnTelaPrincipal.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						new Principal().setVisible(true);
+						this.dispose();
+
+					}
+
+					private void dispose() {
+						setVisible(false);
+					}
+
+				});
 
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.setBounds(50, 170, 1250, 515);
@@ -107,18 +128,22 @@ public class TelaSessao extends JFrame {
 		//
 
 		JLabel lblGuardioes = new JLabel("Guardiões da Galáxia");
+		lblGuardioes.setForeground(Color.BLACK);
 		lblGuardioes.setFont(new Font("Verdana", Font.BOLD, 14));
-		lblGuardioes.setBounds(265, 25, 170, 15);
+		lblGuardioes.setBounds(260, 25, 170, 15);
 		horarios.add(lblGuardioes);
 
 		JLabel lblShrek = new JLabel("Shrek 2");
+		lblShrek.setForeground(Color.BLACK);
 		lblShrek.setFont(new Font("Verdana", Font.BOLD, 14));
-		lblShrek.setBounds(615, 25, 65, 14);
+		lblShrek.setBounds(620, 25, 65, 15);
 		horarios.add(lblShrek);
 
 		JLabel lblBarbie = new JLabel("Barbie");
+		lblBarbie.setHorizontalAlignment(SwingConstants.CENTER);
+		lblBarbie.setForeground(Color.BLACK);
 		lblBarbie.setFont(new Font("Verdana", Font.BOLD, 14));
-		lblBarbie.setBounds(915, 25, 65, 14);
+		lblBarbie.setBounds(920, 25, 60, 15);
 		horarios.add(lblBarbie);
 
 		JLabel lblDub = new JLabel("Dublado");
@@ -132,39 +157,42 @@ public class TelaSessao extends JFrame {
 		horarios.add(lblLeg);
 
 		JLabel lblPosterGuardioes = new JLabel("");
-		lblPosterGuardioes.setBounds(275, 50, 150, 215);
+		lblPosterGuardioes.setBounds(270, 50, 150, 215);
 		horarios.add(lblPosterGuardioes);
 		lblPosterGuardioes.setIcon(new ImageIcon(img));
 
 		JLabel lblPosterShrek = new JLabel("");
-		lblPosterShrek.setBounds(565, 50, 150, 215);
+		lblPosterShrek.setBounds(570, 50, 150, 215);
 		horarios.add(lblPosterShrek);
 		lblPosterShrek.setIcon(new ImageIcon(imgShrek));
 
 		JLabel lblPosterBarbie = new JLabel("");
-		lblPosterBarbie.setBounds(865, 50, 150, 215);
+		lblPosterBarbie.setBounds(870, 50, 150, 215);
 		horarios.add(lblPosterBarbie);
 		lblPosterBarbie.setIcon(new ImageIcon(imgBarb));
 
 		JRadioButton rdbtnDubladoG = new JRadioButton("16:00h");
+		rdbtnDubladoG.setForeground(Color.BLACK);
 		rdbtnDubladoG.setBackground(Color.LIGHT_GRAY);
 		rdbtnDubladoG.setHorizontalAlignment(SwingConstants.CENTER);
 		rdbtnDubladoG.setFont(new Font("Verdana", Font.BOLD, 16));
 		rdbtnDubladoG.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
-		rdbtnDubladoG.setBounds(295, 315, 115, 50);
+		rdbtnDubladoG.setBounds(290, 315, 115, 50);
 
 		horarios.add(rdbtnDubladoG);
 
 		JRadioButton rdbtnLegendadoG = new JRadioButton("18:30h");
+		rdbtnLegendadoG.setForeground(Color.BLACK);
 		rdbtnLegendadoG.setHorizontalAlignment(SwingConstants.CENTER);
 		rdbtnLegendadoG.setFont(new Font("Verdana", Font.BOLD, 16));
 		rdbtnLegendadoG.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
 		rdbtnLegendadoG.setBackground(Color.LIGHT_GRAY);
-		rdbtnLegendadoG.setBounds(295, 400, 115, 50);
+		rdbtnLegendadoG.setBounds(290, 400, 115, 50);
 
 		horarios.add(rdbtnLegendadoG);
 
 		JRadioButton rdbtnLegendadoS = new JRadioButton("20:00h");
+		rdbtnLegendadoS.setForeground(Color.BLACK);
 		rdbtnLegendadoS.setHorizontalAlignment(SwingConstants.CENTER);
 		rdbtnLegendadoS.setFont(new Font("Verdana", Font.BOLD, 16));
 		rdbtnLegendadoS.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
@@ -174,6 +202,7 @@ public class TelaSessao extends JFrame {
 		horarios.add(rdbtnLegendadoS);
 
 		JRadioButton rdbtnDubladoS = new JRadioButton("19:00h");
+		rdbtnDubladoS.setForeground(Color.BLACK);
 		rdbtnDubladoS.setHorizontalAlignment(SwingConstants.CENTER);
 		rdbtnDubladoS.setFont(new Font("Verdana", Font.BOLD, 16));
 		rdbtnDubladoS.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
@@ -183,6 +212,7 @@ public class TelaSessao extends JFrame {
 		horarios.add(rdbtnDubladoS);
 
 		JRadioButton rdbtnLegendadoB = new JRadioButton("18:00h");
+		rdbtnLegendadoB.setForeground(Color.BLACK);
 		rdbtnLegendadoB.setHorizontalAlignment(SwingConstants.CENTER);
 		rdbtnLegendadoB.setFont(new Font("Verdana", Font.BOLD, 16));
 		rdbtnLegendadoB.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
@@ -192,11 +222,12 @@ public class TelaSessao extends JFrame {
 		horarios.add(rdbtnLegendadoB);
 
 		JRadioButton rdbtnDubladoB = new JRadioButton("16:30h");
+		rdbtnDubladoB.setForeground(Color.BLACK);
 		rdbtnDubladoB.setHorizontalAlignment(SwingConstants.CENTER);
 		rdbtnDubladoB.setFont(new Font("Verdana", Font.BOLD, 16));
-		rdbtnDubladoB.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		rdbtnDubladoB.setBorder(new LineBorder(new Color(255, 255, 255), 3, true));
 		rdbtnDubladoB.setBackground(Color.LIGHT_GRAY);
-		rdbtnDubladoB.setBounds(890, 309, 115, 50);
+		rdbtnDubladoB.setBounds(890, 315, 115, 50);
 
 		horarios.add(rdbtnDubladoB);
 
@@ -208,12 +239,13 @@ public class TelaSessao extends JFrame {
 		buttonGroup.add(rdbtnDubladoB);
 		buttonGroup.add(rdbtnLegendadoB);
 
-		JButton btnSalvar = new JButton("Salvar");
-		btnSalvar.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnSalvar.setBackground(Color.WHITE);
-		btnSalvar.setBounds(1085, 345, 150, 65);
+		JButton btnSeguir = new JButton("SEGUIR");
+		btnSeguir.setBorder(new LineBorder(new Color(0, 255, 64), 3, true));
+		btnSeguir.setFont(new Font("Verdana", Font.BOLD, 20));
+		btnSeguir.setBackground(Color.WHITE);
+		btnSeguir.setBounds(1075, 345, 125, 65);
 
-		btnSalvar.addActionListener(new ActionListener() {
+		btnSeguir.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -351,7 +383,7 @@ public class TelaSessao extends JFrame {
 			}
 
 		});
-		horarios.add(btnSalvar);
+		horarios.add(btnSeguir);
 
 		//
 
@@ -362,8 +394,8 @@ public class TelaSessao extends JFrame {
 		Assentos.setLayout(null);
 
 		JButton btnPagamento = new JButton("PAGAR");
-		btnPagamento.setBorder(new LineBorder(new Color(142, 223, 147), 3));
-		btnPagamento.setBounds(925, 200, 200, 70);
+		btnPagamento.setBorder(new LineBorder(new Color(0, 255, 64), 3, true));
+		btnPagamento.setBounds(950, 200, 175, 70);
 		Assentos.add(btnPagamento);
 		btnPagamento.setFont(new Font("Verdana", Font.BOLD, 22));
 		btnPagamento.setBackground(Color.WHITE);
@@ -431,23 +463,25 @@ public class TelaSessao extends JFrame {
 				// Cria um JLabel para exibir o lugar correspondente
 				JLabel lblLugar = new JLabel(Character.toString((char) ('A' + row)) + (col + 1));
 				lblLugar.setFont(new Font("Verdana", Font.BOLD, 14));
-				lblLugar.setBounds(185 + (col * 90), 76 + (row * 90), 50, 25);
+				lblLugar.setBounds(200 + (col * 90), 25 + (row * 90), 50, 25);
 				Assentos.add(lblLugar);
 
 				JButton btnIngresso = new JButton("");
 				btnIngresso.setBackground(new Color(255, 255, 255));
-				btnIngresso.setBounds(185 + (col * 90), 101 + (row * 90), 66, 65);
+				btnIngresso.setBounds(200 + (col * 90), 50 + (row * 90), 66, 65);
 				Assentos.add(btnIngresso);
 
 				final int finalRow = row;
 				final int finalCol = col;
+
 				btnIngresso.addActionListener(new ActionListener() {
+
 					public void actionPerformed(ActionEvent e) {
-						// Altera a cor de fundo do botão quando for selecionado
+
 						JButton btn = (JButton) e.getSource();
 						btn.setBackground(btn.isSelected() ? Color.RED : Color.WHITE);
 
-						btn.setSelected(!btn.isSelected()); // Inverte o estado de seleção do botão
+						btn.setSelected(!btn.isSelected());
 
 						// Atualiza o estado do ingresso correspondente na matriz de ingressos
 						// disponíveis
@@ -477,26 +511,6 @@ public class TelaSessao extends JFrame {
 				lugares[row][col] = lblLugar;
 			}
 		}
-
-		JButton btnTelaPrincipal = new JButton("Voltar");
-		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnTelaPrincipal.setBackground(Color.WHITE);
-		btnTelaPrincipal.setBounds(1150, 50, 150, 65);
-		contentPane.add(btnTelaPrincipal);
-		btnTelaPrincipal.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				new Principal().setVisible(true);
-				this.dispose();
-
-			}
-
-			private void dispose() {
-				setVisible(false);
-			}
-
-		});
 
 		Image imgS = new ImageIcon(this.getClass().getResource("/Shrek2.png")).getImage();
 		Image imgB = new ImageIcon(this.getClass().getResource("/Barbie.png")).getImage();

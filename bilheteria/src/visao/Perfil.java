@@ -78,18 +78,13 @@ public class Perfil extends JFrame {
 		faixa.setBounds(0, 0, 400, 705);
 		getContentPane().add(faixa);
 		faixa.setLayout(null);
-
-		JLabel lblIconPerfil = new JLabel("");
-		lblIconPerfil.setBounds(137, 151, 114, 221);
-		faixa.add(lblIconPerfil);
 		Image iconPerfil = new ImageIcon(this.getClass().getResource("/profileResized.png")).getImage();
-		lblIconPerfil.setIcon(
-				new ImageIcon("C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\profileResized.png"));
 
 		JLabel lblPerfil = new JLabel(" Perfil");
+		lblPerfil.setForeground(Color.BLACK);
 		lblPerfil.setBounds(85, 286, 200, 70);
 		faixa.add(lblPerfil);
-		lblPerfil.setBorder(new LineBorder(new Color(128, 128, 128), 3));
+		lblPerfil.setBorder(null);
 		lblPerfil.setFont(new Font("Verdana", Font.BOLD, 53));
 
 		// nome
@@ -176,8 +171,9 @@ public class Perfil extends JFrame {
 
 		// btn atualizar infos
 		btnAtualizar = new JButton("Atualizar");
-		btnAtualizar.setBorder(new LineBorder(new Color(192, 192, 192), 4));
-		btnAtualizar.setBackground(new Color(202, 220, 249));
+		btnAtualizar.setForeground(Color.BLACK);
+		btnAtualizar.setBorder(new LineBorder(new Color(0, 255, 255), 3, true));
+		btnAtualizar.setBackground(new Color(128, 255, 255));
 		btnAtualizar.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnAtualizar.setBounds(475, 560, 200, 65);
 		JanelaPerfil.add(btnAtualizar);
@@ -237,7 +233,8 @@ public class Perfil extends JFrame {
 
 		// btn deletar
 		JButton btnDeletar = new JButton("Deletar conta");
-		btnDeletar.setBorder(new LineBorder(new Color(255, 128, 128), 4));
+		btnDeletar.setForeground(Color.BLACK);
+		btnDeletar.setBorder(new LineBorder(new Color(255, 128, 128), 3, true));
 		btnDeletar.setBackground(new Color(242, 146, 132));
 		btnDeletar.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnDeletar.setBounds(975, 560, 200, 65);
@@ -275,7 +272,8 @@ public class Perfil extends JFrame {
 
 		// btn voltar main
 		btnTelaPrincipal = new JButton("Voltar");
-		btnTelaPrincipal.setBorder(new LineBorder(new Color(0, 0, 0), 3, true));
+		btnTelaPrincipal.setForeground(Color.BLACK);
+		btnTelaPrincipal.setBorder(new LineBorder(new Color(7, 1, 88), 3, true));
 		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnTelaPrincipal.setBackground(Color.WHITE);
 		btnTelaPrincipal.setBounds(730, 560, 200, 65);

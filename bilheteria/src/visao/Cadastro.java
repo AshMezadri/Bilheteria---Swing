@@ -82,7 +82,7 @@ public class Cadastro extends JFrame {
 		// lbl cadastro
 		lblCadastro = new JLabel("CADASTRO");
 		lblCadastro.setForeground(Color.BLACK);
-		lblCadastro.setBounds(21, 250, 330, 70);
+		lblCadastro.setBounds(25, 300, 330, 75);
 		panelCadastro.add(lblCadastro);
 		lblCadastro.setFont(new Font("Verdana", Font.BOLD, 53));
 
@@ -167,8 +167,8 @@ public class Cadastro extends JFrame {
 
 		// Btn Cadastro
 		btnCadastro = new JButton("Cadastrar");
-		btnCadastro.setBorder(new LineBorder(new Color(149, 232, 236), 4));
-		btnCadastro.setForeground(new Color(0, 0, 0));
+		btnCadastro.setBorder(new LineBorder(new Color(149, 232, 236), 5, true));
+		btnCadastro.setForeground(Color.BLACK);
 		btnCadastro.setBackground(new Color(183, 232, 174));
 		btnCadastro.addActionListener(new ActionListener() {
 
@@ -219,16 +219,16 @@ public class Cadastro extends JFrame {
 		});
 
 		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 19));
-		btnCadastro.setBounds(683, 575, 275, 55);
+		btnCadastro.setBounds(675, 575, 275, 65);
 		getContentPane().add(btnCadastro);
 
 		// Btn TelaPrincipal
 		btnTelaPrincipal = new JButton("Voltar");
-		btnTelaPrincipal.setBorder(new LineBorder(new Color(255, 155, 200), 4));
+		btnTelaPrincipal.setBorder(new LineBorder(new Color(255, 155, 200), 5, true));
 		btnTelaPrincipal.setForeground(Color.BLACK);
 		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnTelaPrincipal.setBackground(new Color(242, 146, 132));
-		btnTelaPrincipal.setBounds(1031, 575, 275, 55);
+		btnTelaPrincipal.setBounds(1030, 575, 275, 65);
 
 		btnTelaPrincipal.addActionListener(new ActionListener() {
 

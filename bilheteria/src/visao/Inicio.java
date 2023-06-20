@@ -21,6 +21,7 @@ public class Inicio extends JFrame {
 	private JPanel contentPane;
 	private JPanel panelMain;
 	private JButton btnCadastro, btnLogin;
+	private JLabel lblBilheteria;
 
 	/**
 	 * Launch the application.
@@ -66,23 +67,16 @@ public class Inicio extends JFrame {
 		contentPane.add(panelMain);
 		panelMain.setLayout(null);
 
-		new JLabel("BILHETERIA");
-		JLabel lblBilheteria = new JLabel("BILHETERIA");
+		lblBilheteria = new JLabel("BILHETERIA");
 		lblBilheteria.setBorder(new LineBorder(new Color(201, 201, 201), 3));
 		lblBilheteria.setForeground(Color.BLACK);
-		lblBilheteria.setBounds(50, 300, 406, 107);
+		lblBilheteria.setBounds(50, 300, 405, 110);
 		panelMain.add(lblBilheteria);
 		lblBilheteria.setFont(new Font("Verdana", Font.BOLD, 57));
 
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(
-				"C:\\Users\\Aluno\\Desktop\\Bilheteria-Swing\\bilheteria\\img\\image-removebg-preview (1).png"));
-		lblNewLabel.setBounds(120, 105, 248, 227);
-		panelMain.add(lblNewLabel);
-
 		// btn login
 		btnLogin = new JButton("Login");
-		btnLogin.setBorder(new LineBorder(new Color(125, 169, 240), 5));
+		btnLogin.setBorder(new LineBorder(new Color(125, 169, 240), 5, true));
 		btnLogin.setForeground(Color.BLACK);
 		btnLogin.setBackground(Color.WHITE);
 		btnLogin.addActionListener(new ActionListener() {
@@ -98,17 +92,17 @@ public class Inicio extends JFrame {
 		});
 
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 24));
-		btnLogin.setBounds(800, 225, 205, 70);
+		btnLogin.setBounds(800, 225, 210, 75);
 
 		contentPane.add(btnLogin);
 
 		// btn cadastro
 		btnCadastro = new JButton("Cadastro");
-		btnCadastro.setBorder(new LineBorder(new Color(122, 166, 239), 4, true));
+		btnCadastro.setBorder(new LineBorder(new Color(122, 166, 239), 5, true));
 		btnCadastro.setForeground(Color.BLACK);
 		btnCadastro.setBackground(Color.WHITE);
 		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 24));
-		btnCadastro.setBounds(800, 450, 205, 70);
+		btnCadastro.setBounds(800, 450, 210, 75);
 		btnCadastro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 

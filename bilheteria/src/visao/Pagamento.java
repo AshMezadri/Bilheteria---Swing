@@ -65,6 +65,9 @@ public class Pagamento extends JFrame {
 	private Integer idIngresso;
 	private Character fileira;
 	private Integer cadeira;
+	private JLabel lblNome;
+	private JTextField txtNome;
+	private JTextField txtEmail;
 
 	/**
 	 * Launch the application.
@@ -149,17 +152,17 @@ public class Pagamento extends JFrame {
 		txtPoltrona = new JTextField();
 		txtPoltrona.setForeground(Color.BLACK);
 		txtPoltrona.setFont(new Font("Verdana", Font.BOLD, 20));
-		txtPoltrona.setEnabled(true);
+		txtPoltrona.setEnabled(false);
 		txtPoltrona.setEditable(false);
 		txtPoltrona.setBackground(new Color(243, 243, 243));
 		txtPoltrona.setBounds(155, 510, 150, 40);
 		panelCadastro.add(txtPoltrona);
 
-		lblIngresso = new JLabel("Sessão:");
+		lblIngresso = new JLabel("Cod. Ing.:");
 		lblIngresso.setHorizontalAlignment(SwingConstants.CENTER);
 		lblIngresso.setForeground(Color.BLACK);
 		lblIngresso.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblIngresso.setBounds(45, 580, 90, 40);
+		lblIngresso.setBounds(35, 580, 110, 40);
 		panelCadastro.add(lblIngresso);
 
 		txtIngresso = new JTextField();
@@ -212,7 +215,46 @@ public class Pagamento extends JFrame {
 		separator.setBounds(10, 315, 380, 2);
 		panelCadastro.add(separator);
 
-		// Nome
+		lblNome = new JLabel("Nome:");
+		lblNome.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNome.setForeground(Color.BLACK);
+		lblNome.setFont(new Font("Verdana", Font.BOLD, 17));
+		lblNome.setBounds(75, 150, 70, 40);
+		panelCadastro.add(lblNome);
+
+		txtNome = new JTextField();
+		txtNome.setForeground(Color.BLACK);
+		txtNome.setFont(new Font("Verdana", Font.BOLD, 20));
+		txtNome.setEnabled(false);
+		txtNome.setEditable(false);
+		txtNome.setBackground(new Color(243, 243, 243));
+		txtNome.setBounds(155, 150, 150, 40);
+		panelCadastro.add(txtNome);
+
+		JLabel lblEmail = new JLabel("Email:");
+		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEmail.setForeground(Color.BLACK);
+		lblEmail.setFont(new Font("Verdana", Font.BOLD, 17));
+		lblEmail.setBounds(75, 215, 70, 40);
+		panelCadastro.add(lblEmail);
+
+		txtEmail = new JTextField();
+		txtEmail.setForeground(Color.BLACK);
+		txtEmail.setFont(new Font("Verdana", Font.BOLD, 20));
+		txtEmail.setEnabled(false);
+		txtEmail.setEditable(false);
+		txtEmail.setBackground(new Color(243, 243, 243));
+		txtEmail.setBounds(155, 215, 150, 40);
+		panelCadastro.add(txtEmail);
+
+		for (Pessoa pessoa : pDAO.listaPessoas()) {
+
+			txtNome.setText(pessoa.nome);
+			txtEmail.setText(pessoa.email);
+
+		}
+
+		// titular
 		lblTitular = new JLabel("Titular:");
 		lblTitular.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitular.setForeground(Color.WHITE);
@@ -228,7 +270,7 @@ public class Pagamento extends JFrame {
 		txtTitular.setBounds(625, 135, 500, 50);
 		getContentPane().add(txtTitular);
 
-		// Email
+		// Numero
 		lblNumero = new JLabel("Número ");
 		lblNumero.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNumero.setForeground(new Color(255, 255, 255));
@@ -237,6 +279,17 @@ public class Pagamento extends JFrame {
 		getContentPane().add(lblNumero);
 
 		txtNumeroCartao = new JTextField();
+
+		/*****************/
+		MaskFormatter mascaraNumeroCartao = null;
+		try {
+			mascaraNumeroCartao = new MaskFormatter("#### #### #### ####");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtNumeroCartao = new JFormattedTextField(mascaraNumeroCartao);
+		/*****************/
+
 		txtNumeroCartao.setForeground(Color.BLACK);
 		txtNumeroCartao.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtNumeroCartao.setColumns(10);
@@ -244,7 +297,7 @@ public class Pagamento extends JFrame {
 		txtNumeroCartao.setBounds(625, 260, 500, 50);
 		getContentPane().add(txtNumeroCartao);
 
-		// CPF
+		// Validade
 		lblValidade = new JLabel("Validade: ");
 		lblValidade.setHorizontalAlignment(SwingConstants.CENTER);
 		lblValidade.setForeground(Color.WHITE);
@@ -253,21 +306,25 @@ public class Pagamento extends JFrame {
 		getContentPane().add(lblValidade);
 
 		txtValidade = new JTextField();
-		txtValidade.setForeground(Color.BLACK);
-		txtValidade.setFont(new Font("Verdana", Font.BOLD, 20));
+
+		/*****************/
 		MaskFormatter mascaraValidade = null;
 		try {
-			mascaraValidade = new MaskFormatter("##/####");
+			mascaraValidade = new MaskFormatter("##/##");
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 		txtValidade = new JFormattedTextField(mascaraValidade);
+		/*****************/
+
+		txtValidade.setForeground(Color.BLACK);
+		txtValidade.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtValidade.setColumns(10);
 		txtValidade.setBackground(Color.WHITE);
 		txtValidade.setBounds(615, 400, 200, 50);
 		getContentPane().add(txtValidade);
 
-		// Senha
+		// CVV
 		lblCVV = new JLabel("CVV:");
 		lblCVV.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCVV.setForeground(new Color(255, 255, 255));
@@ -283,8 +340,8 @@ public class Pagamento extends JFrame {
 		getContentPane().add(lblDocartao);
 
 		txtCVV = new JTextField();
-		txtCVV.setForeground(Color.BLACK);
-		txtCVV.setFont(new Font("Verdana", Font.BOLD, 20));
+
+		/*****************/
 		MaskFormatter mascaraCVV = null;
 		try {
 			mascaraCVV = new MaskFormatter("###");
@@ -292,14 +349,18 @@ public class Pagamento extends JFrame {
 			e.printStackTrace();
 		}
 		txtCVV = new JFormattedTextField(mascaraCVV);
+		/*****************/
+
+		txtCVV.setForeground(Color.BLACK);
+		txtCVV.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtCVV.setColumns(10);
 		txtCVV.setBackground(Color.WHITE);
 		txtCVV.setBounds(925, 400, 200, 50);
 		getContentPane().add(txtCVV);
 
 		// Btn Compra
-		btnCompra = new JButton("Realizar Compra");
-		btnCompra.setBorder(new LineBorder(new Color(70, 230, 230), 3));
+		btnCompra = new JButton("Finalizar Compra");
+		btnCompra.setBorder(new LineBorder(new Color(128, 255, 128), 3, true));
 		btnCompra.setForeground(Color.BLACK);
 		btnCompra.setBackground(Color.WHITE);
 		btnCompra.addActionListener(new ActionListener() {
@@ -308,12 +369,16 @@ public class Pagamento extends JFrame {
 
 				if (txtTitular.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null, "O campo do titular deve ser preenchido!");
+					
 				} else if (txtNumeroCartao.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null, "O campo do número do cartão deve ser preenchido!");
+					
 				} else if (txtValidade.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null, "O campo da validade deve ser preenchido!");
+					
 				} else if (txtCVV.getText().isEmpty()) {
 					JOptionPane.showMessageDialog(null, "O campo do cvv deve ser preenchido!");
+					
 				} else {
 
 					for (Filme filme : fDAO.listaFilmes()) {
@@ -355,15 +420,16 @@ public class Pagamento extends JFrame {
 					boolean atualizacao = iDAO.alterarIngresso(ingresso, idIngresso, sessao, pessoa, filme,
 							valorIngresso, fileira, cadeira);
 					if (atualizacao) {
-						JOptionPane.showMessageDialog(null, "Atualização concluída com sucesso");
+						JOptionPane.showMessageDialog(null, "Compra realizada com sucesso!");
 					} else {
-						JOptionPane.showMessageDialog(null, "Atualização não concluída");
+						JOptionPane.showMessageDialog(null, "Não foi possível realizar a compra.");
 					}
 
+					new Principal().setVisible(true);
+					dispose();
 				}
 
-				new Principal().setVisible(true);
-				dispose();
+				
 			}
 
 			private void dispose() {
@@ -372,16 +438,16 @@ public class Pagamento extends JFrame {
 		});
 
 		btnCompra.setFont(new Font("Verdana", Font.BOLD, 19));
-		btnCompra.setBounds(525, 575, 275, 55);
+		btnCompra.setBounds(525, 575, 275, 65);
 		getContentPane().add(btnCompra);
 
 		// Btn TelaPrincipal
-		btnTelaPrincipal = new JButton("Voltar");
-		btnTelaPrincipal.setBorder(new LineBorder(new Color(255, 81, 81), 3));
+		btnTelaPrincipal = new JButton("HOME");
+		btnTelaPrincipal.setBorder(new LineBorder(new Color(255, 128, 128), 3, true));
 		btnTelaPrincipal.setForeground(Color.BLACK);
 		btnTelaPrincipal.setFont(new Font("Verdana", Font.BOLD, 20));
 		btnTelaPrincipal.setBackground(Color.WHITE);
-		btnTelaPrincipal.setBounds(925, 575, 275, 55);
+		btnTelaPrincipal.setBounds(925, 575, 275, 65);
 
 		btnTelaPrincipal.addActionListener(new ActionListener() {
 			@Override
@@ -408,20 +474,5 @@ public class Pagamento extends JFrame {
 
 		getContentPane().add(btnTelaPrincipal);
 
-	}
-
-	private void atualizarIngresso() {
-		Ingresso ingresso = iDAO.getIngressoById(idIngresso);
-		if (ingresso != null) {
-			ingresso.setValor(valorIngresso);
-
-			boolean atualizado = iDAO.alterarIngresso(ingresso, idIngresso, null, null, null, valorIngresso, null,
-					idIngresso);
-			if (atualizado) {
-				JOptionPane.showMessageDialog(null, "Informações do ingresso atualizadas com sucesso!");
-			} else {
-				JOptionPane.showMessageDialog(null, "Falha ao atualizar as informações do ingresso.");
-			}
-		}
 	}
 }

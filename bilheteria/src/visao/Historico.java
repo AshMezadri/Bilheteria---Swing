@@ -29,10 +29,8 @@ import javax.swing.JTextField;
 public class Historico extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtNome, txtCPF;
 	private IngressoDAO iDAO = IngressoDAO.getInstancia();
 	private JTable tbIngresso;
-	private Ingresso ingressoSelecionado;
 
 	/**
 	 * Launch the application.

@@ -73,14 +73,14 @@ public class Login extends JFrame {
 		lblEmailLogin = new JLabel("Email: ");
 		lblEmailLogin.setForeground(new Color(255, 255, 255));
 		lblEmailLogin.setFont(new Font("Verdana", Font.BOLD, 25));
-		lblEmailLogin.setBounds(644, 192, 105, 50);
+		lblEmailLogin.setBounds(450, 200, 100, 50);
 		getContentPane().add(lblEmailLogin);
 
 		txtEmailLogin = new JTextField();
 		txtEmailLogin.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtEmailLogin.setForeground(new Color(0, 0, 0));
 		txtEmailLogin.setBackground(Color.WHITE);
-		txtEmailLogin.setBounds(775, 192, 500, 50);
+		txtEmailLogin.setBounds(555, 200, 500, 50);
 		getContentPane().add(txtEmailLogin);
 		txtEmailLogin.setColumns(10);
 
@@ -88,7 +88,7 @@ public class Login extends JFrame {
 		lblSenhaLogin = new JLabel("Senha:");
 		lblSenhaLogin.setForeground(new Color(255, 255, 255));
 		lblSenhaLogin.setFont(new Font("Verdana", Font.BOLD, 25));
-		lblSenhaLogin.setBounds(644, 328, 110, 50);
+		lblSenhaLogin.setBounds(440, 325, 105, 50);
 		getContentPane().add(lblSenhaLogin);
 
 		txtSenhaLogin = new JPasswordField();
@@ -96,13 +96,14 @@ public class Login extends JFrame {
 		txtSenhaLogin.setFont(new Font("Verdana", Font.BOLD, 20));
 		txtSenhaLogin.setColumns(10);
 		txtSenhaLogin.setBackground(Color.WHITE);
-		txtSenhaLogin.setBounds(775, 330, 500, 50);
+		txtSenhaLogin.setBounds(555, 325, 500, 50);
 		getContentPane().add(txtSenhaLogin);
 
 		// Btn login
-		btnLogin = new JButton("Login");
-		btnLogin.setBorder(new LineBorder(new Color(226, 226, 197), 4));
-		btnLogin.setBackground(Color.WHITE);
+		btnLogin = new JButton("LOGIN");
+		btnLogin.setForeground(Color.BLACK);
+		btnLogin.setBorder(new LineBorder(new Color(149, 232, 236), 5, true));
+		btnLogin.setBackground(new Color(183, 232, 174));
 		btnLogin.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
@@ -140,7 +141,7 @@ public class Login extends JFrame {
 		});
 
 		btnLogin.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnLogin.setBounds(887, 443, 300, 60);
+		btnLogin.setBounds(660, 500, 210, 75);
 		getContentPane().add(btnLogin);
 
 		// panel
@@ -153,12 +154,12 @@ public class Login extends JFrame {
 		lblLogin = new JLabel("LogIn");
 		lblLogin.setForeground(Color.BLACK);
 		lblLogin.setFont(new Font("Verdana", Font.BOLD, 57));
-		lblLogin.setBounds(68, 342, 200, 70);
+		lblLogin.setBounds(70, 250, 200, 70);
 		panelLogin.add(lblLogin);
 
 		// lbl icon
 		lblIcon = new JLabel("");
-		lblIcon.setBounds(118, 455, 75, 75);
+		lblIcon.setBounds(120, 350, 75, 75);
 		panelLogin.add(lblIcon);
 
 		Image iconLogIn = new ImageIcon(this.getClass().getResource("/logIn.png")).getImage();
@@ -166,38 +167,37 @@ public class Login extends JFrame {
 		Image iconLogIn1 = new ImageIcon(this.getClass().getResource("/logIn.png")).getImage();
 
 		JLabel lblLogin = new JLabel("Olá, faça seu Login");
-		lblLogin.setBounds(775, 39, 460, 73);
+		lblLogin.setBounds(550, 65, 460, 73);
 
 		getContentPane().add(lblLogin);
 		lblLogin.setForeground(Color.WHITE);
 		lblLogin.setFont(new Font("Verdana", Font.BOLD, 42));
-		
-		JButton btnCadastro = new JButton("Cadastro");
+
+		JButton btnCadastro = new JButton("Não possui \r\ncadastro?");
+		btnCadastro.setForeground(Color.BLACK);
 		btnCadastro.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnCadastro.setFont(new Font("Verdana", Font.BOLD, 20));
-		btnCadastro.setBorder(new LineBorder(new Color(226, 226, 197), 4));
+		btnCadastro.setFont(new Font("Verdana", Font.ITALIC, 17));
+		btnCadastro.setBorder(new LineBorder(new Color(125, 169, 240), 5, true));
 		btnCadastro.setBackground(Color.WHITE);
-		btnCadastro.setBounds(887, 558, 300, 60);
-		
-		btnCadastro.addActionListener(new ActionListener() {
-		    @Override
-		    public void actionPerformed(ActionEvent e) {
-		        	
-		        new Cadastro().setVisible(true);
-		        dispose();
-		    }
+		btnCadastro.setBounds(1100, 600, 210, 70);
 
-		    private void dispose() {
-		        setVisible(false);
-		    }
+		btnCadastro.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				new Cadastro().setVisible(true);
+				dispose();
+			}
+
+			private void dispose() {
+				setVisible(false);
+			}
 		});
 
 		getContentPane().add(btnCadastro);
-		
-		
 
 	}
 }
