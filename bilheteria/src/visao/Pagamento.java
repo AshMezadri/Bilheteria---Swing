@@ -219,32 +219,32 @@ public class Pagamento extends JFrame {
 		lblNome.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNome.setForeground(Color.BLACK);
 		lblNome.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblNome.setBounds(75, 150, 70, 40);
+		lblNome.setBounds(50, 150, 70, 40);
 		panelCadastro.add(lblNome);
 
 		txtNome = new JTextField();
 		txtNome.setForeground(Color.BLACK);
-		txtNome.setFont(new Font("Verdana", Font.BOLD, 20));
+		txtNome.setFont(new Font("Verdana", Font.BOLD, 17));
 		txtNome.setEnabled(false);
 		txtNome.setEditable(false);
 		txtNome.setBackground(new Color(243, 243, 243));
-		txtNome.setBounds(155, 150, 150, 40);
+		txtNome.setBounds(135, 150, 225, 40);
 		panelCadastro.add(txtNome);
 
 		JLabel lblEmail = new JLabel("Email:");
 		lblEmail.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEmail.setForeground(Color.BLACK);
 		lblEmail.setFont(new Font("Verdana", Font.BOLD, 17));
-		lblEmail.setBounds(75, 215, 70, 40);
+		lblEmail.setBounds(50, 215, 70, 40);
 		panelCadastro.add(lblEmail);
 
 		txtEmail = new JTextField();
 		txtEmail.setForeground(Color.BLACK);
-		txtEmail.setFont(new Font("Verdana", Font.BOLD, 20));
+		txtEmail.setFont(new Font("Verdana", Font.BOLD, 17));
 		txtEmail.setEnabled(false);
 		txtEmail.setEditable(false);
 		txtEmail.setBackground(new Color(243, 243, 243));
-		txtEmail.setBounds(155, 215, 150, 40);
+		txtEmail.setBounds(135, 215, 225, 40);
 		panelCadastro.add(txtEmail);
 
 		for (Pessoa pessoa : pDAO.listaPessoas()) {
